@@ -3,17 +3,17 @@ title: Editing Fields
 ---
 # Editing Fields
 
-A [form](../forms/creating_a_form.md) can contain a number of different [field types](../forms/understanding_field_types.md) which allow you to customize how data is entered into a [record](../records/creating_a_record.md). In addition to field types, however, there are further customizations to fields that can be made in order to manipulate how data is entered. This documentation will cover how and were to edit your fields, and what options are available during this editing.
+A [form](../forms/creating_a_form.md) can contain a number of different [field types](../forms/understanding_field_types.md) which allow you to customize how data is entered into a [record](../records/creating_a_record.md). In addition to field types, there are further customizations to fields that can be made in order to manipulate how data is entered. This documentation will cover how and where to edit your fields, and what options are available during this editing.
 
 ## Editing Fields from the Form Home Page
 
-There are a two ways to edit the [fields that you've created](../forms/creating_fields.md): from the form page, and within the field page. This section will cover how to edit your fields from the [form home](../forms/navigating_to_a_form.md).
+There are a two ways to edit the [fields that you've created](../forms/creating_fields.md), from the form page and within the field page. This section will cover how to edit your fields from the [form home](../forms/navigating_to_a_form.md).
 
 1. From the form home, open up a field box by pressing the **arrow** button located in the right of all field boxes. The first field within your form [pages](../forms/creating_a_multipage_form.md) should already be open. <p align="center"> <img src="../forms-img/editing_fields_1_annotated.png" width="100%" style="align:center" title="Step 1"> </p>
 
-2. Once you have opened up a field, there are seven boxes that you are able to check that will give your field certain attributes. Which boxes you check should be automatically saved by Kora. See the section on "Field Options Descriptions" below for a better understanding of what these options do. <p align="center"> <img src="../forms-img/editing_fields_2_annotated.png" width="100%" style="align:center" title="Step 2"> </p>
+2. Once you have opened up a field, there are seven boxes that you are able to check that will give your field certain attributes. Which boxes you check should be automatically saved by Kora. See the section on *Field Options Descriptions* below for a better understanding of what these options do. <p align="center"> <img src="../forms-img/editing_fields_2_annotated.png" width="100%" style="align:center" title="Step 2"> </p>
 
-3. The last option that you are able to take advantage of from the *Form Home* page is the ability to delete fields. Simply press the **red trash can** to delete any unwanted fields. You will be asked if you are sure if you want to delete this field. <p align="center"> <img src="../forms-img/editing_fields_3_annotated.png" width="100%" style="align:center" title="Step 3"> </p>
+3. The last option that you are able to take advantage of from the *Form Home* page is the ability to delete fields. Simply press the **red trash can** to delete any unwanted fields. You will be asked if you are sure if you want to delete this field in a pop-up. <p align="center"> <img src="../forms-img/editing_fields_3_annotated.png" width="100%" style="align:center" title="Step 3"> </p>
 
 ## Editing in the Field Options Page
 
@@ -25,7 +25,7 @@ There are three sections available to edit from the *Field Page*:
 
 2. Each field type will then have its own specialized set of advanced options available in the next section. Go to the [Understanding Field Types](../forms/understanding_field_types.md) documentation to get a better understanding of how these advanced options work.
 
-3. The last section available when editing a form will be the same options available in step 2 of "Editing Fields from the Form Home Page". These are seven options which can be checked to give your field certain attributes. See the section on "Field Options Descriptions" below for a better understanding of what these options do. <p align="center"> <img src="../forms-img/editing_fields_6_annotated.png" width="100%" style="align:center" title="Step 6"> </p>
+3. The last section available when editing a form will be the same options available in step 2 of "Editing Fields from the Form Home Page". These are seven options which can be checked to give your field certain attributes. See the section on *Field Options Descriptions* below for a better understanding of what these options do. <p align="center"> <img src="../forms-img/editing_fields_6_annotated.png" width="100%" style="align:center" title="Step 6"> </p>
 
 4. Click **Update Field** at the bottom of the page to save any changes that you've made while editing your fields. <p align="center"> <img src="../forms-img/editing_fields_7_annotated.png" width="100%" style="align:center" title="Step 7"> </p>
 
