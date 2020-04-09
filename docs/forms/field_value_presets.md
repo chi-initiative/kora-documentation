@@ -6,7 +6,7 @@ title: Field Value Presets
 Field Value Presets are predefined field options that can be used repeatedly across all projects and forms. For example, "Language" and "Country" fields will consistently have the same options available across multiple projects. Using a Field Value Preset for languages allows you to easily incorporate the same controlled vocabulary every time you use this category in a form.
 
 ## Navigating to the Field Value Presets Page
-Navigating to Field Value Presets can take place from either the [dashboard](../projects/managing_projects_from_the_dashboard.md) or from a project's homepage.
+Navigating to Field Value Presets can take place from either the [dashboard](../projects/accessing_and_managing_projects_from_the_dashboard.md) or from a project's homepage.
 
 * From the dashboard, you are able to navigate to the field value presets page from a project block using the **Quick Action** icon. <p align="center"> <img src="../forms-img/field_value_presets_1_annotated.png" width="100%" style="align:center" title="Step 1"> </p>
 
@@ -20,11 +20,11 @@ There are three levels of availability for field value presets: project, shared 
 
 The availability of field value presets is characterized in the following ways:
 
-* project presets will be available for the project for which the field value preset was created.
+* Project presets will be available for the project for which the field value preset was created.
 
-* shared presets will be available across multiple projects.
+* Shared presets will be available across multiple projects.
 
-* stock presets are field value presets provided by us, that can be used and edited by administrators in any kora installation. The following stock presets are always originally available:
+* Stock presets are field value presets provided by us, that can be used and edited by administrators in any kora installation. The following stock presets are always originally available:
 
   * **URL_URI**: this [regex](https://en.wikipedia.org/wiki/Regular_expression) provides a pattern that helps with the entering of URLs.
 
