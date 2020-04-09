@@ -17,7 +17,7 @@ Follow these steps to reset your account from the Kora login screen:
 
 4. Select the password reset link in your email. <p align="center"> <img src="../user-accounts-img/resetting_your_account_password_4_annotated.png" width="100%" style="align:center" title="Step 4"> </p>
 
-5. Enter a new password that you will remember and that is secure. Then press **Set New Password** to reset your password. <p align="center"> <img src="../user-accounts-img/resetting_your_account_password_5_annotated.png" width="100%" style="align:center" title="Step 5"> </p>
+5. Enter a new password that you will remember and that is secure. Then press the **Set New Password** button to reset your password. <p align="center"> <img src="../user-accounts-img/resetting_your_account_password_5_annotated.png" width="100%" style="align:center" title="Step 5"> </p>
 
 ## Resetting your Password While Logged In.
 
@@ -35,7 +35,7 @@ Follow these steps if you want to update your password while logged into Kora:
 
 If you are an administrator, then you are able to update the passwords of other Kora users. Follow these directions to change another user's password:
 
-1. [Navigate to the *User Management*](../user-accounts/managing_users_in_a_kora_installation.md) page. <p align="center"> <img src="../user-accounts-img/resetting_your_account_password_10_annotated.png" width="100%" style="align:center" title="Step 10"> </p>
+1. [Navigate to the *User Management*](../user-accounts/managing_users_in_a_kora_installation.md) page. <img style="display:block;margin:auto;max-width:100%" src="../user-accounts-img/resetting_your_account_password_10_annotated.png" title="Step 10">
 
 2. Scroll down the *User Management* page to the user whose password you want to edit, and click **Edit User Profile** <p align="center"> <img src="../user-accounts-img/resetting_your_account_password_11_annotated.png" width="100%" style="align:center" title="Step 11"> </p>
 
