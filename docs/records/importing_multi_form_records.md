@@ -2,10 +2,10 @@
 title: Importing Multi Form Records
 ---
 # Importing Multi Form Records
-If you want to import your forms into more than one form, then you will have to format your records in a particular way. This is a slightly different process than [importing records into a single form](/records/importing_a_record.md). You will have to format your records correctly into a csv, json or xml file. Examples of the correct file formats are provided in the File Formatting section.
+If you want to import your forms into more than one form, then you will have to format your records in a particular way. This is a slightly different process than [importing records into a single form](../records/importing_a_record.md). You will have to format your records correctly into a csv, json or xml file. Examples of the correct file formats are provided in the *File Formatting* section below.
 
 ## Navigating to the Import Page
-Navigating to *Import Multi Form Records* page can take place from either the [dashboard](../projects/managing_projects_from_the_dashboard.md) or from a project's homepage.
+Navigating to *Import Multi Form Records* page can take place from either the [dashboard](../projects/accessing_and_managing_projects_from_the_dashboard.md) or from a project's homepage.
 
 * From the dashboard, you are able to navigate to the *Import Multi Form Records* page from a project block by clicking on the **Quick Action** icon. <p align="center"> <img src="../records-img/importing_multi_form_records_1_annotated.png" width="100%" style="align:center" title="Step 1"> </p>
 
@@ -14,7 +14,7 @@ Navigating to *Import Multi Form Records* page can take place from either the [d
 Either of these options will bring you to the *Import Multi Form Records* page where you can import record files to multiple forms <p align="center"> <img src="../records-img/importing_multi_form_records_3_annotated.png" width="100%" style="align:center" title="Step 3"> </p>
 
 ## File Formatting
-There are three formats that you are able to upload files in: .csv, .json, and .xml. If you follow the example formats given below, you will be able to import records into multiple forms. (Note to kora doc people: example files are on the Google drive. Do you think it would be better to just link to the example files that Anthony provided me?)
+There are three formats that you are able to upload files: 1) .csv, 2) .json, and 3) .xml. If you follow the example formats given below, you will be able to import records into multiple forms. (Note to kora doc people: example files are on the Google drive. Do you think it would be better to just link to the example files that Anthony provided me?)
 
 * **CSV format**: This file format uses Comma Separated Values to describe the fields you are attempting to import. You can download an <a href="../records-files/import_example_csv.csv" download>example CSV file here</a>. <p align="center"> <img src="../records-img/importing_multi_form_records_4_annotated.png" width="100%" style="align:center" title="Step 4"> </p>
 
