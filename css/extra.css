@@ -44,3 +44,31 @@ a:visited {
 ol li {
     margin-top:18px;
 }
+
+/* For preserving nav bar indent once updates from 1.0.4 to 1.1*/
+/*
+.wy-menu-vertical li.toctree-l1 a[href="../.."], .wy-menu-vertical li.toctree-l1.current a[href="."] {
+    padding: .4045em 1.618em !important;
+    font-size: 90%;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+    font-size: 90%;
+}
+
+.wy-menu-vertical li.toctree-l1 a, .wy-menu-vertical li.loctree-l1.current span.toctree-expand, .wy-menu-vertical li.loctree-l1.current a {
+    padding: 0.4045em 2.427em !important;
+    font-size: 90%;
+}
+
+.wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.loctree-l2.current a, .wy-menu-vertical li.loctree-l2.current span.toctree-expand {
+    padding: 0.4045em 4.045em !important;
+    font-size: 90%;
+}
+
+.wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.loctree-l3.current a, .wy-menu-vertical li.loctree-l3.current span.toctree-expand {
+    padding: 0.4045em 5.663em !important;
+    font-size: 90%;
+}
+
+*/
