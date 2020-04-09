@@ -29,7 +29,7 @@ Once you have your records formatted correctly (follow the steps in the above se
 
 1. Upload the correctly formatted record files by clicking the **Add New File** button. After clicking the button, you'll be able to select the files you want to upload from your computer. <p align="center"> <img src="../records-img/importing_multi_form_records_7_annotated.png" width="100%" style="align:center" title="Step 7"> </p>
 
-2. Once you've selected the files you want to upload, select the forms that you want the records to be uploaded to by clicking 8*Select Some Options**. A dropdown menu will appear allowing you to select forms you have created. <p align="center"> <img src="../records-img/importing_multi_form_records_8_annotated.png" width="100%" style="align:center" title="Step 8"> </p>
+2. Once you've selected the files you want to upload, select the forms that you want the records to be uploaded to by clicking **Select Some Options**. A dropdown menu will appear, this is where you can select forms that you have already created. <p align="center"> <img src="../records-img/importing_multi_form_records_8_annotated.png" width="100%" style="align:center" title="Step 8"> </p>
 
 3. If you have zipped files that correlate to the records you are already importing, you may add them below. These records should have the same format as the records that you are already importing. <p align="center"> <img src="../records-img/importing_multi_form_records_9_annotated.png" width="100%" style="align:center" title="Step 9"> </p>
 
