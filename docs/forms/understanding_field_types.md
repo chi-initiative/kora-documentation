@@ -205,7 +205,7 @@ There are a number of different **Specialty Fields** which serve specific functi
 
 ### Boolean
 
-The *boolean* field allows. As you can see in the previous image, You are able to make a title and description for a boolean field, which the person entering data may check or uncheck by clicking on the circle. You may automatically have the boolean field selected by checking the **default** option in the advanced options of the boolean field you are creating or editing. <img style="display:block;margin:auto;max-width:100%" src="../forms-img/understanding_field_types_33_annotated.png" title="Step 33">
+The boolean field refers to a true or false field option. You are able to make a title and description for a boolean field, which the person entering data may check or uncheck by clicking on the circle. You may automatically have the boolean field selected by checking the default option in the advanced options of the boolean field you are creating or editing. <img style="display:block;margin:auto;max-width:100%" src="../forms-img/understanding_field_types_33_annotated.png" title="Step 33">
 
 ### Geolocator
 
@@ -245,7 +245,7 @@ Now that you have the correct association permissions set up for your form, you 
 
 3. After your search configuration is set up, you can create a default value for the associator field. Go to the next section for directions on how to use an associator field.
 
-##### How to Use an Associator Field
+### How to Use an Associator Field
 
 After setting up the permissions and search configurations for an *associator* field as outlined in the previous sections, you will now be able to associate records from your form with records from other desired forms. Follow these steps to associate records using an associator field:
 
