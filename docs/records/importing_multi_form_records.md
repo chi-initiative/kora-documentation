@@ -14,13 +14,19 @@ Navigating to *Import Multi Form Records* page can take place from either the [d
 Either of these options will bring you to the *Import Multi Form Records* page where you can import record files to multiple forms <p align="center"> <img src="../records-img/importing_multi_form_records_3_annotated.png" width="100%" style="align:center" title="Step 3"> </p>
 
 ## File Formatting
-There are three formats that you are able to upload files: 1) .csv, 2) .json, and 3) .xml. If you follow the example formats given below, you will be able to import records into multiple forms. Below you can view and download example files for each file type. 
+There are three formats that you are able to upload files: 1) .csv, 2) .json, and 3) .xml. If you follow the example formats given below, you will be able to import records into multiple forms. Below you can view and download example files for each file type.
 
-* **CSV format**: This file format uses *Comma Separated Values* to describe the fields you are attempting to import. You can download an <a href="../records-files/import_example_csv.csv" download>example CSV file here</a>. <p align="center"> <img src="../records-img/importing_multi_form_records_4_annotated.png" width="100%" style="align:center" title="Step 4"> </p>
+* **CSV format**: This file format uses *Comma Separated Values* to describe the fields you are attempting to import. An example of the CSV format is embedded below. Follow the **import_example_csv.csv** link to github.com in order to download this file.
 
-* **JSON format**: This file format uses *JavaScript Object Notation* to describe the fields for the records you are attempting to import. You can download an <a href="../records-files/import_example_json.json" download>example JSON file here</a>. <p align="center"> <img src="../records-img/importing_multi_form_records_5_annotated.png" width="100%" style="align:center" title="Step 5"> </p>
+<script src="https://gist.github.com/0Redfeather/0258f81c076428893e7c848153255839.js"></script>
 
-* **XML format**: *Extensible Markup Language* is a markup language designed to encode data that is both machine and human readable. You can download an <a href="../records-files/import_example_xml.xml" download>example XML file here</a>. <p align="center"> <img src="../records-img/importing_multi_form_records_6_annotated.png" width="100%" style="align:center" title="Step 6"> </p>
+* **JSON format**: This file format uses *JavaScript Object Notation* to describe the fields for the records you are attempting to import. An example of the JSON format is embedded below. Follow the **import_example_json.json** link to github.com in order to download this file.
+
+<script src="https://gist.github.com/0Redfeather/17692e3550e94330d1fc7b85c3fd66a4.js"></script>
+
+* **XML format**: *Extensible Markup Language* is a markup language designed to encode data that is both machine and human readable. An example of the JSON format is embedded below. Follow the **import_example_json.json** link to github.com in order to download this file.
+
+<script src="https://gist.github.com/0Redfeather/64252b8a700acf030cad141e2aefe1f4.js"></script>
 
 One important aspect of the format to pay attention to is associators. The formatting allows you to create associations between records that do not already exist.
 
