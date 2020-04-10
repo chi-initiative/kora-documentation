@@ -163,6 +163,8 @@
         
             <li><a class="toctree-l4" href="#specialty-fields">Specialty Fields</a></li>
         
+            <li><a class="toctree-l4" href="#associator">Associator</a></li>
+        
         </ul>
     
 
@@ -353,32 +355,32 @@
               
                 <h1 id="understanding-field-types">Understanding Field Types</h1>
 <p>Each <a href="../creating_a_form/">form</a> has to ability to add any number of different fields across <a href="../creating_a_multipage_form/">multiple pages</a>. This includes text, number, list, data, file and specialty fields. Understanding what these field types bring to the table will allow you to create spaces for data entry that are relevant to your digital repository. <a href="../creating_fields/">Creating a field</a> is the first step towards understanding field types. <p align="center"> <img src="../forms-img/understanding_field_types_1_annotated.png" width="100%" style="align:center" title="Step 1"> </p></p>
-<p>After choosing to create a field and selecting the <em>Field Type</em> drop-down menu, you'll find the field type options available. These options will determine what types of data are entered into a <a href="../../records/creating_a_record/">record</a>. The headings below will discuss the field types by their category: text, number, list, data, file and specialty. <p align="center"> <img src="../forms-img/understanding_field_types_2_annotated.png" width="100%" style="align:center" title="Step 2"> </p></p>
+<p>After choosing to create a field and selecting the <em>Field Type</em> drop-down menu, you'll find the field type options available. These options will determine what types of data are entered into a <a href="../../records/creating_a_record/">record</a>. The headings below will discuss the field types by their category: text, number, list, date, file, and specialty. <p align="center"> <img src="../forms-img/understanding_field_types_2_annotated.png" width="100%" style="align:center" title="Step 2"> </p></p>
 <p>After selecting your field type, you can click on <strong>Show Advanced Field Options</strong>. This is where you will be able to view many of the options for customizing your fields discussed below. <p align="center"> <img src="../forms-img/understanding_field_types_3_annotated.png" width="100%" style="align:center" title="Step 3"> </p></p>
 <h2 id="text-fields">Text Fields</h2>
 <p>Text field are fields in which you enter text. There are two types of text field: <em>text field</em> and <em>rich text field</em>. <p align="center"> <img src="../forms-img/understanding_field_types_4_annotated.png" width="100%" style="align:center" title="Step 4"> </p></p>
 <h3 id="text">Text</h3>
-<p>A <em>text field</em> allows users to enter any plain text into a record. This can include characters, numbers, and symbols from your keyboard. The advanced field options available include: a <strong>Default</strong> value, a <strong>Regex</strong> pattern and whether or not to make the field <em>Multilined</em>*.</p>
+<p>A <em>text field</em> allows users to enter any plain text into a record. This can include characters, numbers, and symbols from your keyboard. The advanced field options available include: a <strong>Default</strong> value, a <strong>Regex</strong> pattern and whether or not to make the field <em>Multilined</em>.</p>
 <ul>
 <li>
 <p><strong>Default</strong>: inputting a default value for a text field will create a value that is always present in that field when creating a record. This value can be deleted and replaced, but it will be initially present for every record containing this <em>text field</em>.</p>
 </li>
 <li>
-<p><strong>Regex</strong>: A Regex pattern allows you to customize how a <em>text field</em> is searched for within Kora. For instance, if a word has multiple ways of being spelled, you can specify the different ways that a text field may be entered: the regular expression seriali[sz]e matches both "serialise" and "serialize". There are much more complex regex expressions you can learn how to write, however.</p>
+<p><strong>Regex</strong>: A Regex pattern allows you to customize how a <em>text field</em> is searched for within Kora. For instance, if a word has multiple ways of being spelled, you can specify the different ways that a text field may be entered: the regular expression seriali[sz]e matches both "serialise" and "serialize". There are also much more complex regex expressions you can learn how to write.</p>
 </li>
 <li>
 <p><strong>Multilined?</strong>: The multilined option allows you to enter more than one line of plain text, by clicking the enter button. There is no set limit to the number of lines you can enter, and a scroll bar will appear if the lines appear out of the text field's view. <p align="center"> <img src="../forms-img/understanding_field_types_5_annotated.png" width="100%" style="align:center" title="Step 5"> </p></p>
 </li>
 </ul>
 <h3 id="rich-text">Rich Text</h3>
-<p>A <em>rich text</em> field allows you write text that can be stylized and edited with the CKE editor. There are numerous options available in this editor to manipulate text. Users will be able to italicize, bold, underline, and strikethrough their text. They can also insert tables and images  headings, bulleted lists and numbered lists into their text. Users are then able to run spellchecker, insert links and change other aspects of their text. The user guide for the CKE editor can be found <a href="https://ckeditor.com/docs/user">here</a><strong>(They do not have a user guide up and running yet)</strong>. There are no advanced options available for this field besides the creation of a default value.</p>
+<p>A <em>rich text</em> field allows you write text that can be stylized and edited with the CKE editor. There are numerous options available in this editor to manipulate text. Users will be able to italicize, bold, underline, and strikethrough their text. They can also insert tables and images  headings, bulleted lists and numbered lists into text. Users are then able to run spellcheck, insert links, and change other aspects of their text. The user guide for the CKE editor can be found <a href="https://ckeditor.com/docs/user">here</a> <strong>(They do not have a user guide up and running yet)</strong>. There are no advanced options available for this field besides the creation of a default value.</p>
 <ul>
-<li><strong>Default</strong>: Default text can be entered into this field. The entered text will always be present in that field when creating a record. This value can be deleted and replaced, but will always be initially present for every record containing this * rich text field*. <p align="center"> <img src="../forms-img/understanding_field_types_6_annotated.png" width="100%" style="align:center" title="Step 6"> </p></li>
+<li><strong>Default</strong>: Default text can be entered into this field. The entered text will always be present in that field when creating a record. This value can be deleted and replaced, but will always be initially present for every record containing this <em>rich text field</em>. <p align="center"> <img src="../forms-img/understanding_field_types_6_annotated.png" width="100%" style="align:center" title="Step 6"> </p></li>
 </ul>
 <h2 id="number-fields">Number Fields</h2>
-<p>Number fields allow you to enter numbers. Users may enter the numbers manually into this field using a keyboard. alternatively, users are able to use arrow keys or scroll with their mouse wheel to move the number value up or down by 1.  There are two types of number fields: <em>integer field</em> and <em>float field</em>. <p align="center"> <img src="../forms-img/understanding_field_types_7_annotated.png" width="100%" style="align:center" title="Step 7"> </p></p>
+<p>Number fields allows you to enter numbers. Users may enter the numbers manually into this field using a keyboard. Alternatively, users are able to use arrow keys or scroll with their mouse wheel to move the number value up or down by 1.  There are two types of number fields: <em>integer field</em> and <em>float field</em>. <p align="center"> <img src="../forms-img/understanding_field_types_7_annotated.png" width="100%" style="align:center" title="Step 7"> </p></p>
 <h3 id="integer">Integer</h3>
-<p><em>Integer fields</em> take in whole numbers as their values. These are numbers without decimal points, and they can include negative numbers. If you attempt to enter a value that is not a whole number, then the value will not appear in the record. The advanced field options available include: a <strong>Default</strong> value, a <strong>Minimum Value</strong>, a <strong>Max Value</strong> and <strong>Unit of Measurement</strong>.</p>
+<p><em>Integer fields</em> use whole numbers as their values. These are numbers without decimal points, and they can include negative numbers. If you attempt to enter a value that is not a whole number, then the value will not appear in the record. The advanced field options available include: a <strong>Default</strong> value, a <strong>Minimum Value</strong>, a <strong>Max Value</strong> and <strong>Unit of Measurement</strong>.</p>
 <ul>
 <li>
 <p><strong>Default</strong>: A default number can be entered into this field. The entered number will always be present in that field when creating a record. This value can be deleted and replaced, but will always be initially present for every record containing this <em>integer field</em>.</p>
@@ -410,7 +412,7 @@
 </li>
 </ul>
 <h2 id="list-fields">List Fields</h2>
-<p>Lists fields allow users to create lists of data or select list options from a controlled vocabulary. Users are also able to generate a list, or create a list of objects associated with other objects. Perhaps the greatest strength of lists is the ability to force users to enter in controlled vocabulary for data fields. Controlled vocabulary refers to the use of a specific terms to refer to your data. If you only have three possible options for a particular value, then that makes it easier to characterize and analyze the data. You don't have to worry about the particular differences in how people describe objects or spelling errors. The trade-off is a loss of nuance. It is up to form creators to decide which goals are important to them. Their are four types of list fields available: <em>list field</em>, <em>multi-select list</em>, <em>generated list</em> and <em>combo list</em>. <p align="center"> <img src="../forms-img/understanding_field_types_10_annotated.png" width="100%" style="align:center" title="Step 10"> </p></p>
+<p>The Lists field allow users to create lists of data or select list options from a controlled vocabulary. Users are also able to generate a list, or create a list of objects associated with other objects. Perhaps the greatest strength of lists is the ability to force users to enter in controlled vocabulary for data fields. Controlled vocabulary refers to the use of a specific terms to refer to your data. If you only have three possible options for a particular value, then that makes it easier to characterize and analyze the data. You don't have to worry about the particular differences in how people describe objects or spelling errors. The trade-off is a loss of nuance. It is up to form creators to decide which goals are important to them. Their are four types of list fields available: <em>list field</em>, <em>multi-select list</em>, <em>generated list</em> and <em>combo list</em>. <p align="center"> <img src="../forms-img/understanding_field_types_10_annotated.png" width="100%" style="align:center" title="Step 10"> </p></p>
 <h3 id="list">List</h3>
 <p>A <em>list field</em> is the most straightforward list option available. You may create a list of possible values (a.k.a a controlled vocabulary) from which users may select one value for the data field. A <em>list field</em> will appear as a dropdown menu from which you can select one of these values when creating a record. Many of the options mentioned here are available for all lists and so will refer back to this section. So, when creating any list you may follow these steps in the advanced options to create that list:</p>
 <ol>
@@ -418,7 +420,7 @@
 <p>Under list options, enter your possible values in the green box labeled <strong>Type here and hit the enter key or "ADD" to add a new list option</strong>. From there hit enter or press the <strong>"ADD"</strong> button to add your value to the list. <p align="center"> <img src="../forms-img/understanding_field_types_11_annotated.png" width="100%" style="align:center" title="Step 11"> </p></p>
 </li>
 <li>
-<p>Your new value ("option 1 in the image below") will be added to the list options above the green box you entered your data into. You can continue to add values in the bottom green box which will appear in the order created. You may also <strong>Copy All List Options</strong> or <strong>Delete All List Options</strong>. Copying list options will put all list options into your clipboard, separated by commas. Deleting all list options will delete all the values you have entered into a list. You will receive a notification asking you to confirm that you really do want to delete all your list options. <p align="center"> <img src="../forms-img/understanding_field_types_12_annotated.png" width="100%" style="align:center" title="Step 12"> </p></p>
+<p>Your new value ("Option 1" in the image below) will be added to the list options above the green box you entered your data into. You can continue to add values in the bottom green box which will appear in the order created. You may also <strong>Copy All List Options</strong> or <strong>Delete All List Options</strong>. Copying list options will put all list options into your clipboard, separated by commas. Deleting all list options will delete all the values you have entered into a list. You will receive a notification asking you to confirm that you really do want to delete all your list options in a pop-up. <p align="center"> <img src="../forms-img/understanding_field_types_12_annotated.png" width="100%" style="align:center" title="Step 12"> </p></p>
 </li>
 <li>
 <p>You are able to move your list options around by clicking on the arrows next to the list options you have created. Clicking on an up arrow will switch that list option with the option below it, while clicking on a down arrow will switch that list option with the option below it. You may also click and drag a list option to a different part of the list. <p align="center"> <img src="../forms-img/understanding_field_types_13_annotated.png" width="100%" style="align:center" title="Step 13"> </p>  </p>
@@ -431,7 +433,7 @@
 </li>
 </ol>
 <h3 id="multi-select-list">Multi-Select List</h3>
-<p>A <em>multi-select list field</em> creates a list of possible values (a.k.a a controlled vocabulary) from which users may select multiple values for the data field. This field follows the same setup as a <em>list field</em> (see steps 1-5 for <em>list field</em> above), but the end result is the ability to select multiple list options from a single list.</p>
+<p>A <em>multi-select list field</em> creates a list of possible values (a.k.a. a controlled vocabulary) from which users may select multiple values for the data field. This field follows the same setup as a <em>list field</em> (see steps 1-5 for <em>list field</em> above), but the end result is the ability to select multiple list options from a single list.</p>
 <ul>
 <li>You may select list options from a *multi-select list by clicking them in the drop-down menu. You may also remove selected items by clicking the <strong>x</strong> next to the field option. <p align="center"> <img src="../forms-img/understanding_field_types_16_annotated.png" width="100%" style="align:center" title="Step 16"> </p></li>
 </ul>
@@ -493,7 +495,7 @@
 <li><strong>Default</strong>: the <em>date time</em> field type gives the additional option to specify a default hour, minute and second. Default times are changeable, but will appear initially every time a record using that date time field is created. <p align="center"> <img src="../forms-img/understanding_field_types_24_annotated.png" width="100%" style="align:center" title="Step 24"> </p></li>
 </ul>
 <h3 id="historical-date">Historical date</h3>
-<p>A <em>historical date</em> field type provides everything that the date field type provides, plus the ability to add prefixes and calendar notation to the dates. The advanced options for this field type are similar to the <em>date time</em> field, except a few advanced options: <strong>Select Prefix(Optional)</strong>, <strong>Select Calendar/Date Notation</strong>, <strong>Show Prefixes?</strong> and <strong>Show Calendar/Date Notation?</strong>. These advanced options unique to the <em>historical date</em> field type are outlined below. Check out the section on the <em>date</em> field type above to learn more about the other advanced options.</p>
+<p>A <em>historical date</em> field type provides everything that the date field type provides, plus the ability to add prefixes and calendar notation to the dates. The advanced options for this field type are similar to the <em>date time</em> field, except a few advanced options: <strong>Select Prefix(Optional)</strong>, <strong>Select Calendar/Date Notation</strong>, <strong>Show Prefixes?</strong> and <strong>Show Calendar/Date Notation?</strong>. The advanced options unique to the <em>historical date</em> field type are outlined below. Check out the section on the <em>date</em> field type above to learn more about the other advanced options.</p>
 <ul>
 <li>
 <p><strong>Select Prefix(Optional)</strong>: prefixes are selected by clicking the circle to the left of their name. The prefixes available include circa, pre and post. Circa refers to approximate or estimated dates. Pre refers to times before the specified date. Post refers to times after the date. You may only select one prefix.</p>
@@ -524,7 +526,7 @@
 </li>
 </ul>
 <h3 id="gallery">Gallery</h3>
-<p>The <em>gallery</em> file field creates a data field which allows users to upload images. Standard file formats are already selected for this field and include: jpg, gif and png and bmp image files. The advanced options available are similar to other file fields: <strong>Max File Size (kb)</strong>; <strong>Max File Amount</strong>; and <strong>Allowed File Types</strong>.</p>
+<p>The <em>gallery</em> file field creates a data field which allows users to upload images. Standard file formats are already selected for this field and include: .jpg, .gif, .png, and .bmp image files. The advanced options available are similar to other file fields: <strong>Max File Size (kb)</strong>; <strong>Max File Amount</strong>; and <strong>Allowed File Types</strong>.</p>
 <ul>
 <li>
 <p><strong>Max File Size (kb)</strong>: allows you to determine the maximum size of a file that can be uploaded.</p>
@@ -546,7 +548,7 @@
 <p><strong>Max File Amount</strong>: allows you to determine the maximum number of files that you want uploaded with each record.</p>
 </li>
 <li>
-<p><strong>Allowed File Types:</strong>: the file types provided are already optimized for typical audio file formats including: MP3 and WAV audio files. These are the only file types you may choose from. <p align="center"> <img src="../forms-img/understanding_field_types_29_annotated.png" width="100%" style="align:center" title="Step 29"> </p></p>
+<p><strong>Allowed File Types</strong>: the file types provided are already optimized for typical audio file formats including: MP3 and WAV audio files. These are the only file types you may choose from. <p align="center"> <img src="../forms-img/understanding_field_types_29_annotated.png" width="100%" style="align:center" title="Step 29"> </p></p>
 </li>
 </ul>
 <h3 id="video">Video</h3>
@@ -563,7 +565,7 @@
 </li>
 </ul>
 <h3 id="3d-model">3D model</h3>
-<p>The <em>3D model</em> file field creates a space for users to upload 3D models into a record. There are standard file formats already selected for 3D models which include: OBJ, STL, JPEG Texture, PNG Texture and other. The advanced options available are similar to other file fields, but include some notable differences: <strong>Max File Size (kb)</strong>; <strong>Allowed File Types</strong>; <strong>Model Color</strong>; <strong>Background Color One</strong>; and <strong>Background Color Two</strong>.</p>
+<p>The <em>3D model</em> file field creates a space for users to upload 3D models into a record. There are standard file formats already selected for 3D models which include: OBJ, STL, JPEG Texture, PNG Texture, and other. The advanced options available are similar to other file fields, but include some notable differences: <strong>Max File Size (kb)</strong>, <strong>Allowed File Types</strong>, <strong>Model Color</strong>, <strong>Background Color One</strong>, and <strong>Background Color Two</strong>.</p>
 <ul>
 <li>
 <p><strong>Max File Size (kb)</strong>: allows you to determine the maximum size of a file that can be uploaded.</p>
@@ -582,9 +584,9 @@
 </li>
 </ul>
 <h2 id="specialty-fields">Specialty Fields</h2>
-<p>There are a number of different Specialty fields which serve specific functions for form creators. These functions allow users to create true or false options, describe geographic location and associate records with other records. These field types are referred to respectively as:<em>Boolean</em>; <em>Geolocator</em>; and <em>Associator</em> fields. <p align="center"> <img src="../forms-img/understanding_field_types_32_annotated.png" width="100%" style="align:center" title="Step 32"> </p></p>
+<p>There are a number of different <strong>Specialty Fields</strong> which serve specific functions for form creators. These functions allow users to create true or false options, describe geographic location and associate records with other records. These field types are referred to respectively as: <em>Boolean</em>, <em>Geolocator</em>, and <em>Associator</em> fields. <p align="center"> <img src="../forms-img/understanding_field_types_32_annotated.png" width="100%" style="align:center" title="Step 32"> </p></p>
 <h3 id="boolean">Boolean</h3>
-<p>The <em>boolean</em> field allows. As you can see in the previous image, You are able to make a title and description for a boolean field, which the person entering data may check or uncheck by clicking on the circle. You may automatically have the boolean field selected by checking the <strong>default</strong> option in the advanced options of the boolean field you are creating or editing. <p align="center"> <img src="../forms-img/understanding_field_types_33_annotated.png" width="100%" style="align:center" title="Step 33"> </p></p>
+<p>The <em>boolean</em> field allows. As you can see in the previous image, You are able to make a title and description for a boolean field, which the person entering data may check or uncheck by clicking on the circle. You may automatically have the boolean field selected by checking the <strong>default</strong> option in the advanced options of the boolean field you are creating or editing. <img style="display:block;margin:auto;max-width:100%" src="../forms-img/understanding_field_types_33_annotated.png" title="Step 33"></p>
 <h3 id="geolocator">Geolocator</h3>
 <p>The <em>geolocator</em> field allows users to enter geographic data through the use of latitude/longitude (lat/long), and address data. When entering new geolocator data, users enter the name of the new location, what type of geographic data they are entering (lat/long or address) and then the actual data. This field provides three advanced options when customizing this field: <strong>Default Locations</strong>, <strong>Map Display</strong> and <strong>Displayed Data</strong>.</p>
 <ul>
@@ -598,10 +600,10 @@
 <p><strong>Displayed Data</strong>: If you choose not to display a map using the <strong>Map Display</strong> option, then Kora will display your data as text. There are two types of location data that you are able to display when viewing records: <strong>Lat Long</strong> and <strong>Address</strong>. Displaying <strong>Lat Long</strong> will display the coordinates of your location using latitude and longitude coordinates. Likewise, selecting <strong>Address</strong> will display the address of your locations. If a record provides latitude and longitude, Kora will still be able to look up an associated address to display if that is the option that is chosen. The opposite is also true. <p align="center"> <img src="../forms-img/understanding_field_types_35_annotated.png" width="100%" style="align:center" title="Step 35"> </p></p>
 </li>
 </ul>
-<h3 id="associator">Associator</h3>
+<h2 id="associator">Associator</h2>
 <p>An <em>associator</em> field creates connections between records. Let's say, for example, that you want to <a href="../creating_a_form/">create a form</a> that keeps track of people associated with a museum project. This could include supervisors, volunteers, archaeologists, etc. Individual records could be created with their names and roles. Now let's say you want to create another form for objects associated with this project. You could create records which include data on these objects <em>and</em> the people involved with the curation of those objects. This could potentially be a lot of data reentry, however. One solution Kora offers for this hypothetical problem is the ability to associate the object records from the one form with the people records from the other form.  </p>
 <p>When an association is created within a record, the <em>associator</em> field displays your selected, associated record as a clickable link within that original record. This link will bring you to the record page for that associated record. The possible association are extremely flexible, in that you are able to associate records with other records from the same form or even records from another project's form. In order to do this, however, you will need to give forms the ability to search each other through <em>Form association permissions</em>. What follows are directions for: creating association permissions between forms; setting up the search configurations for an associator field, and how to use an associator field.</p>
-<h5 id="associator-permissions">Associator Permissions</h5>
+<h3 id="associator-permissions">Associator Permissions</h3>
 <p>Follow these steps to set up associator permissions:</p>
 <ol>
 <li>
@@ -617,14 +619,14 @@
 <p>If you do not have administrative permissions to a form, you may select the <em>Request Form Access</em> tab. Clicking <strong>Request Form Access</strong> on that page will allow you to select a form, after which Kora will send an email to all administrators requesting access to form associations. <p align="center"> <img src="../forms-img/understanding_field_types_39_annotated.png" width="100%" style="align:center" title="Step 39"> </p>  </p>
 </li>
 </ol>
-<h5 id="association-search-configuration">Association Search Configuration</h5>
+<h3 id="association-search-configuration">Association Search Configuration</h3>
 <p>Now that you have the correct association permissions set up for your form, you can create an association field that will be able to search records from other forms. In the directions below, we will be creating an <em>associator</em> field that is able to search for records through another form called "Form 2". These setup steps will work for any <em>associator</em> field:</p>
 <ol>
 <li>
-<p>First go to the advanced options for the associator when <a href="../forms/creating_a_fields.md">creating the field</a>. There you will find the <em>Association Search Configuration</em>, which will have the forms that you are able to search through available to be checked off. <p align="center"> <img src="../forms-img/understanding_field_types_40_annotated.png" width="100%" style="align:center" title="Step 40"> </p></p>
+<p>First go to the advanced options for the associator when <a href="../creating_fields/">creating the field</a>. There you will find the <em>Association Search Configuration</em>, which will have the forms that you are able to search through available to be checked off. <p align="center"> <img src="../forms-img/understanding_field_types_40_annotated.png" width="100%" style="align:center" title="Step 40"> </p></p>
 </li>
 <li>
-<p>Once you have selected the form that you want this field to be able to associate with, you will have the option to select preview values. Preview values will show any values from the selected fields you choose when searching for records. If you do not select a preview value, then the internal Kora Identification (KID) will be the only value that is shown when searching for records with this associator. It is recommended that you choose a field such as "name", "id", etc. that will allow you to more easily identify what record you are looking at. <p align="center"> <img src="../forms-img/understanding_field_types_41_annotated.png" width="100%" style="align:center" title="Step 41"> </p></p>
+<p>Once you have selected the form that you want this field to associate with, you will have the option to select preview values. Preview values will show any values from the selected fields you choose when searching for records. If you do not select a preview value, then the internal Kora Identification (KID) will be the only value that is shown when searching for records with this associator. It is recommended that you choose a field such as "name", "id", etc. that will allow you to more easily identify what record you are looking at. <p align="center"> <img src="../forms-img/understanding_field_types_41_annotated.png" width="100%" style="align:center" title="Step 41"> </p></p>
 </li>
 <li>
 <p>After your search configuration is set up, you can create a default value for the associator field. Go to the next section for directions on how to use an associator field.</p>
