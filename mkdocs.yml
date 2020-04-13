@@ -45,6 +45,7 @@ nav:
         - 'Navigating to a Form': 'forms/navigating_to_a_form.md'
         - 'Importing a Form': 'forms/importing_a_form.md'
         - 'Using Field Value Presets': 'forms/field_value_presets.md'
+        - 'Searching for a Form': 'forms/searching_for_a_form.md'
     - 'Records':
         - 'Creating a Record': 'records/creating_a_record.md'
         - 'Viewing and Managing Record Revisions': 'records/viewing_and_managing_record_revisions.md'
