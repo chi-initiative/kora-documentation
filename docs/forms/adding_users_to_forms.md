@@ -2,7 +2,7 @@
 title: Adding Users to Forms
 ---
 # Adding Users to Forms
- Adding a user to a [form](../forms/creating_a_form.md) gives certain form permissions to [users already in your KORA organization](../forms/managing_users_in_a_kora_installation.md). Form permissions allow users to create, edit, and delete fields as well as records, depending on the permissions given to them. [Users added as administrators](../forms/additional_form_administrators.md) will automatically have all of these permissions, but Kora allows you to create different permission groups for different users. Limiting the amount of form permissions granted to other users is useful in cases where you only want users to be able to enter data and create records.
+ Adding a user to a [form](../forms/creating_a_form.md) gives certain form permissions to [users already in your KORA organization](../user-accounts/managing_users_in_a_kora_installation.md). Form permissions allow users to create, edit, and delete fields as well as records, depending on the permissions given to them. [Users added as administrators](../forms/additional_form_administrators.md) will automatically have all of these permissions, but Kora allows you to create different permission groups for different users. Limiting the amount of form permissions granted to other users is useful in cases where you only want users to be able to enter data and create records.
 
 ## Adding Users to Forms
 
