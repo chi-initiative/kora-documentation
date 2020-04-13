@@ -7,7 +7,7 @@ A [form](../forms/creating_a_form.md) allows you to organize fields in order to 
 
 ## Creating multiple pages
 
-In order to create multiple pages in a form you will need to [create a form](../forms/create_form.md). This will initially provide you with a single page labeled *(Your Form Name) Default Page*. <p align="center"> <img src="../forms-img/creating_a_multipage_form_1_annotated.png" width="100%" style="align:center" title="Step 1"> </p>
+In order to create multiple pages in a form you will need to [create a form](../forms/creating_a_form.md). This will initially provide you with a single page labeled *(Your Form Name) Default Page*. <p align="center"> <img src="../forms-img/creating_a_multipage_form_1_annotated.png" width="100%" style="align:center" title="Step 1"> </p>
 
 This default page will initially contain no fields. Soon, however, you may find yourself [creating a large number of fields](../forms/creating_fields.md) in an attempt to capture as much data as possible. In many cases, it may be better for the readability of your form to separate these fields into multiple pages based on their content.
 
@@ -29,4 +29,4 @@ You may create a new [field](../forms/creating_fields.md) within any page, or mo
 
 2. Drag the field with your mouse. <p align="center"> <img src="../forms-img/creating_a_multipage_form_7_annotated.png" width="100%" style="align:center" title="Step 7"> </p>
 
-3. Place the field in the desired page. <p align="center"> <img src="../forms-img/creating_a_multipage_form_8_annotated.png" width="100%" style="align:center" title="Step 8"> </p>
+3. Place the field in the desired page. This will automatically save in Kora. <p align="center"> <img src="../forms-img/creating_a_multipage_form_8_annotated.png" width="100%" style="align:center" title="Step 8"> </p>
