@@ -29,4 +29,4 @@ You may create a new [field](../forms/creating_fields.md) within any page, or mo
 
 2. Drag the field with your mouse. <p align="center"> <img src="../forms-img/creating_a_multipage_form_7_annotated.png" width="100%" style="align:center" title="Step 7"> </p>
 
-3. Place the field in the desired page. <p align="center"> <img src="../forms-img/creating_a_multipage_form_8_annotated.png" width="100%" style="align:center" title="Step 8"> </p>
+3. Place the field in the desired page. This will automatically save in Kora. <p align="center"> <img src="../forms-img/creating_a_multipage_form_8_annotated.png" width="100%" style="align:center" title="Step 8"> </p>
