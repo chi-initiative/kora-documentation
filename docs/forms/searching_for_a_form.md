@@ -7,7 +7,7 @@ As your digital repository grows and expands, you may find yourself forgetting w
 
 ## Searching Across a Kora Installation
 
-At the navigation bar at the top of the page, is a **magnifying glass** icon. No matter what page you are on, this navigation bar and icon should be available. clicking on it will allow you to search for any forms within the Kora Installation that you have access to. Follow these steps to search for a form using this method:
+At the navigation bar at the top of the page, is a **magnifying glass** icon. No matter what page you are on, this navigation bar and icon should be available, clicking on it will allow you to search for any forms within the Kora Installation that you have access to. Follow these steps to search for a form using this method:
 
 1. Click on the magnifying glass icon in the top right corner within the navigation bar. <p align="center"> <img src="../forms-img/searching_for_a_form_1_annotated.png" width="100%" style="align:center" title="Step 1"> </p>
 
@@ -15,7 +15,7 @@ At the navigation bar at the top of the page, is a **magnifying glass** icon. No
 
 3. If you are able to enter the name of your form, the option to *Go to Form* will be made available under the search bar. Simply click on your form name to go to that form. <p align="center"> <img src="../forms-img/searching_for_a_form_3_annotated.png" width="100%" style="align:center" title="Step 3"> </p>
 
-4. Sometimes you will not know the exact name of the form, however. In these cases, if you get close to the spelling of the form, Kora may still be able to provide options for you to jump to. <p align="center"> <img src="../forms-img/searching_for_a_form_4_annotated.png" width="100%" style="align:center" title="Step 4"> </p>
+4. However, sometimes you will not know the exact name of the form. In these cases, if you get close to the spelling of the form, Kora may still be able to provide options for you to jump to. <p align="center"> <img src="../forms-img/searching_for_a_form_4_annotated.png" width="100%" style="align:center" title="Step 4"> </p>
 
 5. If Kora still is not able to find your form in the initial typing into the search bar, then you will have to click the right-facing **arrow** in the search bar to perform a proper search. <p align="center"> <img src="../forms-img/searching_for_a_form_5_annotated.png" width="100%" style="align:center" title="Step 5"> </p>
 
