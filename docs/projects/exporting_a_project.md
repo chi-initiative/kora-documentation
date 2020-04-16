@@ -1,15 +1,19 @@
 #Exporting a Project
 
-Exporting a project allows you to save the project as a .kProj file onto your computer. Another benefit of exporting a project is that it allows you to import that project into Kora as a new project, so you can use the forms and fields already created.
+Kora admins and project admins can export Kora projects.  The export process generates a .kProj file which contains project structure and information (title, description) and forms (including all of the form structure).  The export process **does not** export the records themselves.  
+To learn how to export records, visit the [Exporting a Record](../records/exporting_a_record.md) guide.
 
-Follow the steps below to export a project.
+There is a couple of reasons why you might want to export your project.  The most notable is that it allows project portability.  You can export your porject and then import it into another Kora installation, thereby avoiding the need to build the structure of a project from scratch.  If you're interested in learning how to import a kora project, check out the [Importing a Project](../project/importing_a_project.md) guide.
 
-1. From the project you would like to export, click the name of the project in the top menu bar. This will open a dropdown menu.
+To export a project:
 
+1. Navigate to the project you'd like to export. 
+
+2. Click the name of the project in the top menu bar to open the project's dropdown menu.
 <img style="display:block;margin:auto;max-width:100%" src="../projects-img/exporting_a_project_1_annotated.png" title="Menu Bar from Project">
 
-2. In the dropdown, select the last option, **Export Project**. This will automatically start the download of the project onto your computer as a .kProj filetype.
+3. In the dropdown menu, select **Export Project**. This will automatically start downloading your project's .kProj export file.
 
 <img style="display:block;margin:auto;max-width:80%" src="../projects-img/exporting_a_project_2_annotated.png" title="Select Export Project">
 
-Visit the [Importing a Project Guide](../projects/importing_a_project.md) for step-by-step instruction on how to import your project into Kora.
+Visit the [Importing a Project](../projects/importing_a_project.md) guide for step-by-step instruction on how to import your project into Kora.
