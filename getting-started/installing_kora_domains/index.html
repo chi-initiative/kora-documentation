@@ -423,7 +423,7 @@
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_13_annotated.png" title="cPanel's File Manager"></p>
 </li>
 <li>
-<p>Take a note of which directory is your main URL directory (the one that provides all the files available via your main URL). In this screenshot you can see the globe icon being used for the URL directory "public_html," which is the common icon in this version of cPanel and used in MSU's Domain of One's Own.</p>
+<p>Take a note of which directory is your main URL directory (the one that provides all the files available via your main URL). In this screenshot you can see the globe icon being used for the URL directory "public_html," which is the common icon in this version of cPanel and used in MSU's Domain of One's Own. You may use this directory later, to confirm something in Step 3 of "Subdirectory URL Setup Via cPanel Terminal," if following that path for creating your Kora installation URL (this will make sense later).</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_14.1_annotated.png" title="URL Directory"></p>
 <p>You will also notice the same globe icon, but with a black chain-link icon over it, used for "www".</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_14.2_annotated.png" title="'Linked' Directory"></p>
@@ -436,7 +436,7 @@
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_15_annotated.png" title="Enable Viewing Hidden Files"></p>
 </li>
 <li>
-<p>Next, you'll upload the kora installation .zip file you downloaded earlier from <a href="https://github.com/matrix-msu/kora/releases">Kora's GitHub repo releases</a> page. Kora is intended to be installed <em>outside</em> of the main URL directory you noted in Step 2 of this section; the easiest is to install it into the same directory alongside your main URL directory. If you have never changed the default directory that loads when opening File Manager, you are more than likely already viewing the correct location.</p>
+<p>Next, you'll upload the kora installation .zip file you downloaded earlier from <a href="https://github.com/matrix-msu/kora/releases">Kora's GitHub repo releases</a> page. Kora is intended to be installed <em>outside</em> of the main URL directory you noted in Step 2 of this section; the easiest is to install it into the same directory alongside your main URL directory. If you have never changed the default directory that loads when opening File Manager, you should be viewing the correct location, which in this example case is named after the user ("geyerbri").</p>
 <p>While at this location, click on "Upload" in the menu at the top.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_16.1_annotated.png" title="Upload Files"></p>
 <p>In the page that opens, just drag-and-drop the .zip file to upload it. You may also click on "Select File" to find it via your computer's file management windows. When the .zip file finishes uploading, click on the link leading back to File Manager.</p>
@@ -501,6 +501,7 @@ DB_PASSWORD={saved database user password}
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_29_annotated.png" title="First Set of Terminal Commands"></p>
 <p>After running, if it is successful, the window will look like this, with the successful installation message (in green):</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_30_annotated.png" title="Successful Installation Message"></p>
+<p><em><strong>NOTE</strong>: If the installation fails and provides a message that says (in part) "Failed to connect to database! Check your database credentials or review the logs for more error information," this may be due to some common problems and there are a few things to check before trying to run the installation command again. First, return to the MySQL section of cPanel to confirm you have written down the full database name and username correctly. Second, re-open the .env file where you earlier put that database information, to double-check that these names are correct. If they are, there may be an issue with the generated password for your MySQL user. You can go generate a new password, save it again, and enter it into the .env file, before once again trying to run the installation command. If the installation again fails, the issue may be something else. You can check for any similar issues and potential solutions in <a href="https://github.com/matrix-msu/kora/issues">Kora's GitHub Issues</a>, or open your own Issue with a detailed description of the problem.</em></p>
 </li>
 <li>
 <p><strong>INCREDIBLY IMPORTANT</strong>: You <em>must</em> copy the last line generated here in the successful installation message (outlined above), which has your password for the generated username of "admin". To copy things in cPanel's Terminal, first use your mouse to select the line, then right-click and select "Copy." Paste this somewhere safe, where you will not lose it! <strong><em>It cannot be stressed enough how important this step is, because losing this password means losing access to your installation.</em></strong></p>
@@ -531,18 +532,27 @@ DB_PASSWORD={saved database user password}
 <p>For some (such as those installing on MSU's Domain of One's Own at the time this documentation was written), the previous commands will have been enough to complete the required permissions setup for their installation. However for others, it will be necessary to specifically change the permissions on the three directory trees noted in the successful installation message. These settings are different because each server environment may have been set up differently by the systems administrator. The install message's reference to "web user" is in a way referring to this difference: in some cases, things will be set up such that new files that Kora creates will be attempted to be created with the "Owner" attribute/level. In others, the new files will be attempted with the "Group" or (in rare cases) "Other/World" attribute/level.</p>
 <p>The specific way your installation works can be tested by quickly creating a record that has a file attached to it, and then uploading that file. If the file upload works, then your current installation does not need any further permissions adjustments. If it does not work, you will need to re-enter cPanel and re-enter Terminal, which should default to the correct location (the directory directly above "kora"). You will need to wait until your Kora installation is completed and properly configured before you can properly conduct this test, but its instructions are repeated below in the section "<a href="#test-file-permissions">Test File Permissions</a>"</p>
 <p>If the permissions need to be changed, then run the following three commands, using the exact locations described in the successful installation message (reproduced here in case you are coming back to Terminal after learning that your installation requires these settings to work). These will set the "WRITE" (and execute) permissions correctly. Hit "Enter" after each command (i.e. run each on its own).</p>
-<p><code>chmod -R 775 kora/bootstrap/cache/</code><br><code>chmod -R 775 kora/storage/</code><br><code>chmod -R 775 kora/public/assets/javascripts/production/</code></p>
+<pre><code>chmod -R 775 kora/bootstrap/cache/
+</code></pre>
+<p><span></span></p>
+<pre><code>chmod -R 775 kora/storage/
+</code></pre>
+<p><span></span></p>
+<pre><code>chmod -R 775 kora/public/assets/javascripts/production/
+</code></pre>
 <p>Just as before, when successful, each of these will just re-display the command prompt without a message. After you've run all three, your terminal will look something like this:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_33_annotated.png" title="Setting Write/Execute for 'Group' and 'Others'"></p>
 <h2 id="create-kora-installation-urls">Create Kora Installation URLs</h2>
-<p>Next, it is important to have your Kora installation accessible via a web browser and URL. There are two options for doing this: a subdomain or a subdirectory. A subdirectory URL looks like: https://example.org/subdirectory, whereas a subdomain looks like: https://subdomain.example.org. Find the directions for each below.</p>
+<p>Next, it is important to have your Kora installation accessible via a web browser and URL. There are two options for doing this: a subdomain or a subdirectory. A subdirectory URL looks like: https://example.org/subdirectory, whereas a subdomain looks like: https://subdomain.example.org. You only need to choose one of these two options for you to do.</p>
+<p>Find the directions for each below.</p>
 <h3 id="subdirectory-url-setup-via-cpanel-terminal">Subdirectory URL Setup Via cPanel Terminal</h3>
 <ol>
 <li>
-<p>To set up a subdirectory URL for your Kora installation, you will just have to do a couple more things in Terminal. First you will change your location to be inside of the directory that your main URL is accessible from: in this example case in MSU's Domain of One's Own environment, this is a directory called <code>public_html</code>. But another common case is <code>www</code>. Use:</p>
+<p>To set up a subdirectory URL for your Kora installation, you will just have to do a couple more things in Terminal. First you will change your location to be inside of the directory that your main URL is accessible from: in this example case in MSU's Domain of One's Own environment, this is a directory called <code>public_html</code>. But another common name for it is <code>www</code>. Use the following, with whatever name pertains to your version:</p>
 <pre><code>cd public_html
 </code></pre>
 <p>Note: if you receive an error that "public_html" does not exist, more than likely this is because you skipped over a few previous steps that did not pertain to you and so you are currently still inside of the "kora" directory. If this is the case, use <code>cd ..</code> to move upward, and then again try <code>cd public_html</code>.</p>
+<p>(There is no screenshot for this specifically, but you will know you have successfully changed your directory to <code>public_html</code> - or the one relevant to your case - when you see it to the left of the dollar sign character, inside the brackets.)</p>
 </li>
 <li>
 <p>Setting up the subdirectory for your URL requires using the command <code>ln</code> with the <code>-s</code> flag. <code>ln</code> stands for "link" and the <code>-s</code> flag tells the system that the link being created is "symbolic". The next part of the command is the location of the Kora installation public directory, relative to your current location. And then the final part is the location of the desired subdirectory that will appear at the end of your site's URL. So in the case of a <code>public_html</code> example, the public directory of the installation files is located one directory up, and then inside of <code>kora</code>. So the command is:</p>
@@ -550,10 +560,10 @@ DB_PASSWORD={saved database user password}
 </code></pre>
 <p>After both of these steps, your terminal window will look something like this:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_34_annotated.png" title="Set up Subdirectory Symbolic Link"></p>
-<p>This was the last bit of Terminal required for setup, so you may now close Terminal and return to cPanel Main.</p>
+<p>This was the last bit of Terminal required for setup, so you may now close Terminal and return to cPanel Main. It isn't necessary, but if you wish, you can run the command <code>exit</code> to terminate your Terminal connection before navigating back to cPanel Main.</p>
 </li>
 <li>
-<p>To confirm that the symbolic link process worked, you may go back into File Manager and navigate into your publicly-accessible directory. There, you should find the directory "kora" with the black chain-link icon over the folder icon.</p>
+<p>To confirm that the symbolic link process worked, you may go back into File Manager and navigate into your publicly-accessible directory, which you were to take note of in Step 2 of "<a href="https://chi-initiative.github.io/kora-documentation/getting-started/installing_kora_domains/#upload-and-prepare-kora-application-files-via-cpanel-file-manager">Upload and Prepare Kora Application Files via cPanel File Manager</a>."" There, you should find the directory "kora" with the black chain-link icon over the folder icon.</p>
 </li>
 </ol>
 <h3 id="subdomain-urls">Subdomain URLs</h3>
