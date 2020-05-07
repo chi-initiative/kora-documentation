@@ -6,10 +6,10 @@ Follow the steps below to export a form:
 
 1. [Navigate to the form](../form/navigating_to_a_form.md) you would like to export. Click the **Form Name** in the menu bar to open a dropdown menu.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../forms-img/export_a_form_1_annotated.png" width="100%" title="Click Your Form's Name in the Menu Bar">
+    <img style="display:block;margin:auto;max-width:100%" src="../forms-img/export_a_form_1_annotated.png" width="100%" title="Click Your Form's Name in the Menu Bar">
 
 2. At the bottom of this dropdown menu, click the **Export Form** option.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../forms-img/export_a_form_2_annotated.png" width="100%" title="Click Export Form">
+    <img style="display:block;margin:auto;max-width:100%" src="../forms-img/export_a_form_2_annotated.png" width="100%" title="Click Export Form">
 
 This will automatically download the form onto your computer as a .kForm file type.

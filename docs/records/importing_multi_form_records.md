@@ -2,7 +2,7 @@
 title: Importing Multi Form Records
 ---
 # Importing Multi Form Records
-If you want to import your forms into more than one form, then you will have to format your records in a particular way. This is a slightly different process than [importing records into a single form](../records/importing_a_record.md). You will have to format your records correctly into a csv, json or xml file. Examples of the correct file formats are provided in the *File Formatting* section below.
+If you have multiple records that you want to import into multiple forms, Kora provides a way to import all of those records at once. Rather than performing multiple imports to submit records into a form, you may perform one multiform record import. This will require formatting your records in a particular way. This is a slightly different process than [importing records into a single form](../records/importing_a_record.md). You will have to format your records correctly into a csv, json or xml file. Examples of the correct file formats are provided in the *File Formatting* section below.
 
 ## Navigating to the Import Page
 Navigating to *Import Multi Form Records* page can take place from either the [dashboard](../projects/accessing_and_managing_projects_from_the_dashboard.md) or from a project's homepage.
@@ -40,3 +40,26 @@ Once you have your records formatted correctly (follow the steps in the above se
 3. If you have zipped files that correlate to the records you are already importing, you may add them below. These records should have the same format as the records that you are already importing. <p align="center"> <img src="../records-img/importing_multi_form_records_9_annotated.png" width="100%" style="align:center" title="Step 9"> </p>
 
 4. Once you have all of your files uploaded, press the **Upload Record Import Files** <p align="center"> <img src="../records-img/importing_multi_form_records_10_annotated.png" width="100%" style="align:center" title="Step 10"> </p>
+
+
+5. A loading page will open informing you that your import has begun. Depending on the number of records you are importing, it may take several minutes to complete. Do not close the page or browser until completion. When the import is complete, you will be automatically brought to the *Import Records Complete* page.
+
+		<img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_7_annotated.png" title="Loading Page">
+
+6. On this page you can view how many records were successfully imported and have the option to view the imported records by clicking on the *View Imported Records* button.
+
+		<img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_a_record_8_annotated.png" title="Field Matching">
+
+##Failed Record Import
+
+There are several reasons a record import will fail. If a required field was not assoicated with an uploaded field (matched), you will be informed how many records out of the total were successfuly imported on the *Import Records Complete* page (example: 0 of 1 Records Successfully Imported).
+
+Your record(s) will not import if you associate different field types.
+
+###Failed Records Report
+
+		<img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_9_annotated.png" title="Failed Records Report">
+
+You can download the failed records and their report to identify the problem with the import. The **Failed Records Report** will state which fields are required. If you did not match your field types correctly, the *Failed Records Report* may give you an error: {"18":"Unable to determine error. This is usually caused by a structure issue in your CSV\/XML\/JSON, or an unexpected bug in kora."}. If this occurs, we recommend trying to import your record(s) again after checking how the fields should be matched.
+
+You can then try importing the record(s) again or view the successfully imported records using the buttons on the page.
