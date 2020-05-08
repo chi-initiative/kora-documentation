@@ -351,50 +351,60 @@
 <p>A <a href="../creating_a_record/">record</a> is the metadata element that your data is entered into. You can import a record(s) into a single form via a CSV, JSON, or XML file. If you wish to import records into multiple <a href="../../forms/creating_a_form/">forms</a>, take a look at the documentation on <a href="../importing_multi_form_records/">importing records into multiple forms</a>.</p>
 <p>Follow the steps below to import a record(s) into a single form:</p>
 <ol>
-<li>First, open your current project (You can find the list of your projects by clicking on the <em>Projects</em> button on the top menu). Choose the form you would like to import a record(s) into by clicking on the <em>form name</em>. This will open the form page.</li>
-</ol>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_1_annotated.png" title="Select the Project Form"></p>
-<ol>
-<li>Click on the form name in the menu bar at the top of the page, this will open a dropdown menu. Choose the <strong>Import Records</strong> option in the dropdown menu. This will open the <em>Import Records</em> page.</li>
-</ol>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_2_annotated.png" title="Select Import Records"></p>
-<ol>
-<li>On the <em>Import Records</em> page, under the <em>Upload Record Files</em> tab, you can either drag and drop or browse your computer for the XML/JSON/CSV file you would like to import in first (top) box. If you have files in a zipped format that correlate to the XML/JSON/CSV file  first (top) box, you can either drag and drop or select the zipped files in the second (bottom) box.</li>
-</ol>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_3_annotated.png" title="Select Import Records"></p>
-<ol>
-<li>After you finish selecting your record file, click the <strong>Upload Record Import File</strong> button at the bottom of the page.</li>
-</ol>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_4_annotated.png" title="Upload Record Import"></p>
-<ol>
+<li>
+<p>First, open your current project (You can find the list of your projects by clicking on the <em>Projects</em> button on the top menu). Choose the form you would like to import a record(s) into by clicking on the <em>form name</em>. This will open the form page.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_1_annotated.png" title="Select the Project Form"&gt;
+</code></pre>
+</li>
+<li>
+<p>Click on the form name in the menu bar at the top of the page, this will open a dropdown menu. Choose the <strong>Import Records</strong> option in the dropdown menu. This will open the <em>Import Records</em> page.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_2_annotated.png" title="Select Import Records"&gt;
+</code></pre>
+</li>
+<li>
+<p>On the <em>Import Records</em> page, under the <em>Upload Record Files</em> tab, you can either drag and drop or browse your computer for the XML/JSON/CSV file you would like to import in first (top) box. If you have files in a zipped format that correlate to the XML/JSON/CSV file  first (top) box, you can either drag and drop or select the zipped files in the second (bottom) box.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_3_annotated.png" title="Select Import Records"&gt;
+</code></pre>
+</li>
+<li>
+<p>After you finish selecting your record file, click the <strong>Upload Record Import File</strong> button at the bottom of the page.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_4_annotated.png" title="Upload Record Import"&gt;
+</code></pre>
+</li>
 <li>
 <p>This will bring you to the <em>Field Matching</em> tab on the <em>Import Records</em> page. This page allows you to associate the field names between the records you are uploading to the form you are importing the records to. Select fields if applicable on the right column of the page. You will want to associate or match fields based on type. If you need information about field types, visit the <a href="/forms/understanding_field_types.md">Understanding Field Types</a> guide.</p>
-<p><strong>Note</strong>: If a field is <em>required</em> in the form you are importing records into, you must associate an incoming field to one that is being imported.</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_5_annotated.png" title="Field Matching"></p>
+<pre><code>* **Note**: If a field is *required* in the form you are importing records into, you must associate an incoming field to one that is being imported.
+
+&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_5_annotated.png" title="Field Matching"&gt;
+</code></pre>
 </li>
 <li>
 <p>Click the <strong>Upload Records</strong> button at the bottom of the screen.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_6_annotated.png" title="Upload Records"&gt;
+</code></pre>
+</li>
+<li>
+<p>A loading page will open informing you that your import has begun. Depending on the number of records you are importing, it may take several minutes to complete. Do not close the page or browser until completion. When the import is complete, you will be automatically brought to the <em>Import Records Complete</em> page.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_7_annotated.png" title="Loading Page"&gt;
+</code></pre>
+</li>
+<li>
+<p>On this page you can view how many records were successfully imported and have the option to view the imported records by clicking on the <em>View Imported Records</em> button.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_a_record_8_annotated.png" title="Field Matching"&gt;
+</code></pre>
 </li>
 </ol>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_6_annotated.png" title="Upload Records"></p>
-<ol>
-<li>A loading page will open informing you that your import has begun. Depending on the number of records you are importing, it may take several minutes to complete. Do not close the page or browser until completion. When the import is complete, you will be automatically brought to the <em>Import Records Complete</em> page.</li>
-</ol>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_7_annotated.png" title="Loading Page"></p>
-<ol>
-<li>On this page you can view how many records were successfully imported and have the option to view the imported records by clicking on the <em>View Imported Records</em> button.</li>
-</ol>
-<p><img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_a_record_8_annotated.png" title="Field Matching"></p>
 <h2 id="failed-record-import">Failed Record Import</h2>
 <p>There are several reasons a record import will fail. If a required field was not assoicated with an uploaded field (matched), you will be informed how many records out of the total were successfuly imported on the <em>Import Records Complete</em> page (example: 0 of 1 Records Successfully Imported).</p>
 <p>Your record(s) will not import if you associate different field types.</p>
 <h3 id="failed-records-report">Failed Records Report</h3>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_9_annotated.png" title="Failed Records Report"></p>
+<pre><code>    &lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_9_annotated.png" title="Failed Records Report"&gt;
+</code></pre>
 <p>You can download the failed records and their report to identify the problem with the import. The <strong>Failed Records Report</strong> will state which fields are required. If you did not match your field types correctly, the <em>Failed Records Report</em> may give you an error: {"18":"Unable to determine error. This is usually caused by a structure issue in your CSV\/XML\/JSON, or an unexpected bug in kora."}. If this occurs, we recommend trying to import your record(s) again after checking how the fields should be matched.</p>
 <p>You can then try importing the record(s) again or view the successfully imported records using the buttons on the page.</p>
 <h2 id="file-type-definitions">File Type Definitions:</h2>
 <p><strong>CSV</strong> is a simple file format that is used to store tabular data, such as a database or spreadsheet. CSV stands for "comma-separated values." Files in CSV format can be imported and exported from programs that store data in tables such as Microsoft Excel, Apple Numbers, or Google Sheets.</p>
-<p><strong>JSON</strong> is a file type that stores data in JavaScript Object Notation format, a standard data interchange format. It is commonly used to transmit data between a web application and a server. It serves as an alternative to XML, as it easy for humans to read and write, as well as machine-readable. </p>
+<p><strong>JSON</strong> is a file type that stores data in JavaScript Object Notation format, a standard data interchange format. It is commonly used to transmit data between a web application and a server. It serves as an alternative to XML, as it easy for humans to read and write, as well as machine-readable.</p>
 <p><strong>XML</strong> is a file extension for an Extensible Markup Language (XML) file format. It stores data in a structure that is readable by machines and humans, as it stores data in plain text format. XML is similar to HTML.</p>
               
             </div>
