@@ -145,6 +145,8 @@ A *historical date* field type provides everything that the date field type prov
 
 File Fields allow you to create fields were users can upload files to a record. This includes documents, images, audio, video and 3D models. The image below shows what a typical file field looks like. There will be a title, a space to upload your file, and a description below. The File Field Types are: *Documents*, *Gallery*, *Playlist*, *Video* and *3D-Model*. <p align="center"> <img src="../forms-img/understanding_field_types_26_annotated.png" width="100%" style="align:center" title="Step 26"> </p>
 
+*Note: When you are uploading any files, there are some restrictions on filenames. They are limited to <code>a-z</code>,* <code>A-Z</code>, *and* <code>0-9</code>. *No spaces are permitted in filenames.*
+
 ### Documents
 
 The *documents* file field creates a space for document files to be uploaded. Since there are multiple types of files that documents can come in, you must select the document file types that you want to upload. You can customize the types of files you want uploaded and how you want them uploaded with the advanced options available: **Max File Size (kb)**; **Max File Amount**; and **Allowed File Types (MIME):**.

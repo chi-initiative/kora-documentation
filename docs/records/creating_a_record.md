@@ -30,6 +30,9 @@ To begin creating a record, you must first choose the [project](../projects/crea
 
     <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_6_annotated.png" title="Click Create New Record">
 
+*Note: If you are uploading any files, there are some restrictions on filenames. They are limited to <code>a-z</code>,* <code>A-Z</code>, *and* <code>0-9</code>. *No spaces are permitted in filenames.*
+
+
 ##Additional Information
 This section describes additional information that may be useful when creating a record. This includes how to use a record preset, how to duplicate records and how to create a record preset.
 
