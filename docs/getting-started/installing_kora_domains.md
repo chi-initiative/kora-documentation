@@ -102,7 +102,11 @@ To return from nearly any part of cPanel to the Main interface (shown in the scr
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_16.1_annotated.png" title="Upload Files">
 
-    In the page that opens, just drag-and-drop the .zip file to upload it. You may also click on "Select File" to find it via your computer's file management windows. When the .zip file finishes uploading, click on the link leading back to File Manager.
+    In the page that opens, just drag-and-drop the .zip file to upload it. You may also click on "Select File" to find it via your computer's file management windows.
+
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_50_annotated.png" title="Upload a File">
+
+    When the .zip file finishes uploading, click on the link leading back to File Manager.
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_17_annotated.png" title="Back to File Manager">
 
@@ -126,7 +130,7 @@ To return from nearly any part of cPanel to the Main interface (shown in the scr
 
 7. Next, it's time to initially set up the .env file that manages some of the configuration settings for your Kora install. Many of the settings in this file will be adjustable once the installation is complete, but a few are not and require configuration now.
 
-    Enter your renamed "kora" directory, right-click on the ".env.example" file, and select "Copy."
+    Enter/access your renamed "kora" directory by double clicking on it, then right-click on the ".env.example" file and select "Copy."
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_22_annotated.png" title="Selecting Copy in the Context Menu">
     In the Copy modal that opens, add "/.env" without quotations to whatever is already in the text box and click "Copy File(s)."
@@ -147,13 +151,13 @@ To return from nearly any part of cPanel to the Main interface (shown in the scr
         DB_USERNAME=geyerbri_kora
         DB_PASSWORD={saved database user password}
 
-    Notice, this is where you will paste in the database password you saved in Step 5 of [Set Up MySQL Database](.#set-up-mysql-database) above. Remove the curl brackets from the example code and make sure there are no spaces before or after the password.
+    Notice, this is where you will paste in the database password you saved in Step 5 of "[Set Up MySQL Database](#set-up-mysql-database)" above. Remove the curl brackets from the example code and make sure there are no spaces before or after the password.
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_26_annotated.png" title="Editing .env File">
 
     After finishing this, click "Save Changes". Once that's done you can either close the tab or click "Close" (which does the same thing) and go back to the File Manager tab.
 
-9. Finally, there is one more example file to copy as a configuration file. Enter the directory "public" and also copy the file ".htaccess.example". Add "/.htaccess" after the defaulted location, the same way you did for ".env" in the previous step. The default settings in this file will work for basic installations of Kora, but should you want to adjust settings such as more complex URLs than what this guide presents (see "[Create Kora Installation URLs](#create-kora-installation-urls)"" below), or to change the advanced settings such as acceptable file sizes, memory limits, timeout lengths, etc., they are controlled in this file.
+9. Finally, there is one more example file to copy as a configuration file. Enter the directory "public" and also copy the file ".htaccess.example". Add "/.htaccess" after the defaulted location, the same way you did for ".env" in the previous step. The default settings in this file will work for basic installations of Kora, but should you want to adjust settings such as more complex URLs than what this guide presents (see "[Create Kora Installation URLs](#create-kora-installation-urls)" below), or to change the advanced settings such as acceptable file sizes, memory limits, timeout lengths, etc., they are controlled in this file.
 
     Once copied, you're finished with the initial file setup. Navigate back to cPanel Main.
 
@@ -165,7 +169,7 @@ To return from nearly any part of cPanel to the Main interface (shown in the scr
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_27_annotated.png" title="cPanel's Terminal">
 
-    Read and (hopefully) accept the terms to reach the in-cPanel terminal interface. It will look like this:
+    Read and (hopefully) accept the terms to reach the in-cPanel Terminal interface. It will look like this:
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_28_annotated.png" title="Terminal Window">
 
@@ -209,33 +213,52 @@ To return from nearly any part of cPanel to the Main interface (shown in the scr
 
         chmod -R 755 .
 
-    And just as before, when successful, it will just re-display the command prompt without a message. If you intend to set the "Write" privileges because you are sure your specific server environment's defaults will prevent Kora from working properly, then you can prepare for the commands in the next section by changing your location to be one directory above "Kora". As before, use `cd`, but this time use `..`, which just means 'move up one directory':
+    And just as before, when successful, it will just re-display the command prompt without a message.
+
+6. Next it is important to check if your write permissions are set properly. Run the `ls` command with the `-l` flag. `ls` is the list command; the `-l` flag is for listing contents in long-form. The full command is:
+
+        ls -l
+
+    The resulting list will look like this:
+
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_51_annotated.png" title="Long-form Directory List">
+
+    In the long-form list, Terminal will display two account names: first the username of "Owner," then (the one highlighted in the image above) the username of "Group." In the example here, both are set to the same username, which means the "Owner" permissions level is applied to "Group" as well. In this such case - where the "Owner" and "Group" have the same username - no further permissions changes need to be made to ensure Kora is working properly and you may skip down to "[Create Kora Installation URLs](#create-kora-installation-urls)."  
+
+    However, if these two are different, then you will need to additionally adjust the "Write" privileges for "Group," so please continue to the next section.  
+
+    If you intend to set the "Write" privileges because you are sure your specific server environment's defaults will prevent Kora from working properly, then you can prepare for the commands in the next section
+
+## Set "Write" and "Execute" Privileges On Certain Directories if Needed via cPanel Terminal
+
+As stated in the previous section, the previous commands will have been enough for some users to complete the required permissions setup for their installation. However for others, it will be necessary to specifically change the permissions on the three directory trees noted in the successful installation message.
+
+If you are unsure of whether or not your file permissions need to be additionally configured, you can quickly test this by completing the rest of the Kora setup process, then creating a record in your Kora installation that has a file attached to it and uploading that file. If the file upload process works, then your current installation does not need any further permissions adjustments. If it does not work, you will need to re-enter cPanel and re-enter Terminal, which should default to the correct location (the root directory) for this section's instructions.
+
+You will need to wait until your Kora installation is completed and properly configured before you can conduct this test, so its instructions are provided in more detail below, in the section "[Test File Permissions](#test-file-permissions)."
+
+1. Begin by ensuring your current Terminal location is the root directory, represented by a "~" in the Terminal prompt to the left of the cursor. If your prompt does not have a "~" - it may instead still display "kora" - change your location upward to relocate to the root. As before, use `cd`, but this time use `..`, which just means 'move up one directory':
 
         cd ..
 
-    Now your terminal will look like this:
+    If needed, continue to use this command until your Terminal prompt looks like this:
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_32_annotated.png" title="Moving Up One Directory">
 
-## Set Write and Execute Privileges On Certain Directories if Needed via cPanel Terminal
 
-For some (such as those installing on MSU's Domain of One's Own at the time this documentation was written), the previous commands will have been enough to complete the required permissions setup for their installation. However for others, it will be necessary to specifically change the permissions on the three directory trees noted in the successful installation message. These settings are different because each server environment may have been set up differently by the systems administrator. The install message's reference to "web user" is in a way referring to this difference: in some cases, things will be set up such that new files that Kora creates will be attempted to be created with the "Owner" attribute/level. In others, the new files will be attempted with the "Group" or (in rare cases) "Other/World" attribute/level.
+2. Run the following three commands, using the exact locations described in the successful installation message (reproduced here in case you are coming back to Terminal after learning that your installation requires these settings to work). These will set the "Write" (and "Execute") permissions for "Group" correctly. Hit "Enter" after each command (i.e. run each on its own).
 
-The specific way your installation works can be tested by quickly creating a record that has a file attached to it, and then uploading that file. If the file upload works, then your current installation does not need any further permissions adjustments. If it does not work, you will need to re-enter cPanel and re-enter Terminal, which should default to the correct location (the directory directly above "kora"). You will need to wait until your Kora installation is completed and properly configured before you can properly conduct this test, but its instructions are repeated below in the section "[Test File Permissions](#test-file-permissions)"
+        chmod -R 775 kora/bootstrap/cache/
+    <span></span>
 
-If the permissions need to be changed, then run the following three commands, using the exact locations described in the successful installation message (reproduced here in case you are coming back to Terminal after learning that your installation requires these settings to work). These will set the "WRITE" (and execute) permissions correctly. Hit "Enter" after each command (i.e. run each on its own).
+        chmod -R 775 kora/storage/
+    <span></span>
 
-    chmod -R 775 kora/bootstrap/cache/
-<span></span>
+        chmod -R 775 kora/public/assets/javascripts/production/
 
-    chmod -R 775 kora/storage/
-<span></span>
+    Just as before, when successful, each of these will just re-display the command prompt without a message. After you've run all three, your Terminal will look something like this:
 
-    chmod -R 775 kora/public/assets/javascripts/production/
-
-Just as before, when successful, each of these will just re-display the command prompt without a message. After you've run all three, your terminal will look something like this:
-
-<img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_33_annotated.png" title="Setting Write/Execute for 'Group' and 'Others'">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_33_annotated.png" title="Setting Write/Execute for 'Group' and 'Others'">
 
 ## Create Kora Installation URLs
 
@@ -257,13 +280,13 @@ Find the directions for each below.
 
         ln -s ../kora/public kora
 
-    After both of these steps, your terminal window will look something like this:
+    After both of these steps, your Terminal window will look something like this:
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_34_annotated.png" title="Set up Subdirectory Symbolic Link">
 
     This was the last bit of Terminal required for setup, so you may now close Terminal and return to cPanel Main. It isn't necessary, but if you wish, you can run the command `exit` to terminate your Terminal connection before navigating back to cPanel Main.
 
-3. To confirm that the symbolic link process worked, you may go back into File Manager and navigate into your publicly-accessible directory, which you were to take note of in Step 2 of "[Upload and Prepare Kora Application Files via cPanel File Manager](https://chi-initiative.github.io/kora-documentation/getting-started/installing_kora_domains/#upload-and-prepare-kora-application-files-via-cpanel-file-manager)."" There, you should find the directory "kora" with the black chain-link icon over the folder icon.
+3. To confirm that the symbolic link process worked, you may go back into File Manager and navigate into your publicly-accessible directory, which you were to take note of in Step 2 of "[Upload and Prepare Kora Application Files via cPanel File Manager](#upload-and-prepare-kora-application-files-via-cpanel-file-manager)." There, you should find the directory "kora" with the black chain-link icon over the folder icon.
 
 ### Subdomain URLs
 
@@ -288,6 +311,8 @@ Once you have implemented one of the two methods above, your Kora installation i
 2. For your main domain entry and subdomain entry on the list, click the toggle to turn it on (or ensure it is already toggled on for each).
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_37_annotated.png" title="Force HTTPS Toggled On for Domain and Subdomain (if applicable)">
+
+    Toggling this setting may not immediately work, with an error displaying that might say, "You cannot activate HTTPS Redirect because AutoSSL is not currently active for this domain or the SSL certificate is not valid." If this happens, wait a moment or two and refresh the page, then try toggling the setting on again.
 
 Once completed, return to cPanel Main.
 
@@ -389,7 +414,7 @@ The final portion of configuration is for the admin account's profile settings. 
 
 ## Test File permissions
 
-As noted above in the section above outlining how to set the Write and Execute privileges for the specified directories, in some cases Kora will not work with the defaulted permissions generated during installation.
+As noted above in the section above outlining how to set the "Write" and "Execute" privileges for the specified directories, in some cases Kora will not work with the defaulted permissions generated during installation.
 
 To check whether or not your installation works properly:
 
@@ -401,4 +426,4 @@ To check whether or not your installation works properly:
 
 4. And finally, [create a Record](../../records/creating_a_record/) where you upload an example file.
 
-If the creation of that Record with an uploaded file succeeds, such that the uploaded file is viewable or downloadable when clicked upon, then your permissions are correct. If this fails, please go to [Set Write and Execute Privileges On Certain Directories if Needed via cPanel Terminal](#set-write-and-execute-privileges-on-certain-directories-if-needed-via-cpanel-terminal) above. Follow the instructions there for using cPanel Terminal to adjust your Kora installation's permissions on the correct directories.
+If the creation of that Record with an uploaded file succeeds, such that the uploaded file is viewable or downloadable when clicked upon, then your permissions are correct. If this fails, please go to "[Set 'Write' and 'Execute' Privileges On Certain Directories if Needed via cPanel Terminal](#set-write-and-execute-privileges-on-certain-directories-if-needed-via-cpanel-terminal)" above. Follow the instructions there for using cPanel Terminal to adjust your Kora installation's permissions on the correct directories.
