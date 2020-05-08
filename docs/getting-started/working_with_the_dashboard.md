@@ -8,21 +8,21 @@ You are able to enable or disable your dashboard from your [user preferences](..
 
 1. When you are logged into Kora, you can access your user preferences from anywhere. Click on the person icon in the top menu located in the top right corner of the page.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_1_annotated.png" width="100%" title="Person Icon">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_1_annotated.png" width="100%" title="Person Icon">
 
 2. This will open a dropdown menu. Choose the **My Preferences** option.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_2_annotated.png" width="100%" title="My Preferences">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_2_annotated.png" width="100%" title="My Preferences">
 
 3. On the **My Preferences** page, you are able to modify your kora preferences. There are four different preferences you can modify. This is where you can chose to enable or disable your dashboard.  
 
 4. The dashboard option allows you to choose whether you would like to use the dashboard or to turn off the dashboard entirely. Click the circle next to the option you would like to select. This will change the color of the circle and text and add a white checkmark within the circle.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_3_annotated.png" width="100%" title="Use Dashboard?">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_3_annotated.png" width="100%" title="Use Dashboard?">
 
 5. When you have finished making changes to your kora user preferences, click the **Update Preferences* blue button at the bottom of the page to save the changes.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_4_annotated.png" width="100%" title="Update Preferences">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_4_annotated.png" width="100%" title="Update Preferences">
 
 ## Dashboard Sections
 
@@ -32,31 +32,31 @@ You can organize your dashboard into sections. This can allow you to put blocks 
 
 1. Select edit your dashboard.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
 
 2. Scroll to the bottom of your dashboard until you find **Type Here and Hit Enter to Add a New Section**. Type in your section title and then hit enter on your keyboard to add the section to your dashboard. You can add as many sections as you would like during this step.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_35_annotated.png" width="100%" title="Add New Section">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_35_annotated.png" width="100%" title="Add New Section">
 
 3. Click **Finish Editing Dashboard** to exit the editing of your dashboard either at the top or bottom of the page.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_33_annotated.png" width="100%" title="Finish Editing - Top">
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_34_annotated.png" width="100%" title="Finish Editing - Bottom">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_33_annotated.png" width="100%" title="Finish Editing - Top">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_34_annotated.png" width="100%" title="Finish Editing - Bottom">
 
 ### Removing Sections from your Dashboard
 
 1. Select edit your dashboard.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
 
 2. Scroll until you find the section you would like to remove and click the **X** on the right side of the screen.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_36_annotated.png" width="100%" title="Delete New Section">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_36_annotated.png" width="100%" title="Delete New Section">
 
 3. Click **Finish Editing Dashboard** to exit the editing of your dashboard either at the top or bottom of the page.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_33_annotated.png" width="100%" title="Finish Editing - Top">
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_34_annotated.png" width="100%" title="Finish Editing - Bottom">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_33_annotated.png" width="100%" title="Finish Editing - Top">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_34_annotated.png" width="100%" title="Finish Editing - Bottom">
 
 
 ## Dashboard Blocks
@@ -67,87 +67,87 @@ Blocks are shortcuts you can add to your dashboard sections. These can be shortc
 
 1. Navigate to your dashboard and select **Add New Block**
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_5_annotated.png" width="100%" title="Add a New Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_5_annotated.png" width="100%" title="Add a New Block">
 
 2. This will open a popup.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_6_annotated.png" width="100%" title="Add New Dashboard Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_6_annotated.png" width="100%" title="Add New Dashboard Block">
 
 3. Here you can decide what you would like to add to your block including project, form, record, quote, kora twitter, and a note. See the following sub-sections for detailed instruction for each block type option.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_7_annotated.png" width="100%" title="Choose your Block Type">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_7_annotated.png" width="100%" title="Choose your Block Type">
 
 4. Following your selection of block type and section, click the **Add New Dashboard Block** button.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
 
 #### Adding a Project to Dashboard Block
 
 1. Select *Project* from the **Dashboard Block type** drop-down menu.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_9_annotated.png" width="100%" title="Dashboard Block Type">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_9_annotated.png" width="100%" title="Dashboard Block Type">
 
 2. Select the project that you want to appear on your dashboard.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_10_annotated.png" width="100%" title="Select Project">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_10_annotated.png" width="100%" title="Select Project">
 
 3. Once you've selected the project for your block, you have the option to choose what section of your dashboard that you want the block to appear in.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_11_annotated.png" width="100%" title="Choose Section">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_11_annotated.png" width="100%" title="Choose Section">
 
 4. Click the **Add New Dashboard Block** button.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
 
 #### Adding a Form to Dashboard Block
 
 1. Select *Form* from the **Dashboard Block type** drop-down menu.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_12_annotated.png" width="100%" title="Select Block Type">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_12_annotated.png" width="100%" title="Select Block Type">
 
 2. Select the form that you want to appear on your dashboard.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_13_annotated.png" width="100%" title="Select Form">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_13_annotated.png" width="100%" title="Select Form">
 
 3. Once you've selected the form for your block, you have the option to choose what section of your dashboard that you want the block to appear in.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_14_annotated.png" width="100%" title="Select section">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_14_annotated.png" width="100%" title="Select section">
 
 4. Click the **Add New Dashboard Block** button.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
 
 #### Adding a Record to Dashboard Block
 
 1. Select *Record* from the **Dashboard Block type** drop-down menu.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_15_annotated.png" width="100%" title="Select Record for Block Type">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_15_annotated.png" width="100%" title="Select Record for Block Type">
 
 2. Enter the record KID (the unique idenifier for each record within the Kora system) that you want to appear on your dashboard.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_16_annotated.png" width="100%" title="Record KID">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_16_annotated.png" width="100%" title="Record KID">
 
 3. Once you've selected the record for your block, you have the option to choose what section of your dashboard that you want the block to appear in.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_17_annotated.png" width="100%" title="Choose Section">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_17_annotated.png" width="100%" title="Choose Section">
 
 4. Click the **Add New Dashboard Block** button.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
 
 #### Adding a Quote to Dashboard Block
 
 1. Select *Quote* from the **Dashboard Block type** drop-down menu.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_18_annotated.png" width="100%" title="Choose Quote Block Type">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_18_annotated.png" width="100%" title="Choose Quote Block Type">
 
 2. Once you've selected the record for your block, you have the option to choose what section of your dashboard that you want the block to appear in.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_19_annotated.png" width="100%" title="Choose Section">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_19_annotated.png" width="100%" title="Choose Section">
 
 3. Click the **Add New Dashboard Block** button.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
 
 ##### Auto-Generated Quote Blocks
 
@@ -172,86 +172,86 @@ The quotes are generated from a fixed list in a function contained in the underl
 
 1. Select *Kora Twitter* from the **Dashboard Block type** drop-down menu.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_20_annotated.png" width="100%" title="Choose Kora Twitter Block Type">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_20_annotated.png" width="100%" title="Choose Kora Twitter Block Type">
 
 2. Once you've selected *Kora Twitter* your block, you have the option to choose what section of your dashboard that you want the block to appear in.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_21_annotated.png" width="100%" title="Choose Section">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_21_annotated.png" width="100%" title="Choose Section">
 
 3. Click the **Add New Dashboard Block** button.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
 
 4. Your twitter block will appear in your chosen section.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_22_annotated.png" width="100%" title="Twitter Block Example">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_22_annotated.png" width="100%" title="Twitter Block Example">
 
 #### Adding a Note to Dashboard Block
 
 1. Select *Note* from the **Dashboard Block type** drop-down menu.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_23_annotated.png" width="100%" title="Choose Note Block Type">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_23_annotated.png" width="100%" title="Choose Note Block Type">
 
 2. Enter your *note title* (maximum of 30 characters) that want to appear on your dashboard.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_24_annotated.png" width="100%" title="Note Title">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_24_annotated.png" width="100%" title="Note Title">
 
 3. Enter your *note content* (maximum of 300 characters) that you want to appear on your dashboard.  
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_25_annotated.png" width="100%" title="Note Content">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_25_annotated.png" width="100%" title="Note Content">
 
 4. Once you've selected the form for your block, you have the option to choose what section of your dashboard that you want the block to appear in.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_26_annotated.png" width="100%" title="Choose Section">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_26_annotated.png" width="100%" title="Choose Section">
 
 5. Click the **Add New Dashboard Block** button.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_8_annotated.png" width="100%" title="Add New Dashboard Block">
 
 ### Edit Blocks on Dashboard
 You are also able to edit the blocks that you've created in the dashboard. Follow these steps:
 
 1. Select edit your dashboard.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
 
 2. Hover your mouse over the block which you wish to edit.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_28_annotated.png" width="100%" title="Hover over the Block you want to Edit">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_28_annotated.png" width="100%" title="Hover over the Block you want to Edit">
 
 3. Select **Edit Block** in the center
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_37_annotated.png" width="100%" title="Select Edit Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_37_annotated.png" width="100%" title="Select Edit Block">
 
 4. This will open a pop-up for editing your block. Here you have the option to change the *Block Type* and make any other changes you reqire.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_38_annotated.png" width="100%" title="Edit Block Pop-up">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_38_annotated.png" width="100%" title="Edit Block Pop-up">
 
 5. When you have finished making your changes, click the **Update Block** button at the bottom of the pop-up.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_39_annotated.png" width="100%" title="Update Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_39_annotated.png" width="100%" title="Update Block">
 
 ### Removing Blocks from Dashboard
 
 1. Select edit your dashboard.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
 
 2. Hover your mouse over the block which you wish to edit.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_28_annotated.png" width="100%" title="Hover over the Block you want to Edit">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_28_annotated.png" width="100%" title="Hover over the Block you want to Edit">
 
 3. Select the trash can icon in the bottom left corner of the block you would like to remove.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_40_annotated.png" width="100%" title="Trash Can Icon">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_40_annotated.png" width="100%" title="Trash Can Icon">
 
 4. A pop-up will appear asking you to confirm deleting the block. Select the red **Delete Block** button at the bottom of the pop-up to confirm.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_41_annotated.png" width="100%" title="Delete Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_41_annotated.png" width="100%" title="Delete Block">
 
 5. When you have finished making your changes, click the **Update Block** button at the bottom of the pop-up.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_39_annotated.png" width="100%" title="Update Block">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_39_annotated.png" width="100%" title="Update Block">
 
 
 ## Editing Quick Access Actions
@@ -260,30 +260,30 @@ The quick actions in Kora are the six icons on the bottom of each block in your 
 
 1. Select edit your dashboard.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_27_annotated.png" width="100%" title="Edit your Dashboard">
 
 2. Hover your mouse over the block whose **Quick Actions** you wish to edit.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_28_annotated.png" width="100%" title="Hover over the Block you want to Edit">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_28_annotated.png" width="100%" title="Hover over the Block you want to Edit">
 
 3. Select **Edit Quick Actions**. This will prompt the *Edit Quick Actions* pop-up to appear.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_29_annotated.png" width="100%" title="Edit Quick Actions">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_29_annotated.png" width="100%" title="Edit Quick Actions">
 
 4. You may edit the order of quick actions by either pressing the **up arrow** or **down arrow**. Alternatively, you may also click on the **Quick Action** you want to reorder, and drag it to its desired location.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_30_annotated.png" width="100%" title="Edit Quick Actions Order">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_30_annotated.png" width="100%" title="Edit Quick Actions Order">
 
 
 5. Note that only the top 6 **Quick Actions** will be displayed in the block that you are editing. The following three will appear when you hover over the far right
 
-  <img style="display:block;margin:auto;max-width:80%" src="../getting-started-img/working_with_the_dashboard_31_annotated.png" width="100%" title="Top 6 QA Displayed">
+    <img style="display:block;margin:auto;max-width:80%" src="../getting-started-img/working_with_the_dashboard_31_annotated.png" width="100%" title="Top 6 QA Displayed">
 
 6. Click **Update Quick actions** to save your changes.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_32_annotated.png" width="100%" title="Update Quick Actions">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_32_annotated.png" width="100%" title="Update Quick Actions">
 
 7. Click **Finish Editing Dashboard** to exit the editing of your dashboard either at the top or bottom of the page.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_33_annotated.png" width="100%" title="Finish Editing - Top">
-  <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_34_annotated.png" width="100%" title="Finish Editing - Bottom">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_33_annotated.png" width="100%" title="Finish Editing - Top">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/working_with_the_dashboard_34_annotated.png" width="100%" title="Finish Editing - Bottom">

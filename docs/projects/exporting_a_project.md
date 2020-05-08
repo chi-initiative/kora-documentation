@@ -7,13 +7,14 @@ There is a couple of reasons why you might want to export your project.  The mos
 
 To export a project:
 
-1. Navigate to the project you'd like to export. 
+1. Navigate to the project you'd like to export.
 
 2. Click the name of the project in the top menu bar to open the project's dropdown menu.
-<img style="display:block;margin:auto;max-width:100%" src="../projects-img/exporting_a_project_1_annotated.png" title="Menu Bar from Project">
+
+    <img style="display:block;margin:auto;max-width:100%" src="../projects-img/exporting_a_project_1_annotated.png" title="Menu Bar from Project">
 
 3. In the dropdown menu, select **Export Project**. This will automatically start downloading your project's .kProj export file.
 
-<img style="display:block;margin:auto;max-width:80%" src="../projects-img/exporting_a_project_2_annotated.png" title="Select Export Project">
+    <img style="display:block;margin:auto;max-width:80%" src="../projects-img/exporting_a_project_2_annotated.png" title="Select Export Project">
 
 Visit the [Importing a Project](../projects/importing_a_project.md) guide for step-by-step instruction on how to import your project into Kora.

@@ -6,29 +6,29 @@ To begin creating a record, you must first choose the [project](../projects/crea
 
 1. To start creating a record, there are two options:
 
-  a) One option is to click the **Create New Record** button on the form home page or you can click the form name in the menu bar to open the dropdown and choose the **Create New Record** option.
+    * One option is to click the **Create New Record** button on the form home page or you can click the form name in the menu bar to open the dropdown and choose the **Create New Record** option.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_1_annotated.png" title="create new record button">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_1_annotated.png" title="create new record button">
 
-  b) alternatively, you may also select **Create New Record** from the dropdown menu made available by clicking on the form name in the menu bar.
+    * alternatively, you may also select **Create New Record** from the dropdown menu made available by clicking on the form name in the menu bar.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_2_annotated.png" title="Form Dropdown Menu">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_2_annotated.png" title="Form Dropdown Menu">
 
 2. This will open a *New Record* page.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_3_annotated.png" title="New Record Page">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_3_annotated.png" title="New Record Page">
 
 3. Now you can fill out the [various fields you have created](../forms/understanding_field_types.md) within the form with your data. All the fields with a green dot next to it are a *required field* and will have to be filled out. This can only be changed by [editing the required field](../forms/editing_fields.md)
 
-  <img style="display:block;margin:auto;max-width:50%" src="../records-img/creating_a_record_4_annotated.png" title="Required Fields">
+    <img style="display:block;margin:auto;max-width:50%" src="../records-img/creating_a_record_4_annotated.png" title="Required Fields">
 
 4. If your form has multiple pages, you can toggle between them using the buttons *Previous Page* and *Next Page* at the bottom of the screen.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_5_annotated.png" title="Page Buttons">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_5_annotated.png" title="Page Buttons">
 
 5. When you are finished entering the information for the record, click **Create New Record**.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_6_annotated.png" title="Click Create New Record">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_6_annotated.png" title="Click Create New Record">
 
 ##Additional Information
 This section describes additional information that may be useful when creating a record. This includes how to use a record preset, how to duplicate records and how to create a record preset.
@@ -37,19 +37,19 @@ This section describes additional information that may be useful when creating a
 
 [Record presets](../records/using_record_presets.md) use a previously created record to fill in a new record with the same values. This is useful when you have records that will use the same data for multiple fields. If you would like to use a record preset, click the circle for the **Use a Record Preset** option in a *New Record* page. This will provide a new dropdown option to select a record preset. The new record will then have its fields filled in with the same values as the selected record present. You are still able to edit the newly filled in fields after the preset is selected.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_7_annotated.png" title="Record Presets">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_7_annotated.png" title="Record Presets">
 
 ###Duplicate Record
 
 You may also select the **Duplicate Record** option from the *New Record* page. If you chose to duplicate your record, an identical copy of the record will be created. You can set the number of duplicates after selecting the option.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_8_annotated.png" title="Duplicate Records">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_8_annotated.png" title="Duplicate Records">
 
 You may also duplicate a record after it has been created. Simply [search or browse for the record](../searching_and_browsing_records.md) you would like to duplicate and select the **Duplicate Records** option at the bottom of the block for that record. This will bring you to the *Duplicate Record* page where you can select the duplication amount and click the **Duplicate Record** button at the bottom of the page.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_9_annotated.png" title="Duplication Amount">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_9_annotated.png" title="Duplication Amount">
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_10_annotated.png" title="Duplication Button">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_10_annotated.png" title="Duplication Button">
 
 If you need assistance on how to edit your duplicate record, visit the [Editing a Record](/forms/editing_a_form.md) documentation.
 
@@ -57,4 +57,4 @@ If you need assistance on how to edit your duplicate record, visit the [Editing 
 
 If you wish to use a newly filled out record as a preset option for future records, select the **Create New Record Preset from this Record** option. You will be asked to name your new record preset. This newly named preset option will be available for all records you create in the future. And it will use the same information you enter into this record to fill in the fields using this record preset.
 
-  <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_11_annotated.png" title="Creating A New Record Preset">
+    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_11_annotated.png" title="Creating A New Record Preset">
