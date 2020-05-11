@@ -143,6 +143,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#preparing-the-data">Preparing the Data</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#associatiors">Associatiors</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#file-formats">File Formats</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#csv-format">CSV Format</a>
@@ -164,8 +166,6 @@
     <li class="toctree-l3"><a class="reference internal" href="#import-your-records">Import your records</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#failed-record-import">Failed Record Import</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#import-completition-and-error-reporting">Import Completition and Error Reporting</a>
     </li>
         </ul>
     </li>
@@ -250,38 +250,45 @@
             <div class="section">
               
                 <h1 id="importing-multi-form-records">Importing Multi Form Records</h1>
-<p>If you have multiple records that you want to import into multiple forms, Kora provides a way to import all of those records at once. Rather than performing multiple imports to submit records into a form, you may perform one multiform record import. This will require formatting your records in a particular way. This is a slightly different process than <a href="../importing_a_record/">importing records into a single form</a>. You will have to format your records correctly into a csv, json or xml file. Examples of the correct file formats are provided in the <em>File Formatting</em> section below.</p>
+<p>If you have records that you want to import into multiple forms, Kora provides a way to import all of those records at once. Rather than performing multiple imports to submit records into different forms, you may perform one multiform record import. This will require formatting your records in a particular way in a slightly different process from <a href="../importing_a_record/">importing records into a single form</a>. These records must be formatted into csv, json or xml files. Examples of the correct file formats are provided in the <em>File Formatting</em> section below.</p>
 <h2 id="navigating-to-the-import-page">Navigating to the Import Page</h2>
-<p>Navigating to <em>Import Multi Form Records</em> page can take place from either the <a href="../../projects/accessing_and_managing_projects_from_the_dashboard/">dashboard</a> or from a project's homepage. These options are shown in the next two sections. Either of these options will bring you to the <em>Import Multi Form Records</em> page (shown below) where you can import multiple record files to multiple forms</p>
-<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_3_annotated.png" title="Import Multi Form Records Page"&gt;
-</code></pre>
+<p>Navigating to <em>Import Multi Form Records</em> page can take place from either the <a href="../../projects/accessing_and_managing_projects_from_the_dashboard/">dashboard</a> or from a project's homepage. Either of these options will bring you to the <em>Import Multi Form Records</em> page where you can import multiple record files to multiple forms</p>
 <h3 id="navigating-from-the-dashboard">Navigating from the Dashboard</h3>
 <p>From the dashboard, you are able to navigate to the <em>Import Multi Form Records</em> page from a project block by clicking on the <strong>Quick Action</strong> icon.</p>
-<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_1_annotated.png" title="Use Quick Actions"&gt;
+<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_1_annotated.png" title="Navigating from the Dashboard"&gt;
 </code></pre>
 <h3 id="navigating-from-your-project-homepage">Navigating from your Project Homepage</h3>
 <p>Alternatively, you may select <strong>Import MF Record Setup</strong> from the project homepage using the Kora menu.</p>
-<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_2_annotated.png" title="Using the Kora Menu"&gt;
+<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_2_annotated.png" title="Navigating from the Project Homepage"&gt;
 </code></pre>
 <h2 id="preparing-the-data">Preparing the Data</h2>
-<p>Before you begin importing multiple records into multiple forms, you will have to prepare your data into a format that Kora will be able to understand. Make sure that the following is taken into consideration for your data:</p>
+<p>Before you begin importing multiple records into multiple forms, you will have to prepare your data in a way that Kora will be able to understand. In order to make this process easier take the following into consideration for your data:</p>
 <ul>
 <li>
-<p>Each form should have its own file</p>
+<p><strong>Each form should have its own file containg records</strong>. For example, Form 1 will get a file containing all records for Form 1, while Form 2 will import a file containing all records for Form 2.</p>
 </li>
 <li>
-<p>Every single field column and datatype within an imported file should conform to the Kora datatype standard, which can be found in the below <em>file formats</em> section (This is extremely important).</p>
+<p><strong>Every single field column and datatype within an imported file should conform to the Kora datatype standard</strong>. These fields and data types can be found in the <em>file formats</em> section below. The names of the field types in the example files below will be replaced with the names of your field. For example, if you have a text field named "field 1", then "text field":"Your text value" will be changed to "field 1":"Your text value".</p>
 </li>
 <li>
-<p>For every sheet with 1 or more associators connected to a different sheet within the dataset, the identifier column needs to be duplicated and labled as column header kidConnection. The formatting allows you to create associations between records that do not already exist.</p>
+<p><strong>Make sure that your associator Fileds are labled correclty</strong>. See the next section for details.</p>
 </li>
 <li>
-<p>Multi-field field types have to be imported as XML or JSON (not CSV).</p>
+<p><strong>Multi-field field types have to be imported as XML or JSON (not CSV)</strong>. A multi-field field, <a href="../../forms/understanding_field_types/">such as a combo list field</a>, contains other fields within it. There is no way to format this using CSV, and records containing such a field must be formatted using XML or JSON.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_4_annotated.png" title="Multi-field JSON example"></p>
 </li>
 <li>
-<p>All attached files should be compressed into a zip file. If the files are within folders, then the directory path must be included with the dataset listing in order for the connection to be made.</p>
+<p><strong>All attached files should be compressed into a zip file</strong>. If your imported records contain images or other files, then those files must be compressed into a zip file. If the files are within folders in that zip file, then the directory path must be included with the file/sheet of records in order for the connection to be made. An example of a call to a file is provided:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_5_annotated.png" title="Calling a file JSON example"></p>
 </li>
 </ul>
+<h3 id="associatiors">Associatiors</h3>
+<p>Associators are a useful field type that allow you to create associations between records. Correctly formatting Associator field columns will allow you to create associations with other imported records and records currently in Kora. To make sure that all of your records are associated correclty, consider the following:
+    * The <em>"Associator"</em> field column will contain the name of the associator field for this record. Providing Kora IDs or "kidConnection" identifiers will create associations with those records in this associator field.
+    * The <em>"reverseAssociations"</em> field column will allow you to create associations in other records that point towards this record. Other record's associators will therefore point towards this record. You will need the name of the associator field as well as the KID of the records that you want to to point to that record.
+    * The <em>"kidConnection"</em> field column allows you to create a temporary identifier for an imported record. This is necessary since an imported record does not yet have a KID. This will allow associators to point towards an imported record by putting its "kidConnection" identifier in either the "Associator" or "reverseAssociations" field column.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_multi_form_records_6_annotated.png" title="How to format Associators"&gt;
+</code></pre>
 <h3 id="file-formats">File Formats</h3>
 <p>The files in this section provide the data structure that your imported records will have to conform to. Data not structured as in the files below will be unreadable to Kora. There are three formats that you are able to upload files: 1) .csv, 2) .json, and 3) .xml. Below you can view and download example files for each file type.</p>
 <h4 id="csv-format">CSV Format</h4>
@@ -300,19 +307,17 @@
 <p>Click Save</p>
 </li>
 <li>
-<p>You will see the following prompt. Click OK</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_2_annotated.png" title="Using the Kora Menu"></p>
+<p>You will see the following prompt: “This workbook cannot be saved in the selected file format because it contains multiple sheets. To save the entire workbook, click Cancel, and then save the workbook in another format. To keep the selected format and save only the active sheet". Click <strong>OK</strong>.</p>
 </li>
 <li>
-<p>Then you'll see the following prompt. Click Yes.</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_2_annotated.png" title="Using the Kora Menu"></p>
+<p>Then you'll see the following prompt: "Some features in your workbook might be lost if you save it as CSV UTF-8 (Comma delimited) (.csv). Some features in your workbook might be lost if you save it as CSV UTF-8 (Comma delimited) (.csv)”. Click <strong>Yes</strong>.</p>
 </li>
 <li>
 <p>Close the spread sheet.This file can now be used to create additional csv files and to add your records in.</p>
 </li>
 </ol>
-<p>Do not edit csv files in Microsoft Excel and do a regular save. This could potentially add Microsoft garbage into your file. Instead it is recommended to edit csv files only in a text editor such as Atom or Notepad++.</p>
-<p>It is also reccomended that you open every single csv file in a text editor and do a general check. Especially check for: blank rows at the end of each document and the continued presence of special characters/diacritics (not UTF-8 encoded)</p>
+<p><em>Note</em>: Do not edit csv files in Microsoft Excel and do a regular save. This could potentially add extra Microsoft stuff into your file. Instead it is recommended to edit csv files only in a text editor such as Atom or Notepad++.</p>
+<p><em>Note</em>: It is also reccomended that you open every single csv file in a text editor and do a general check. Especially check for: blank rows at the end of each document and the continued presence of special characters/diacritics (<a href="https://softwareengineering.stackexchange.com/questions/187169/how-to-detect-the-encoding-of-a-file#187174">make sure the file is UTF-8 encoded</a>).</p>
 <p>An example of the CSV format is embedded below. Follow the <strong>import_example_csv.csv</strong> link to github.com in order to download this file.</p>
 <script src="https://gist.github.com/0Redfeather/0258f81c076428893e7c848153255839.js"></script>
 
@@ -325,62 +330,70 @@
 <script src="https://gist.github.com/0Redfeather/64252b8a700acf030cad141e2aefe1f4.js"></script>
 
 <h2 id="importing">Importing</h2>
-<p>Once you have your records formatted correctly, you can begin importing your records into Kora. This will require 3 steps: uploading, matching fields and importing.</p>
+<p>Once you have your records formatted correctly, navigate to the <em>Import Multi Form Records</em> page and begin importing your records into Kora. This will require 3 steps: uploading, matching fields and importing.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_3_annotated.png" title="Import Multi Form Records Page"&gt;
+</code></pre>
 <h3 id="uploading-records">Uploading records</h3>
 <ol>
 <li>
-<p>Upload the correctly formatted record files by clicking the <strong>Add New File</strong> button. After clicking the button, you'll be able to select the files you want to upload from your computer.</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_3_annotated.png" title="Add New File"></p>
+<p>Upload correctly formatted record files by clicking the <strong>Add New File</strong> button. After clicking the button, you'll be able to select the files you want to upload from your computer.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_7_annotated.png" title="Add New File"></p>
 </li>
 <li>
-<p>Once you've selected the files you want to upload, select the forms that you want the records to be uploaded to by clicking <strong>Select Some Options</strong>. A dropdown menu will appear, this is where you can select forms that you have already created.</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_4_annotated.png" title="Select Forms"></p>
+<p>Once you've selected your files, select the forms that you want the records uploaded to by clicking on the  <strong>Select Some Options</strong> bar. A dropdown menu will appear with the forms from your project. You will have to select your forms in the same order that your selected record files appear.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_8_annotated.png" title="Select Forms"></p>
 </li>
 <li>
-<p>If you have zipped files that correlate to the records you are already importing, you may add them below. These records should have the same format as the records that you are already importing.</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_5_annotated.png" title="Use Zipped Files"></p>
+<p>If you have images or other types of files that you want put into records, they must be compressed into a zip file. Drag and drop that zipped files into the second box, or select the zipped file by clicking <strong>Or Select the Zipped File Here</strong> in the box. Files in the zip file can then be refered to in the imported record files.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_9_annotated.png" title="Use Zipped Files"></p>
 </li>
 <li>
-<p>Once you have all of your files uploaded, press the <strong>Upload Record Import Files</strong></p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_6_annotated.png" title="Upload Record Imports"></p>
+<p>Once you have everything ready, press the <strong>Upload Record Import Files</strong></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_10_annotated.png" title="Upload Record Imports"></p>
 </li>
 </ol>
 <h3 id="field-matching">Field Matching</h3>
 <ol>
 <li>
-<p>This will bring you to the <em>Field Matching</em> tab on the <em>Import Records</em> page. This page allows you to associate the field names between the records you are uploading to the form you are importing the records to. Select fields if applicable on the right column of the page. You will want to associate or match fields based on type. If you need information about field types, visit the <a href="/forms/understanding_field_types.md">Understanding Field Types</a> guide.</p>
+<p>Once you have uploaded the records and files that you want to import, you will be brought to the <em>Field Matching</em> tab on the <em>Import Records</em> page. This page allows you to associate the field names between the records you are uploading to the form you are importing the records to. Many of the fields will automatically map onto the correctly correlated field, but this is your opportunity to make sure everything is mapping correctly. Select fields if applicable on the right column of the page.</p>
 <pre><code>* **Note**: If a field is *required* in the form you are importing records into, you must associate an incoming field to one that is being imported.
-
-&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_7_annotated.png" title="Field Matching"&gt;
 </code></pre>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_11_annotated.png" title="Match Fields"></p>
 </li>
 <li>
-<p>Click the <strong>Upload Records</strong> button at the bottom of the screen.</p>
-<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_8_annotated.png" title="Upload Records"&gt;
-</code></pre>
+<p>Once everything looks correct, click the <strong>Upload Records</strong> button at the bottom of the screen.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_12_annotated.png" title="Upload Record Imports"></p>
 </li>
 </ol>
 <h3 id="import-your-records">Import your records</h3>
 <ol>
 <li>
-<p>A loading page will open informing you that your import has begun. Depending on the number of records you are importing, it may take several minutes to complete. Do not close the page or browser until completion. When the import is complete, you will be automatically brought to the <em>Import Records Complete</em> page.</p>
-<pre><code>&lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_9_annotated.png" title="Loading Page"&gt;
-</code></pre>
+<p>A loading page will open informing you that your import has begun. Depending on the number of records you are importing, it may take several minutes to complete. Do not close the page or browser until completion.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_13_annotated.png" title="Loading Imports Bar"></p>
 </li>
 <li>
-<p>On this page you can view how many records were successfully imported and have the option to view the imported records by clicking on the <em>View Imported Records</em> button.</p>
-<pre><code>&lt;img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_a_record_10_annotated.png" title="Field Matching"&gt;
+<p>When the import is complete, you will be automatically brought to the <em>Import Records Complete</em> page.</p>
+<pre><code>&lt;img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_a_record_8_annotated.png" title="Import Records Complete"&gt;
 </code></pre>
 </li>
 </ol>
 <h4 id="failed-record-import">Failed Record Import</h4>
-<p>There are several reasons a record import will fail. If a required field was not assoicated with an uploaded field (matched), you will be informed how many records out of the total were successfuly imported on the <em>Import Records Complete</em> page (example: 0 of 1 Records Successfully Imported).</p>
-<p>Your record(s) will not import if you associate different field types.</p>
-<h4 id="import-completition-and-error-reporting">Import Completition and Error Reporting</h4>
-<pre><code>    &lt;img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_11_annotated.png" title="Failed Records Report"&gt;
-</code></pre>
-<p>You can download the failed records and their report to identify the problem with the import. The <strong>Failed Records Report</strong> will state which fields are required. If you did not match your field types correctly, the <em>Failed Records Report</em> may give you an error: {"18":"Unable to determine error. This is usually caused by a structure issue in your CSV\/XML\/JSON, or an unexpected bug in kora."}. If this occurs, we recommend trying to import your record(s) again after checking how the fields should be matched.</p>
-<p>You can then try importing the record(s) again or view the successfully imported records using the buttons on the page.</p>
+<p>There are several reasons a record import will fail. If any of your records fail to import then a page will appear giving you a summary of the imported records. This page will tell you how many records were successfuly imported and give you a few options.</p>
+<ul>
+<li>
+<p><strong>Download Failed Records (JSON)</strong>: You may download the records that failed to import. This will download as a JSON. Downloading this along with the failed record repots will help to identify the problem(s) with the import.</p>
+</li>
+<li>
+<p><strong>Download Failed Records Report</strong>: This will download a report with error messages telling you why particular records failed to import. The <strong>Failed Records Report</strong> will state which fields are required. If you did not match your field types correctly, the <em>Failed Records Report</em> may give you an error: {"18":"Unable to determine error. This is usually caused by a structure issue in your CSV\/XML\/JSON, or an unexpected bug in kora."}. If this occurs, we recommend trying to import your record(s) again after checking how the fields should be matched.</p>
+</li>
+<li>
+<p><strong>Try Importing Again</strong>: This allows you to try importing records again.</p>
+</li>
+<li>
+<p><strong>Project Home</strong>: You may also give up on importing your records and go back to your project home.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_14_annotated.png" title="Failed Imports Page"></p>
+</li>
+</ul>
               
             </div>
           </div>
