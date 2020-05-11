@@ -10,7 +10,7 @@ theme:
         - yaml
         - django
 
-markdown_extensions: - markdown.extensions.admonition
+# markdown_extensions: - markdown.extensions.admonition
 
 nav:
     - 'Home': 'index.md'
