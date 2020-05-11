@@ -7,6 +7,3 @@ Kora is an open-source, database-driven, online digital repository platform for 
 Kora stores, manages, and delivers digital objects with corresponding metadata that enhances the research and educational value of the objects.
 
 This documentation is CC-BY-NC and was partially purloined from the Omeka-S documentation
-
-.. note::
-   This is the example for **Caution** admonition.
