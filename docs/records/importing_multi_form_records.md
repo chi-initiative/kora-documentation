@@ -5,17 +5,17 @@ title: Importing Multi Form Records
 If you have records that you want to import into multiple forms, Kora provides a way to import all of those records at once. Rather than performing multiple imports to submit records into different forms, you may perform one multiform record import. This will require formatting your records in a particular way in a slightly different process from [importing records into a single form](../records/importing_a_record.md). These records must be formatted into csv, json or xml files. Examples of the correct file formats are provided in the *File Formatting* section below.
 
 ## Navigating to the Import Page
-Navigating to *Import Multi Form Records* page can take place from either the [dashboard](../projects/accessing_and_managing_projects_from_the_dashboard.md) or from a project's homepage. Either of these options will bring you to the *Import Multi Form Records* page where you can import multiple record files to multiple forms
+Navigating to *Import Multi Form Records* page can take place from either the [dashboard](../projects/accessing_and_managing_projects_from_the_dashboard.md) or from a project's homepage. Either of these options will bring you to the *Import Multi Form Records* page where you can import multiple record files to multiple forms.
 
 ### Navigating from the Dashboard
 From the dashboard, you are able to navigate to the *Import Multi Form Records* page from a project block by clicking on the **Quick Action** icon.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_1_annotated.png" title="Navigating from the Dashboard">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_1_annotated.png" title="Navigating from the Dashboard">
 
 ### Navigating from your Project Homepage
 Alternatively, you may select **Import MF Record Setup** from the project homepage using the Kora menu.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_2_annotated.png" title="Navigating from the Project Homepage">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_2_annotated.png" title="Navigating from the Project Homepage">
 
 ## Preparing the Data
 Before you begin importing multiple records into multiple forms, you will have to prepare your data in a way that Kora will be able to understand. In order to make this process easier take the following into consideration for your data:
@@ -40,7 +40,7 @@ Associators are a useful field type that allow you to create associations betwee
     * The *"reverseAssociations"* field column will allow you to create associations in other records that point towards this record. Other record's associators will therefore point towards this record. You will need the name of the associator field as well as the KID of the records that you want to to point to that record.
     * The *"kidConnection"* field column allows you to create a temporary identifier for an imported record. This is necessary since an imported record does not yet have a KID. This will allow associators to point towards an imported record by putting its "kidConnection" identifier in either the "Associator" or "reverseAssociations" field column.
 
-    <img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_multi_form_records_6_annotated.png" title="How to format Associators">
+<img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_multi_form_records_6_annotated.png" title="How to format Associators">
 
 ### File Formats
 The files in this section provide the data structure that your imported records will have to conform to. Data not structured as in the files below will be unreadable to Kora. There are three formats that you are able to upload files: 1) .csv, 2) .json, and 3) .xml. Below you can view and download example files for each file type.
@@ -84,7 +84,7 @@ The XML file format stands for *Extensible Markup Language*. It is a markup lang
 ## Importing
 Once you have your records formatted correctly, navigate to the *Import Multi Form Records* page and begin importing your records into Kora. This will require 3 steps: uploading, matching fields and importing.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_3_annotated.png" title="Import Multi Form Records Page">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_multi_form_records_3_annotated.png" title="Import Multi Form Records Page">
 
 ### Uploading records
 
@@ -124,7 +124,7 @@ Once you have your records formatted correctly, navigate to the *Import Multi Fo
 
 2. When the import is complete, you will be automatically brought to the *Import Records Complete* page.
 
-		<img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_a_record_8_annotated.png" title="Import Records Complete">
+<img style="display:block;margin:auto;max-width:80%" src="../records-img/importing_a_record_8_annotated.png" title="Import Records Complete">
 
 #### Failed Record Import
 There are several reasons a record import will fail. If any of your records fail to import then a page will appear giving you a summary of the imported records. This page will tell you how many records were successfuly imported and give you a few options.
