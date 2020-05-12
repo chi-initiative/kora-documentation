@@ -68,18 +68,18 @@ This file format uses *Comma Separated Values* to describe the fields you are at
 
 An example of the CSV format is embedded below. Follow the **import_example_csv.csv** link to github.com in order to download this file.
 
-    <script src="https://gist.github.com/0Redfeather/0258f81c076428893e7c848153255839.js"></script>
+<script src="https://gist.github.com/0Redfeather/0258f81c076428893e7c848153255839.js"></script>
 
 #### JSON Format
 The JSON file format uses *JavaScript Object Notation* to describe the fields for the records you are attempting to import. You will need a text editor to create and edit JSON files. An example of the JSON format is embedded below. Follow the **import_example_json.json** link to github.com in order to download this file.
 
-    <script src="https://gist.github.com/0Redfeather/17692e3550e94330d1fc7b85c3fd66a4.js"></script>
+<script src="https://gist.github.com/0Redfeather/17692e3550e94330d1fc7b85c3fd66a4.js"></script>
 
 #### XML Format
 
 The XML file format stands for *Extensible Markup Language*. It is a markup language designed to encode data that is both machine and human readable. You will need a text editor to create and edit XML files. An example of the XML format is embedded below. Follow the **import_example_xml.xml** link to github.com in order to download this file.
 
-    <script src="https://gist.github.com/0Redfeather/64252b8a700acf030cad141e2aefe1f4.js"></script>
+<script src="https://gist.github.com/0Redfeather/64252b8a700acf030cad141e2aefe1f4.js"></script>
 
 ## Importing
 Once you have your records formatted correctly, navigate to the *Import Multi Form Records* page and begin importing your records into Kora. This will require 3 steps: uploading, matching fields and importing.
