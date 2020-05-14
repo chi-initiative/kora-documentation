@@ -30,7 +30,7 @@ Begin all of this by logging into your account to reach your cPanel. Most cPanel
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_4_annotated.png" title="New MySQL Database">
 
-4. Next, scroll down to "MySQL Users" and provide the username "kora" in the text box under "Add New User". This is a common practice - the database and the default user for that database having the same name - which will make it easier to update configurations elsewhere. After this, click on the button "Password Generator."
+4. Next, scroll down to "MySQL Users" and provide the username "kora" in the text box under "Add New User". This is a common practice — the database and the default user for that database having the same name — which will make it easier to update configurations elsewhere. After this, click on the button "Password Generator."
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_5_annotated.png" title="Database New User">
 
@@ -207,7 +207,7 @@ To return from nearly any part of cPanel to the Main interface (shown in the scr
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_31_annotated.png" title="Successful g+s Command">
 
-5. Next, it is important to confirm that the directories and files in this installation are all set to the `755` permissions level. In the operating system your server is running, this number represents the permissions levels for three different attributes related to a file or directory's ownership in the system. The first number represents the level set for "Owner," the second for "Group," and the third for "Other/World." Setting `7` is full access - aka read, write, and execute - whereas setting `5` is read and execute access only. For the purposes of this basic installation, the level for "Owner" should always be set to `7` so that you will always be able to make changes to things if needed. However the amount of access given to "Group" and "Other/World" attributes will affect the security of your server environment, so it is important to set these to `5` or some other non-write setting whenever possible.
+5. Next, it is important to confirm that the directories and files in this installation are all set to the `755` permissions level. In the operating system your server is running, this number represents the permissions levels for three different attributes related to a file or directory's ownership in the system. The first number represents the level set for "Owner," the second for "Group," and the third for "Other/World." Setting `7` is full access — aka read, write, and execute — whereas setting `5` is read and execute access only. For the purposes of this basic installation, the level for "Owner" should always be set to `7` so that you will always be able to make changes to things if needed. However the amount of access given to "Group" and "Other/World" attributes will affect the security of your server environment, so it is important to set these to `5` or some other non-write setting whenever possible.
 
     So, to confirm that the installation's permissions are set at the appropriate levels for the appropriate attributes, run this command to set all of this directory and its contents to "READ" (and execute, which is missing from the successful installation message). Again, in many cases it isn't strictly needed, but in the few where it is this will ensure the settings are set correctly:
 
@@ -223,7 +223,7 @@ To return from nearly any part of cPanel to the Main interface (shown in the scr
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_51_annotated.png" title="Long-form Directory List">
 
-    In the long-form list, Terminal will display two account names: first the username of "Owner," then (the one highlighted in the image above) the username of "Group." In the example here, both are set to the same username, which means the "Owner" permissions level is applied to "Group" as well. In this such case - where the "Owner" and "Group" have the same username - no further permissions changes need to be made to ensure Kora is working properly and you may skip down to "[Create Kora Installation URLs](#create-kora-installation-urls)."  
+    In the long-form list, Terminal will display two account names: first the username of "Owner," then (the one highlighted in the image above) the username of "Group." In the example here, both are set to the same username, which means the "Owner" permissions level is applied to "Group" as well. In this such case — where the "Owner" and "Group" have the same username — no further permissions changes need to be made to ensure Kora is working properly and you may skip down to "[Create Kora Installation URLs](#create-kora-installation-urls)."  
 
     However, if these two are different, then you will need to additionally adjust the "Write" privileges for "Group," so please continue to the next section.  
 
@@ -237,7 +237,7 @@ If you are unsure of whether or not your file permissions need to be additionall
 
 You will need to wait until your Kora installation is completed and properly configured before you can conduct this test, so its instructions are provided in more detail below, in the section "[Test File Permissions](#test-file-permissions)."
 
-1. Begin by ensuring your current Terminal location is the root directory, represented by a "~" in the Terminal prompt to the left of the cursor. If your prompt does not have a "~" - it may instead still display "kora" - change your location upward to relocate to the root. As before, use `cd`, but this time use `..`, which just means 'move up one directory':
+1. Begin by ensuring your current Terminal location is the root directory, represented by a "~" in the Terminal prompt to the left of the cursor. If your prompt does not have a "~" — it may instead still display "kora" — change your location upward to relocate to the root. As before, use `cd`, but this time use `..`, which just means 'move up one directory':
 
         cd ..
 
@@ -274,7 +274,7 @@ Find the directions for each below.
 
     Note: if you receive an error that "public_html" does not exist, more than likely this is because you skipped over a few previous steps that did not pertain to you and so you are currently still inside of the "kora" directory. If this is the case, use `cd ..` to move upward, and then again try `cd public_html`.
 
-    (There is no screenshot for this specifically, but you will know you have successfully changed your directory to `public_html` - or the one relevant to your case - when you see it to the left of the dollar sign character, inside the brackets.)
+    (There is no screenshot for this specifically, but you will know you have successfully changed your directory to `public_html` — or the one relevant to your case — when you see it to the left of the dollar sign character, inside the brackets.)
 
 2. Setting up the subdirectory for your URL requires using the command `ln` with the `-s` flag. `ln` stands for "link" and the `-s` flag tells the system that the link being created is "symbolic". The next part of the command is the location of the Kora installation public directory, relative to your current location. And then the final part is the location of the desired subdirectory that will appear at the end of your site's URL. So in the case of a `public_html` example, the public directory of the installation files is located one directory up, and then inside of `kora`. So the command is:
 
@@ -388,13 +388,15 @@ To set up mail for your Kora install, this guide will explain how to use the ema
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_47_annotated.png" title="Check Mail for the New Address">
 
-    Then click "Open" on the resulting page. As long as these pages load correctly, your server's email client is working correctly. If they do not - for instance, MSU's Domain of One's Own accounts currently are not working - you must contact the administrators of your server to rectify this.
+    Then click "Open" on the resulting page. As long as these pages load correctly, your server's email client is working correctly. If they do not — for instance, MSU's Domain of One's Own accounts currently are not working — you must contact the administrators of your server to rectify this.
 
 5. Return to your Kora Configuration File page tab. Scrolling down, you will find the text boxes for your email information. Leave "Mail Host" with "localhost". For "Mail From Address", it is best to enter the email address you just created so that the emails user receive appear to come from that account; in this example, "admin@kora.geyerbri.msu.domains". Set the "Mail From Name" to your own preference, such as "Kora Admin". The "Mail User" setting is how Kora connects with your server's mail client, to actually send the email. So this one must be set to an appropriately-configured email, such as the one just created; in this example, "admin@kora.geyerbri.msu.domains" again. Finally, paste in the save email password into the last box, "Mail Password".
 
     Save all of these configurations by clicking "Update Configuration File". See all of these settings in this screenshot:
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_48_annotated.png" title="Add Email Information to Kora Configuration">
+
+**NOTE**: If your server email is disabled by account administrators — as is the case for MSU Domain of One's Own accounts — and you cannot get another server email to successfully work with Kora, it is still possible to do anything that may appear to require the email server working, such as confirming new users, inviting users, or setting passwords. Find instructions for these tasks in the guide for [managing Kora user accounts](../../uesr-accounts/managing_users_in_a_kora_installation#manual-user-confirmations-activations-and-password-resets).
 
 ### Admin User Profile settings
 
