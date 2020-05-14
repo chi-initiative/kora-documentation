@@ -96,7 +96,7 @@ To return from nearly any part of cPanel to the Main interface (shown in the scr
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_15_annotated.png" title="Enable Viewing Hidden Files">
 
-4. Next, you'll upload the kora installation .zip file you downloaded earlier from [Kora's GitHub repo releases](https://github.com/matrix-msu/kora/releases) page. Kora is intended to be installed *outside* of the main URL directory you noted in Step 2 of this section, to keep it secure and reduce any chances of interference with any other website content you have in your server environment; the easiest is to install it into the same directory alongside your main URL directory. If you have never changed the default directory that loads when opening File Manager, you should be viewing the correct location, which in this example case is named after the user ("geyerbri").
+4. Next, you'll upload the Kora installation .zip file you downloaded earlier from [Kora's GitHub repo releases](https://github.com/matrix-msu/kora/releases) page. Kora is intended to be installed *outside* of the main URL directory you noted in Step 2 of this section, to keep it secure and reduce any chances of interference with any other website content you have in your server environment; the easiest is to install it into the same directory alongside your main URL directory. If you have never changed the default directory that loads when opening File Manager, you should be viewing the correct location, which in this example case is named after the user ("geyerbri").
 
     While at this location, click on "Upload" in the menu at the top.
 
@@ -360,7 +360,7 @@ If you successfully reached the Kora login page, **Congratulations!** Your insta
 
 5. Copy the "site key" and paste it into your Kora Configuration File page text box titled "Recaptcha Public Key"; copy the "secret key" and paste it into the text box titled "Recaptcha Private Key". If you want to ensure this information is saved before setting up your email, scroll to the bottom of the page and click "Update Configuration File".
 
-### Set Up Server Email and Link It to kora
+### Set Up Server Email and Link It to Kora
 
 To set up mail for your Kora install, this guide will explain how to use the email client available through cPanel for your Domain of One's Own account. It is possible to set this up with other email clients, however this basic option is easiest for keeping the installation and email all under the one environment.
 
@@ -368,7 +368,7 @@ To set up mail for your Kora install, this guide will explain how to use the ema
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_43_annotated.png" title="cPane's Email Account">
 
-    To set up a kora-specific email address, click on "Create".
+    To set up a Kora-specific email address, click on "Create".
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_44_annotated.png" title="Create a New Email">
 
