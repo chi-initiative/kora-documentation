@@ -396,7 +396,7 @@ To set up mail for your Kora install, this guide will explain how to use the ema
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_48_annotated.png" title="Add Email Information to Kora Configuration">
 
-**NOTE**: If your server email is disabled by account administrators — as is the case for MSU Domain of One's Own accounts — and you cannot get another server email to successfully work with Kora, it is still possible to do anything that may appear to require the email server working, such as confirming new users, inviting users, or setting passwords. Find instructions for these tasks in the guide for [managing Kora user accounts](../../user-accounts/managing_users_in_a_kora_installation#manual-user-confirmationsactivations-and-password-resets).
+**NOTE**: If your server email is disabled by account administrators — as is the case for MSU Domain of One's Own accounts — and you cannot get another server email to successfully work with Kora, it is still possible to do anything that may appear to require the email server working, such as confirming new users, inviting users, or setting passwords. Find instructions for these tasks in the guide for [managing Kora user accounts](../../user-accounts/managing_users_in_a_kora_installation/#manual-user-confirmationsactivations-and-password-resets).
 
 ### Admin User Profile settings
 
