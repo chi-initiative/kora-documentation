@@ -267,7 +267,7 @@
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_4_annotated.png" title="New MySQL Database"></p>
 </li>
 <li>
-<p>Next, scroll down to "MySQL Users" and provide the username "kora" in the text box under "Add New User". This is a common practice - the database and the default user for that database having the same name - which will make it easier to update configurations elsewhere. After this, click on the button "Password Generator."</p>
+<p>Next, scroll down to "MySQL Users" and provide the username "kora" in the text box under "Add New User". This is a common practice — the database and the default user for that database having the same name — which will make it easier to update configurations elsewhere. After this, click on the button "Password Generator."</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_5_annotated.png" title="Database New User"></p>
 </li>
 <li>
@@ -320,7 +320,7 @@
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_15_annotated.png" title="Enable Viewing Hidden Files"></p>
 </li>
 <li>
-<p>Next, you'll upload the kora installation .zip file you downloaded earlier from <a href="https://github.com/matrix-msu/kora/releases">Kora's GitHub repo releases</a> page. Kora is intended to be installed <em>outside</em> of the main URL directory you noted in Step 2 of this section; the easiest is to install it into the same directory alongside your main URL directory. If you have never changed the default directory that loads when opening File Manager, you should be viewing the correct location, which in this example case is named after the user ("geyerbri").</p>
+<p>Next, you'll upload the kora installation .zip file you downloaded earlier from <a href="https://github.com/matrix-msu/kora/releases">Kora's GitHub repo releases</a> page. Kora is intended to be installed <em>outside</em> of the main URL directory you noted in Step 2 of this section, to keep it secure and reduce any chances of interference with any other website content you have in your server environment; the easiest is to install it into the same directory alongside your main URL directory. If you have never changed the default directory that loads when opening File Manager, you should be viewing the correct location, which in this example case is named after the user ("geyerbri").</p>
 <p>While at this location, click on "Upload" in the menu at the top.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_16.1_annotated.png" title="Upload Files"></p>
 <p>In the page that opens, just drag-and-drop the .zip file to upload it. You may also click on "Select File" to find it via your computer's file management windows.</p>
@@ -403,7 +403,7 @@ DB_PASSWORD={saved database user password}
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_31_annotated.png" title="Successful g+s Command"></p>
 </li>
 <li>
-<p>Next, it is important to confirm that the directories and files in this installation are all set to the <code>755</code> permissions level. In the operating system your server is running, this number represents the permissions levels for three different attributes related to a file or directory's ownership in the system. The first number represents the level set for "Owner," the second for "Group," and the third for "Other/World." Setting <code>7</code> is full access - aka read, write, and execute - whereas setting <code>5</code> is read and execute access only. For the purposes of this basic installation, the level for "Owner" should always be set to <code>7</code> so that you will always be able to make changes to things if needed. However the amount of access given to "Group" and "Other/World" attributes will affect the security of your server environment, so it is important to set these to <code>5</code> or some other non-write setting whenever possible.</p>
+<p>Next, it is important to confirm that the directories and files in this installation are all set to the <code>755</code> permissions level. In the operating system your server is running, this number represents the permissions levels for three different attributes related to a file or directory's ownership in the system. The first number represents the level set for "Owner," the second for "Group," and the third for "Other/World." Setting <code>7</code> is full access — aka read, write, and execute — whereas setting <code>5</code> is read and execute access only. For the purposes of this basic installation, the level for "Owner" should always be set to <code>7</code> so that you will always be able to make changes to things if needed. However the amount of access given to "Group" and "Other/World" attributes will affect the security of your server environment, so it is important to set these to <code>5</code> or some other non-write setting whenever possible.</p>
 <p>So, to confirm that the installation's permissions are set at the appropriate levels for the appropriate attributes, run this command to set all of this directory and its contents to "READ" (and execute, which is missing from the successful installation message). Again, in many cases it isn't strictly needed, but in the few where it is this will ensure the settings are set correctly:</p>
 <pre><code>chmod -R 755 .
 </code></pre>
@@ -415,7 +415,7 @@ DB_PASSWORD={saved database user password}
 </code></pre>
 <p>The resulting list will look like this:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_51_annotated.png" title="Long-form Directory List"></p>
-<p>In the long-form list, Terminal will display two account names: first the username of "Owner," then (the one highlighted in the image above) the username of "Group." In the example here, both are set to the same username, which means the "Owner" permissions level is applied to "Group" as well. In this such case - where the "Owner" and "Group" have the same username - no further permissions changes need to be made to ensure Kora is working properly and you may skip down to "<a href="#create-kora-installation-urls">Create Kora Installation URLs</a>."  </p>
+<p>In the long-form list, Terminal will display two account names: first the username of "Owner," then (the one highlighted in the image above) the username of "Group." In the example here, both are set to the same username, which means the "Owner" permissions level is applied to "Group" as well. In this such case — where the "Owner" and "Group" have the same username — no further permissions changes need to be made to ensure Kora is working properly and you may skip down to "<a href="#create-kora-installation-urls">Create Kora Installation URLs</a>."  </p>
 <p>However, if these two are different, then you will need to additionally adjust the "Write" privileges for "Group," so please continue to the next section.  </p>
 <p>If you intend to set the "Write" privileges because you are sure your specific server environment's defaults will prevent Kora from working properly, then you can prepare for the commands in the next section</p>
 </li>
@@ -426,7 +426,7 @@ DB_PASSWORD={saved database user password}
 <p>You will need to wait until your Kora installation is completed and properly configured before you can conduct this test, so its instructions are provided in more detail below, in the section "<a href="#test-file-permissions">Test File Permissions</a>."</p>
 <ol>
 <li>
-<p>Begin by ensuring your current Terminal location is the root directory, represented by a "~" in the Terminal prompt to the left of the cursor. If your prompt does not have a "~" - it may instead still display "kora" - change your location upward to relocate to the root. As before, use <code>cd</code>, but this time use <code>..</code>, which just means 'move up one directory':</p>
+<p>Begin by ensuring your current Terminal location is the root directory, represented by a "~" in the Terminal prompt to the left of the cursor. If your prompt does not have a "~" — it may instead still display "kora" — change your location upward to relocate to the root. As before, use <code>cd</code>, but this time use <code>..</code>, which just means 'move up one directory':</p>
 <pre><code>cd ..
 </code></pre>
 <p>If needed, continue to use this command until your Terminal prompt looks like this:</p>
@@ -456,7 +456,7 @@ DB_PASSWORD={saved database user password}
 <pre><code>cd public_html
 </code></pre>
 <p>Note: if you receive an error that "public_html" does not exist, more than likely this is because you skipped over a few previous steps that did not pertain to you and so you are currently still inside of the "kora" directory. If this is the case, use <code>cd ..</code> to move upward, and then again try <code>cd public_html</code>.</p>
-<p>(There is no screenshot for this specifically, but you will know you have successfully changed your directory to <code>public_html</code> - or the one relevant to your case - when you see it to the left of the dollar sign character, inside the brackets.)</p>
+<p>(There is no screenshot for this specifically, but you will know you have successfully changed your directory to <code>public_html</code> — or the one relevant to your case — when you see it to the left of the dollar sign character, inside the brackets.)</p>
 </li>
 <li>
 <p>Setting up the subdirectory for your URL requires using the command <code>ln</code> with the <code>-s</code> flag. <code>ln</code> stands for "link" and the <code>-s</code> flag tells the system that the link being created is "symbolic". The next part of the command is the location of the Kora installation public directory, relative to your current location. And then the final part is the location of the desired subdirectory that will appear at the end of your site's URL. So in the case of a <code>public_html</code> example, the public directory of the installation files is located one directory up, and then inside of <code>kora</code>. So the command is:</p>
@@ -524,7 +524,7 @@ DB_PASSWORD={saved database user password}
 </li>
 <li>
 <p>Once logged in, if this is your first time using reCAPTCHA, it will automatically go to the registration page. However, if you have used reCAPTCHA before, it will take you to a page displaying the information for the first reCAPTCHA key set you created. To create a new set of keys, click on the plus icon in the upper-right to register a new site.</p>
-<p>Give your new set any label you prefer (a suggestion would be to use your Kora installation URL). As noted above, Kora currently uses reCAPTCHA v2 "I'm not a robot" Checkbox version, so pick those options. Under "Domains", write your main domain (do not include "http://", "https://", or thesubdirectory) and either hit Enter or click the plus sign to add it to the list of approved domains for the set of keys that are about to be generated. As an aside: this functionality means you could conceivably have multiple Kora installations, or even multiple sites that use reCAPTCHA v2 Checkbox, all using the same keys.</p>
+<p>Give your new set any label you prefer (a suggestion would be to use your Kora installation URL). As noted above, Kora currently uses reCAPTCHA v2 "I'm not a robot" Checkbox version, so pick those options. Under "Domains", write your main domain (do not include "http://", "https://", or the subdirectory) and either hit Enter or click the plus sign to add it to the list of approved domains for the set of keys that are about to be generated. As an aside: this functionality means you could conceivably have multiple Kora installations, or even multiple sites that use reCAPTCHA v2 Checkbox, all using the same keys.</p>
 </li>
 <li>
 <p>The "Owners" section should auto-add your account email, but you can add another if you wish. Be sure to (review and) accept the Terms of Service. The final option is the checkbox for "Send alerts to owners", which you may wish to leave enabled so that you receive emailed updates when security issues with your site arise.</p>
@@ -558,7 +558,7 @@ DB_PASSWORD={saved database user password}
 <li>
 <p>To confirm that your address is working properly, click on "Check Mail" next to your new address in the list.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_47_annotated.png" title="Check Mail for the New Address"></p>
-<p>Then click "Open" on the resulting page. As long as these pages load correctly, your server's email client is working correctly. If they do not - for instance, MSU's Domain of One's Own accounts currently are not working - you must contact the administrators of your server to rectify this.</p>
+<p>Then click "Open" on the resulting page. As long as these pages load correctly, your server's email client is working correctly. If they do not — for instance, MSU's Domain of One's Own accounts currently are not working — you must contact the administrators of your server to rectify this.</p>
 </li>
 <li>
 <p>Return to your Kora Configuration File page tab. Scrolling down, you will find the text boxes for your email information. Leave "Mail Host" with "localhost". For "Mail From Address", it is best to enter the email address you just created so that the emails user receive appear to come from that account; in this example, "admin@kora.geyerbri.msu.domains". Set the "Mail From Name" to your own preference, such as "Kora Admin". The "Mail User" setting is how Kora connects with your server's mail client, to actually send the email. So this one must be set to an appropriately-configured email, such as the one just created; in this example, "admin@kora.geyerbri.msu.domains" again. Finally, paste in the save email password into the last box, "Mail Password".</p>
@@ -566,6 +566,7 @@ DB_PASSWORD={saved database user password}
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_48_annotated.png" title="Add Email Information to Kora Configuration"></p>
 </li>
 </ol>
+<p><strong>NOTE</strong>: If your server email is disabled by account administrators — as is the case for MSU Domain of One's Own accounts — and you cannot get another server email to successfully work with Kora, it is still possible to do anything that may appear to require the email server working, such as confirming new users, inviting users, or setting passwords. Find instructions for these tasks in the guide for <a href="../../user-accounts/managing_users_in_a_kora_installation/#manual-user-confirmationsactivations-and-password-resets">managing Kora user accounts</a>.</p>
 <h3 id="admin-user-profile-settings">Admin User Profile settings</h3>
 <p>The final portion of configuration is for the admin account's profile settings. This section is specific to what is a part of the initial configuration for Kora, but this documentation website also has a more complete <a href="../../user-accounts/edit_user_preferences/">guide for user profile settings</a>.</p>
 <ol>
