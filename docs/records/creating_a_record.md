@@ -30,7 +30,7 @@ To begin creating a record, you must first choose the [project](../projects/crea
 
     <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_6_annotated.png" title="Click Create New Record">
 
-*Note: If you are uploading any files, there are some restrictions on filenames. They are limited to <code>a-z</code>,* <code>A-Z</code>, *and* <code>0-9</code>. *No spaces are permitted in filenames.*
+*Note: When you are uploading any files, there are some restrictions on filenames. They are limited to <code>a-z</code>,* <code>A-Z</code>, <code>0-9</code>, <code>.</code>, <code>-</code> *and* <code>_</code>. *No spaces are permitted in filenames. Also, when creating list items, if your item contains any commas you must encapsulate the entire list item within quotation marks.*
 
 
 ##Additional Information

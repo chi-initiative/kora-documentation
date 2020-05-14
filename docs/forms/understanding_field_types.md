@@ -59,7 +59,7 @@ Number fields allows you to enter numbers. Users may enter the numbers manually 
 
 ## List Fields
 
-The Lists field allow users to create lists of data or select list options from a controlled vocabulary. Users are also able to generate a list, or create a list of objects associated with other objects. Perhaps the greatest strength of lists is the ability to force users to enter in controlled vocabulary for data fields. Controlled vocabulary refers to the use of a specific terms to refer to your data. If you only have three possible options for a particular value, then that makes it easier to characterize and analyze the data. You don't have to worry about the particular differences in how people describe objects or spelling errors. The trade-off is a loss of nuance. It is up to form creators to decide which goals are important to them. Their are four types of list fields available: *list field*, *multi-select list*, *generated list* and *combo list*. <p align="center"> <img src="../forms-img/understanding_field_types_10_annotated.png" width="100%" style="align:center" title="Step 10"> </p>
+The Lists field allow users to create lists of data or select list options from a controlled vocabulary. Users are also able to generate a list, or create a list of objects associated with other objects. Perhaps the greatest strength of lists is the ability to force users to enter in controlled vocabulary for data fields. Controlled vocabulary refers to the use of a specific terms to refer to your data. If you only have three possible options for a particular value, then that makes it easier to characterize and analyze the data. You don't have to worry about the particular differences in how people describe objects or spelling errors. The trade-off is a loss of nuance. It is up to form creators to decide which goals are important to them. Their are four types of list fields available: *list field*, *multi-select list*, *generated list* and *combo list*. Note, if your list item contains any commas you must encapsulate the entire list item within quotation marks. <p align="center"> <img src="../forms-img/understanding_field_types_10_annotated.png" width="100%" style="align:center" title="Step 10"> </p>
 
 ### List
 
@@ -145,7 +145,7 @@ A *historical date* field type provides everything that the date field type prov
 
 File Fields allow you to create fields were users can upload files to a record. This includes documents, images, audio, video and 3D models. The image below shows what a typical file field looks like. There will be a title, a space to upload your file, and a description below. The File Field Types are: *Documents*, *Gallery*, *Playlist*, *Video* and *3D-Model*. <p align="center"> <img src="../forms-img/understanding_field_types_26_annotated.png" width="100%" style="align:center" title="Step 26"> </p>
 
-*Note: When you are uploading any files, there are some restrictions on filenames. They are limited to <code>a-z</code>,* <code>A-Z</code>, *and* <code>0-9</code>. *No spaces are permitted in filenames.*
+*Note: When you are uploading any files, there are some restrictions on filenames. They are limited to <code>a-z</code>,* <code>A-Z</code>, <code>0-9</code>, <code>.</code>, <code>-</code> *and* <code>_</code>. *No spaces are permitted in filenames.*
 
 ### Documents
 
