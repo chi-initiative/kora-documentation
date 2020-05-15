@@ -40,19 +40,19 @@ This section describes additional information that may be useful when creating a
 
 [Record presets](../records/using_record_presets.md) use a previously created record to fill in a new record with the same values. This is useful when you have records that will use the same data for multiple fields. If you would like to use a record preset, click the circle for the **Use a Record Preset** option in a *New Record* page. This will provide a new dropdown option to select a record preset. The new record will then have its fields filled in with the same values as the selected record present. You are still able to edit the newly filled in fields after the preset is selected.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_7_annotated.png" title="Record Presets">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_7_annotated.png" title="Record Presets">
 
 ###Duplicate Record
 
 You may also select the **Duplicate Record** option from the *New Record* page. If you chose to duplicate your record, an identical copy of the record will be created. You can set the number of duplicates after selecting the option.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_8_annotated.png" title="Duplicate Records">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_8_annotated.png" title="Duplicate Records">
 
 You may also duplicate a record after it has been created. Simply [search or browse for the record](../searching_and_browsing_records.md) you would like to duplicate and select the **Duplicate Records** option at the bottom of the block for that record. This will bring you to the *Duplicate Record* page where you can select the duplication amount and click the **Duplicate Record** button at the bottom of the page.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_9_annotated.png" title="Duplication Amount">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_9_annotated.png" title="Duplication Amount">
 
-    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_10_annotated.png" title="Duplication Button">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_10_annotated.png" title="Duplication Button">
 
 If you need assistance on how to edit your duplicate record, visit the [Editing a Record](/forms/editing_a_form.md) documentation.
 
@@ -60,4 +60,4 @@ If you need assistance on how to edit your duplicate record, visit the [Editing 
 
 If you wish to use a newly filled out record as a preset option for future records, select the **Create New Record Preset from this Record** option. You will be asked to name your new record preset. This newly named preset option will be available for all records you create in the future. And it will use the same information you enter into this record to fill in the fields using this record preset.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_11_annotated.png" title="Creating A New Record Preset">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/creating_a_record_11_annotated.png" title="Creating A New Record Preset">

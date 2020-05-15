@@ -19,16 +19,16 @@ Either option will bring you to the **Record Revisions** page for that specific 
 
 Record revisions will display edits made to the record in the *Edits Made* section. What the record looked liked before the edits will be displayed in the *Before* section, allowing you to see what was changed at each revision point. You can sort the revisions by date and user using the text boxes at the top of the page.  
 
-	<img style="display:block;margin:auto;max-width:100%" src="../records-img/viewing_and_managing_record_revisions_4_annotated.png" title="Viewing Record Revisions">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/viewing_and_managing_record_revisions_4_annotated.png" title="Viewing Record Revisions">
 
 ##Restore Record to Before (aka to a Previous Version)
 
 It is possible restore your record to a previous version. To do this, find the version you would like to return the record to, and click **Restore Field(s) to Before**.
 
-	<img style="display:block;margin:auto;max-width:100%" src="../records-img/viewing_and_managing_record_revisions_5_annotated.png" title="Restore Fields to Before">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/viewing_and_managing_record_revisions_5_annotated.png" title="Restore Fields to Before">
 
 A popup will appear asking if you would like to restore fields to before. Click the green button at the bottom of the page.
 
-	<img style="display:block;margin:auto;max-width:100%" src="../records-img/viewing_and_managing_record_revisions_6_annotated.png" title="Restore Fields to Before pop-up">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/viewing_and_managing_record_revisions_6_annotated.png" title="Restore Fields to Before pop-up">
 
 This will *Rollback* your record to the previous version selected and document this change in the *Record Revisions* page for that record.
