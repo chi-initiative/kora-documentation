@@ -45,7 +45,7 @@ Your record(s) will not import if you associate different field types.
 
 ###Failed Records Report
 
-		<img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_9_annotated.png" title="Failed Records Report">
+<img style="display:block;margin:auto;max-width:100%" src="../records-img/importing_a_record_9_annotated.png" title="Failed Records Report">
 
 You can download the failed records and their report to identify the problem with the import. The **Failed Records Report** will state which fields are required. If you did not match your field types correctly, the *Failed Records Report* may give you an error: {"18":"Unable to determine error. This is usually caused by a structure issue in your CSV\/XML\/JSON, or an unexpected bug in kora."}. If this occurs, we recommend trying to import your record(s) again after checking how the fields should be matched.
 
