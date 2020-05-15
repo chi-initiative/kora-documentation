@@ -46,7 +46,7 @@ ol li {
 }
 
 /* For preserving nav bar indent once updates from 1.0.4 to 1.1*/
-/*
+
 .wy-menu-vertical li.toctree-l1 a[href="../.."], .wy-menu-vertical li.toctree-l1.current a[href="."] {
     padding: .4045em 1.618em !important;
     font-size: 90%;
@@ -70,5 +70,3 @@ ol li {
     padding: 0.4045em 5.663em !important;
     font-size: 90%;
 }
-
-*/
