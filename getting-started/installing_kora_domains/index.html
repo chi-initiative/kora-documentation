@@ -68,9 +68,9 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#upload-and-prepare-kora-application-files-via-cpanel-file-manager">Upload and Prepare Kora Application Files via cPanel File Manager</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#kora-installation-and-further-configuration-via-cpanel-terminal">Kora Installation and Further Configuration via cPanel Terminal</a>
+    <li class="toctree-l2"><a class="reference internal" href="#kora-installation-and-initial-configuration-via-cpanel-terminal">Kora Installation and Initial Configuration via cPanel Terminal</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#set-write-and-execute-privileges-on-certain-directories-if-needed-via-cpanel-terminal">Set "Write" and "Execute" Privileges On Certain Directories if Needed via cPanel Terminal</a>
+    <li class="toctree-l2"><a class="reference internal" href="#set-write-and-execute-permissions-on-certain-directories-if-needed-via-cpanel-terminal">Set "Write" and "Execute" Permissions On Certain Directories if Needed via cPanel Terminal</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#create-kora-installation-urls">Create Kora Installation URLs</a>
         <ul>
@@ -88,11 +88,11 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#set-up-server-email-and-link-it-to-kora">Set Up Server Email and Link It to Kora</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#admin-user-profile-settings">Admin User Profile settings</a>
+    <li class="toctree-l3"><a class="reference internal" href="#admin-user-profile-settings">Admin User Profile Settings</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#test-file-permissions">Test File permissions</a>
+    <li class="toctree-l2"><a class="reference internal" href="#test-file-permissions">Test File Permissions</a>
     </li>
     </ul>
                     </li>
@@ -368,7 +368,7 @@ DB_PASSWORD={saved database user password}
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_16.2_annotated.png" title="Return to cPanel Main from File Manager"></p>
 </li>
 </ol>
-<h2 id="kora-installation-and-further-configuration-via-cpanel-terminal">Kora Installation and Further Configuration via cPanel Terminal</h2>
+<h2 id="kora-installation-and-initial-configuration-via-cpanel-terminal">Kora Installation and Initial Configuration via cPanel Terminal</h2>
 <ol>
 <li>
 <p>In cPanel Main, scroll down to the section called "Advanced" and open "Terminal."</p>
@@ -410,17 +410,17 @@ DB_PASSWORD={saved database user password}
 <p>And just as before, when successful, it will just re-display the command prompt without a message.</p>
 </li>
 <li>
-<p>Next it is important to check if your write permissions are set properly. Run the <code>ls</code> command with the <code>-l</code> flag. <code>ls</code> is the list command; the <code>-l</code> flag is for listing contents in long-form. The full command is:</p>
+<p>Next it is important to check if your "Write" permissions are set properly. Run the <code>ls</code> command with the <code>-l</code> flag. <code>ls</code> is the list command; the <code>-l</code> flag is for listing contents in long-form. The full command is:</p>
 <pre><code>ls -l
 </code></pre>
 <p>The resulting list will look like this:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_51_annotated.png" title="Long-form Directory List"></p>
 <p>In the long-form list, Terminal will display two account names: first the username of "Owner," then (the one highlighted in the image above) the username of "Group." In the example here, both are set to the same username, which means the "Owner" permissions level is applied to "Group" as well. In this such case — where the "Owner" and "Group" have the same username — no further permissions changes need to be made to ensure Kora is working properly and you may skip down to "<a href="#create-kora-installation-urls">Create Kora Installation URLs</a>."  </p>
-<p>However, if these two are different, then you will need to additionally adjust the "Write" privileges for "Group," so please continue to the next section.  </p>
-<p>If you intend to set the "Write" privileges because you are sure your specific server environment's defaults will prevent Kora from working properly, then you can prepare for the commands in the next section</p>
+<p>However, if these two are different, then you will need to additionally adjust the "Write" permissions for "Group," so please continue to the next section.  </p>
+<p>If you intend to set the "Write" permissions because you are sure your specific server environment's defaults will prevent Kora from working properly, then you can prepare for the commands in the next section</p>
 </li>
 </ol>
-<h2 id="set-write-and-execute-privileges-on-certain-directories-if-needed-via-cpanel-terminal">Set "Write" and "Execute" Privileges On Certain Directories if Needed via cPanel Terminal</h2>
+<h2 id="set-write-and-execute-permissions-on-certain-directories-if-needed-via-cpanel-terminal">Set "Write" and "Execute" Permissions On Certain Directories if Needed via cPanel Terminal</h2>
 <p>As stated in the previous section, the previous commands will have been enough for some users to complete the required permissions setup for their installation. However for others, it will be necessary to specifically change the permissions on the three directory trees noted in the successful installation message.</p>
 <p>If you are unsure of whether or not your file permissions need to be additionally configured, you can quickly test this by completing the rest of the Kora setup process, then creating a record in your Kora installation that has a file attached to it and uploading that file. If the file upload process works, then your current installation does not need any further permissions adjustments. If it does not work, you will need to re-enter cPanel and re-enter Terminal, which should default to the correct location (the root directory) for this section's instructions.</p>
 <p>You will need to wait until your Kora installation is completed and properly configured before you can conduct this test, so its instructions are provided in more detail below, in the section "<a href="#test-file-permissions">Test File Permissions</a>."</p>
@@ -567,7 +567,7 @@ DB_PASSWORD={saved database user password}
 </li>
 </ol>
 <p><strong>NOTE</strong>: If your server email is disabled by account administrators — as is the case for MSU Domain of One's Own accounts — and you cannot get another server email to successfully work with Kora, it is still possible to do anything that may appear to require the email server working, such as confirming new users, inviting users, or setting passwords. Find instructions for these tasks in the guide for <a href="../../user-accounts/managing_users_in_a_kora_installation/#manual-user-confirmationsactivations-and-password-resets">managing Kora user accounts</a>.</p>
-<h3 id="admin-user-profile-settings">Admin User Profile settings</h3>
+<h3 id="admin-user-profile-settings">Admin User Profile Settings</h3>
 <p>The final portion of configuration is for the admin account's profile settings. This section is specific to what is a part of the initial configuration for Kora, but this documentation website also has a more complete <a href="../../user-accounts/edit_user_preferences/">guide for user profile settings</a>.</p>
 <ol>
 <li>
@@ -583,8 +583,8 @@ DB_PASSWORD={saved database user password}
 <p>Once all these have been set, click "Update Profile" to complete your setup.</p>
 </li>
 </ol>
-<h2 id="test-file-permissions">Test File permissions</h2>
-<p>As noted above in the section above outlining how to set the "Write" and "Execute" privileges for the specified directories, in some cases Kora will not work with the defaulted permissions generated during installation.</p>
+<h2 id="test-file-permissions">Test File Permissions</h2>
+<p>As noted above in the section above outlining how to set the "Write" and "Execute" permissions for the specified directories, in some cases Kora will not work with the defaulted permissions generated during installation.</p>
 <p>To check whether or not your installation works properly:</p>
 <ol>
 <li>
@@ -600,7 +600,7 @@ DB_PASSWORD={saved database user password}
 <p>And finally, <a href="../../records/creating_a_record/">create a Record</a> where you upload an example file.</p>
 </li>
 </ol>
-<p>If the creation of that Record with an uploaded file succeeds, such that the uploaded file is viewable or downloadable when clicked upon, then your permissions are correct. If this fails, please go to "<a href="#set-write-and-execute-privileges-on-certain-directories-if-needed-via-cpanel-terminal">Set 'Write' and 'Execute' Privileges On Certain Directories if Needed via cPanel Terminal</a>" above. Follow the instructions there for using cPanel Terminal to adjust your Kora installation's permissions on the correct directories.</p>
+<p>If the creation of that Record with an uploaded file succeeds, such that the uploaded file is viewable or downloadable when clicked upon, then your permissions are correct. If this fails, please go to "<a href="#set-write-and-execute-permissions-on-certain-directories-if-needed-via-cpanel-terminal">Set 'Write' and 'Execute' Privileges On Certain Directories if Needed via cPanel Terminal</a>" above. Follow the instructions there for using cPanel Terminal to adjust your Kora installation's permissions on the correct directories.</p>
               
             </div>
           </div>
