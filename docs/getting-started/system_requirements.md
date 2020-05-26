@@ -15,9 +15,9 @@ Use whichever installer is available for your Linux-based environment to install
 
 After confirming the environment is a LAMP Stack with the appropriate version levels for MySQL and PHP, it will be important to install several additional PHP packages. These are:
 
-<table style="width:100%;text-align:center;border:none!important">
+<table style="width:100%;text-align:center">
     <tr>
-        <td style="border:none"> php-common</td>
+        <td> php-common</td>
         <td> php-mysql</td>
         <td> php-xml</td>
     </tr>
