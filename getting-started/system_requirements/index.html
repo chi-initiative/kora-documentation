@@ -229,9 +229,9 @@
 <p>Use whichever installer is available for your Linux-based environment to install — or confirm installation of — these basic applicaitons. Common installers are <code>apt</code> (Advanced Package Tool) and <code>yum</code> (Yellowdog Updater, Modifier).</p>
 <h2 id="php-packages">PHP Packages</h2>
 <p>After confirming the environment is a LAMP Stack with the appropriate version levels for MySQL and PHP, it will be important to install several additional PHP packages. These are:</p>
-<table style="width:100%;text-align:center;border:none!important">
+<table style="width:100%;text-align:center">
     <tr>
-        <td style="border:none"> php-common</td>
+        <td> php-common</td>
         <td> php-mysql</td>
         <td> php-xml</td>
     </tr>
@@ -257,7 +257,8 @@
     </tr>
 </table>
 
-<p>Find the versions of these packages that correspond to your</p>
+<p><span style="clear:both"></span></p>
+<p>Install the versions of these packages that correspond to the version of PHP you have installed as a part of your LAMP Stack.</p>
 <h2 id="https-and-ssl-certificate">HTTPS and SSL certificate</h2>
 <p>Kora requires the HTTPS protocol to be enabled for the domain in which it is accessible, which requires an SSL certificate. For some server environments, the included interface — such as cPanel — will have a section for managing the process of enabling HTTPS and acquiring/associating an SSL certificate as a part of that process. Sometimes — such as with MSU's Domains of One's Own accounts and their corresponding cPanel — the SSL certificate and its renewal are handled behind-the-scenes, so to speak, and the certificate is aquired/associated when the HTTPS protocol option is enabled.</p>
 <p>In other instances, it will be necessary to apply for an SSL certificate. This can be done in a number of ways, but the one most commonly used as a cost-free method is through a server application called <a href="https://certbot.eff.org/about">Certbot</a>, which manages the application, acquisition, and association of an SSL certificate from a free certificate supplier called <a href="https://letsencrypt.org/about/">Let's Encrypt</a>. Certbot is a great option for those who need to go this route because it can also be configured to handle automatic certification renewals, since SSL certificates expire. One possible way to install certbot into your server environment is from Certbot directly, and then to provide "Execute" permissions.</p>
