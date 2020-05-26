@@ -42,8 +42,9 @@ After confirming the environment is a LAMP Stack with the appropriate version le
         <td> php-intl</td>
     </tr>
 </table>
+<span style="clear:both"></span>
 
-Find the versions of these packages that correspond to your
+Install the versions of these packages that correspond to the version of PHP you have installed as a part of your LAMP Stack.
 
 ## HTTPS and SSL certificate
 
