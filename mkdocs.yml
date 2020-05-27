@@ -1,5 +1,6 @@
 site_name: Kora 3 User Documentation
 repo_url: 'https://github.com/chi-initiative/kora-documentation'
+
 extra_css:
     - css/extra.css
 
@@ -70,3 +71,6 @@ nav:
         - 'Updating a Kora 3 Installation': 'management/update-kora.md'
         - 'Managing API Tokens': 'management/managing_api_tokens.md'
         - 'Editing Your Kora Installation Configuration': 'management/editing_your_kora_installation_configuration.md'
+
+markdown_extensions:
+    - admonition
