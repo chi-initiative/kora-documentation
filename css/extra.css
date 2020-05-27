@@ -1,59 +1,106 @@
+/* Custom styling for Kora Documentation. Done by Brian Samuel Geyer in Summer 2020 */
 
 
-a {
-    color: #A91919;
+/* content text color */
+
+.wy-nav-content {
+    color: #283C46;
 }
 
-a:hover,
-a:active {
-    color: #d60a0a;
+/* content link colors */
+
+.wy-nav-content a,
+.wy-nav-content a:visited {
+    color: #04B6AF;
 }
 
-a:visited {
-    color: #984646;
+.wy-nav-content a:hover,
+.wy-nav-content a:active {
+    color: #05E1DA !important;
 }
+
+/* spacing for content ordered lists */
+
+.wy-nav-content ol li {
+    margin-top:18px;
+}
+
+/* sidebar header color and icon */
 
 .wy-side-nav-search {
-    background-color: #404E61;
+    background-color: #007C83;
 }
+
+.fa-home::before, .icon-home::before {
+    content: url(../img/white-kora.svg);
+}
+
+/* text color inside sidebar search */
 
 .wy-side-nav-search input[type=text] {
     border-color: #404E61;
 }
 
-.wy-side-nav-search>a,
-.wy-side-nav-search .wy-dropdown>a,
-.wy-menu-vertical a:hover {
-    color: #fff !important;
+/* sidebar menu top-level */
+
+.wy-menu-vertical a {
+    color: #ffffff;
+    /* previous color: #D9D9D9 */
 }
 
+.wy-nav-side {
+    color: #ffffff;
+    /* previous color: #D9D9D9 */
+    background: #283C46;
+}
+
+.wy-menu-vertical a:hover,
 .wy-menu-vertical a:active {
-    background-color: #A91919;
+    color: #ffffff;
+    background-color: #007C83;
 }
 
-.wy-menu-vertical a:visited {
-    color: #b3b3b3;
+/* sidebar first submenu level */
+
+.wy-menu-vertical li ul {
+    background: #F5F6F7;
 }
 
-/* Hide h3s and down in the left navigation. */
+.wy-menu-vertical li.toctree-l1.current a:hover,
+.wy-menu-vertical li.toctree-l2.current>a {
+    background: #DAE0E3;
+}
+
+/* sidebar second submenu level */
+
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3>a {
+    background: #C5CED3;
+}
+
+.wy-menu-vertical li.toctree-l2.current a:hover,
+.wy-menu-vertical li.toctree-l3.current>a {
+    background: #A8B6BD !important;
+}
+
+/* Hide h4s and down in sidebar */
 
 .wy-menu-vertical li.current .toctree-l4 ~ ul {
     display: none;
 }
 
-ol li {
-    margin-top:18px;
-}
+/* Preserving sidebar indent from 1.0.4 in 1.1+ */
 
-/* For preserving nav bar indent once updates from 1.0.4 to 1.1*/
-
-.wy-menu-vertical li.toctree-l1 a[href="../.."], .wy-menu-vertical li.toctree-l1.current a[href="."] {
+.wy-menu-vertical li.toctree-l1 a[href="../.."], .wy-menu-vertical li.toctree-l1 a[href="./."], .wy-menu-vertical li.toctree-l1 a[href="../"], .wy-menu-vertical li.toctree-l1.current a[href="."] {
     padding: .4045em 1.618em !important;
     font-size: 90%;
 }
 
 .wy-menu-vertical header, .wy-menu-vertical p.caption {
     font-size: 90%;
+}
+
+.wy-menu-vertical li span.toctree-expand {
+    color: inherit;
 }
 
 .wy-menu-vertical li.toctree-l1 a, .wy-menu-vertical li.loctree-l1.current span.toctree-expand, .wy-menu-vertical li.loctree-l1.current a {
