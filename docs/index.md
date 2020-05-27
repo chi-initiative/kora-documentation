@@ -2,6 +2,13 @@
 title: About Kora
 ---
 
+Kora is an open-source, database-driven, online digital repository platform for complex multimedia objects (text, images, audio, video, 3D).
+
+Kora stores, manages, and delivers digital objects with corresponding metadata that enhances the research and educational value of the objects.
+
+This documentation is CC-BY-NC and was partially purloined from the Omeka-S documentation
+
+<!--
 !!! warning
     This is a common warning type admonition
 
@@ -23,7 +30,7 @@ title: About Kora
 
         extra_css: [extra.css]
 
-!!! tip "Changed note title from 'Tip'"
+!!! tip "Changed tip title from 'Tip'"
     This tip has had its title changed
 
         extra_css: [extra.css]
@@ -42,10 +49,4 @@ title: About Kora
     This note admonition has its title and icon suppressed
 
         extra_css: [extra.css]
-
-
-Kora is an open-source, database-driven, online digital repository platform for complex multimedia objects (text, images, audio, video, 3D).
-
-Kora stores, manages, and delivers digital objects with corresponding metadata that enhances the research and educational value of the objects.
-
-This documentation is CC-BY-NC and was partially purloined from the Omeka-S documentation
+-->
