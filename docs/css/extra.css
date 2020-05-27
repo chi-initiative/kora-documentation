@@ -90,10 +90,12 @@
 
 /* Preserving sidebar indent from 1.0.4 in 1.1+ */
 
-.wy-menu-vertical li.toctree-l1 a[href="../.."], .wy-menu-vertical li.toctree-l1 a[href="./."], .wy-menu-vertical li.toctree-l1 a[href="../"], .wy-menu-vertical li.toctree-l1.current a[href="."] {
+.wy-menu-vertical li.toctree-l1:only-child a {
     padding: .4045em 1.618em !important;
     font-size: 90%;
-}
+/*    text-transform: uppercase;
+    font-weight: bold;
+*/}
 
 .wy-menu-vertical header, .wy-menu-vertical p.caption {
     font-size: 90%;
