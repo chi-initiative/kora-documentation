@@ -117,3 +117,50 @@
     padding: 0.4045em 5.663em !important;
     font-size: 90%;
 }
+
+/* Admonition styling */
+/* Generic */
+.rst-content .admonition {
+    background: #CAE6F1;
+}
+
+.rst-content .admonition-title {
+    background: #0493C9;
+}
+
+/* Warning */
+
+.rst-content .warning {
+    background: #FBE2E6;
+}
+
+.rst-content .warning .admonition-title {
+    background: #FF6F81;
+}
+
+/* Caution */
+.rst-content .caution {
+    background: #FCE1D0;
+}
+
+.rst-content .caution .admonition-title {
+    background: #F79F68;
+}
+
+/* Tip */
+.rst-content .tip {
+    background: #CAEDEC;
+}
+
+.rst-content .tip .admonition-title {
+    background: #04B6AF;
+}
+
+/* Note */
+.rst-content .note {
+    background: #CAE6F1;
+}
+
+.rst-content .note .admonition-title {
+    background: #0493C9;
+}
