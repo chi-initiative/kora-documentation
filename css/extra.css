@@ -31,11 +31,31 @@
     background-color: #007C83;
 }
 
-.wy-side-nav-search>a[href="."] {
+.icon.icon-home {
     content: url(../img/logo-white.png);
     width: 60%;
     margin-bottom: 0px
 }
+
+/* MOBILE top navbar */
+
+.wy-nav-top {
+    background: #007C83;
+}
+
+/* MOBILE top navbar logo before site name */
+
+.wy-nav-top a::before {
+    background-image: url(../img/white-kora.svg);
+    background-size: 1.2em 1.2em;
+    background-repeat: no-repeat;
+    height: 1.3em;
+    width: 1.3em;
+    content: "";
+    display: inline-block;
+    vertical-align: -6%;
+}
+
 
 /* text color inside sidebar search */
 
