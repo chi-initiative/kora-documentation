@@ -1,4 +1,4 @@
-site_name: Kora 3 User Documentation
+site_name: Kora User Documentation
 repo_url: 'https://github.com/chi-initiative/kora-documentation'
 
 extra_css:
@@ -10,12 +10,10 @@ theme:
     hljs_languages:
         - yaml
         - django
-
-# markdown_extensions: - markdown.extensions.admonition
+    sticky_navigation: false
 
 nav:
     - 'Home': 'index.md'
-  #  - 'Searching': 'search.md'
     - 'Getting Started':
         - 'System Requirements': 'getting-started/system_requirements.md'
         - "Installing Kora on Domain of One's Own & Reclaim Hosting": 'getting-started/installing_kora_domains.md'
