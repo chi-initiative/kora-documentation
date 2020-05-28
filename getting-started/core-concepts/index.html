@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Understanding Core Concepts - Kora 3 User Documentation</title>
+  <title>Understanding Core Concepts - Kora User Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -41,7 +41,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Kora 3 User Documentation</a>
+        <a href="../.." class="icon icon-home"> Kora User Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -61,6 +61,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../installing_kora_domains/">Installing Kora on Domain of One's Own & Reclaim Hosting</a>
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Understanding Core Concepts</a>
+    <ul class="current">
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../understanding_kora_user_types_and_permissions/">Understanding Kora User Types and Permissions</a>
                     </li>
@@ -179,7 +181,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Kora 3 User Documentation</a>
+        <a href="../..">Kora User Documentation</a>
       </nav>
 
       
@@ -209,7 +211,17 @@
           <div role="main">
             <div class="section">
               
-                <p>Coming soon.  </p>
+                <p>Like many other digital repository, archive, and library platforms, Kora is designed which a specific kind of architecture.  This architecture determines both how projects using Kora are organized as well as the workflow used by those working on the projects.  </p>
+<p>In the case of Kora, this architecture is somewhat hiearchical, which relevant moving parts nested within one another.  In order to get the most out of Kora, it is important to understand these components, what role they play, and how the interact with one another</p>
+<h3 id="kora-installation">Kora Installation</h3>
+<p>A Kora installation can have any number of discreet projects (more on Projects below).  For the most part, each project in a Kora installation is its own silo.  The only exception to this is that from within the Kora installation, admins can search across multiple project (cross project searching).  In addition, the Kora API can be used to display (including searching and browsing) records from across multiple projects in one public website.  </p>
+<p>While a Kora installation can contain any number of projects, you might also feel the need to install more than one instance of Kora on a server (to isolate one specific project in a container, for instance).  </p>
+<p>To learn about what you need to install Kora on a server, check out <a href="../system_requirements/">System Requirements</a>.  If you are interested in installing Kora on Reclaim or Domain of One's Own, check out <a href="../installing_kora_domains/">Installing Kora on Domain of One's Own and Reclaim Hosting</a></p>
+<h3 id="project">Project</h3>
+<h3 id="form">Form</h3>
+<p>Forms are essentially the mechanism by which records are generated.  Forms are .  A project can have any number of different forms, each for a different type of record or object.  </p>
+<h3 id="field-types">Field Types</h3>
+<h3 id="records">Records</h3>
               
             </div>
           </div>
@@ -260,7 +272,7 @@
       <script src="../../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
+            SphinxRtdTheme.Navigation.enable(false);
         };
     </script>
 
