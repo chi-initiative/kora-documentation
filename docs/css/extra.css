@@ -25,14 +25,16 @@
     margin-top:18px;
 }
 
-/* sidebar header color and icon */
+/* sidebar header color and logo */
 
 .wy-side-nav-search {
     background-color: #007C83;
 }
 
-.fa-home::before, .icon-home::before {
-    content: url(../img/white-kora.svg);
+.wy-side-nav-search>a[href="."] {
+    content: url(../img/logo-white.png);
+    width: 60%;
+    margin-bottom: 0px
 }
 
 /* text color inside sidebar search */
@@ -45,12 +47,10 @@
 
 .wy-menu-vertical a {
     color: #ffffff;
-    /* previous color: #D9D9D9 */
 }
 
 .wy-nav-side {
     color: #ffffff;
-    /* previous color: #D9D9D9 */
     background: #283C46;
 }
 
@@ -89,14 +89,7 @@
 }
 
 /* Preserving sidebar indent from 1.0.4 in 1.1+ */
-
-.wy-menu-vertical li.toctree-l1:only-child a {
-    padding: .4045em 1.618em !important;
-    font-size: 90%;
-/*    text-transform: uppercase;
-    font-weight: bold;
-*/}
-
+/* Category Names */
 .wy-menu-vertical header, .wy-menu-vertical p.caption {
     font-size: 90%;
 }
@@ -105,16 +98,27 @@
     color: inherit;
 }
 
+/* Top-level Pages (same level as category names) */
+.wy-menu-vertical li.toctree-l1:only-child a {
+    padding: .4045em 1.618em !important;
+    font-size: 90%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Second-Level Pages, Underneath Category */
 .wy-menu-vertical li.toctree-l1 a, .wy-menu-vertical li.loctree-l1.current span.toctree-expand, .wy-menu-vertical li.loctree-l1.current a {
     padding: 0.4045em 2.427em !important;
     font-size: 90%;
 }
 
+/* Third-Level (first sub-page level) */
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.loctree-l2.current a, .wy-menu-vertical li.loctree-l2.current span.toctree-expand {
     padding: 0.4045em 4.045em !important;
     font-size: 90%;
 }
 
+/* Fourth-Level (second sub-page level ) */
 .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.loctree-l3.current a, .wy-menu-vertical li.loctree-l3.current span.toctree-expand {
     padding: 0.4045em 5.663em !important;
     font-size: 90%;
@@ -131,7 +135,6 @@
 }
 
 /* Warning */
-
 .rst-content .warning {
     background: #FBE2E6;
 }
