@@ -55,6 +55,11 @@
     border-color: #404E61;
 }
 
+/* spacing at end of sidebar */
+.wy-menu-vertical ul:last-of-type {
+    margin-bottom: 5px;
+}
+
 /* sidebar menu top-level */
 .wy-menu-vertical a {
     color: #ffffff;
@@ -91,13 +96,13 @@
     background: #A8B6BD !important;
 }
 
-/* Hide h4s and down in sidebar */
+/* hide h4s and down in sidebar */
 .wy-menu-vertical li.current .toctree-l4 ~ ul {
     display: none;
 }
 
-/* Preserving sidebar indent from 1.0.4 in 1.1+ */
-/* Category Names */
+/* preserving sidebar indent from 1.0.4 in 1.1+ */
+/* category names */
 .wy-menu-vertical header, .wy-menu-vertical p.caption {
     font-size: 90%;
 }
@@ -106,7 +111,7 @@
     color: inherit;
 }
 
-/* Top-level Pages (same level as category names) */
+/* top-level pages (same level as category names) */
 .wy-menu-vertical li.toctree-l1:only-child a {
     padding: .4045em 1.618em !important;
     font-size: 90%;
@@ -114,26 +119,26 @@
     font-weight: bold;
 }
 
-/* Second-Level Pages, Underneath Category */
+/* second-level pages, underneath category names */
 .wy-menu-vertical li.toctree-l1 a, .wy-menu-vertical li.loctree-l1.current span.toctree-expand, .wy-menu-vertical li.loctree-l1.current a {
     padding: 0.4045em 2.427em !important;
     font-size: 90%;
 }
 
-/* Third-Level (first sub-page level) */
+/* third-level (first sub-page level) */
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.loctree-l2.current a, .wy-menu-vertical li.loctree-l2.current span.toctree-expand {
     padding: 0.4045em 4.045em !important;
     font-size: 90%;
 }
 
-/* Fourth-Level (second sub-page level ) */
+/* fourth-level (second sub-page level) */
 .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.loctree-l3.current a, .wy-menu-vertical li.loctree-l3.current span.toctree-expand {
     padding: 0.4045em 5.663em !important;
     font-size: 90%;
 }
 
-/* Admonition styling */
-/* Generic */
+/* admonition styling */
+/* generic */
 .rst-content .admonition {
     background: #CAE6F1;
 }
@@ -142,7 +147,7 @@
     background: #0493C9;
 }
 
-/* Warning */
+/* warning */
 .rst-content .warning {
     background: #FBE2E6;
 }
@@ -151,7 +156,7 @@
     background: #FF6F81;
 }
 
-/* Caution */
+/* caution */
 .rst-content .caution {
     background: #FCE1D0;
 }
@@ -160,7 +165,7 @@
     background: #F79F68;
 }
 
-/* Tip */
+/* tip */
 .rst-content .tip {
     background: #CAEDEC;
 }
@@ -169,7 +174,7 @@
     background: #04B6AF;
 }
 
-/* Note */
+/* note */
 .rst-content .note {
     background: #CAE6F1;
 }
