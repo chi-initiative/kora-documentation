@@ -60,6 +60,10 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#php-packages">PHP Packages</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#enabling-mod_rewrite">Enabling mod_rewrite</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-mod_rewrite-in-kora">Using mod_rewrite in Kora</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#https-and-ssl-certificate">HTTPS and SSL certificate</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#kora-email">Kora Email</a>
@@ -220,13 +224,13 @@
                 <h1 id="system-requirements">System Requirements</h1>
 <p>Kora requires a server environment deployed with what is often referred to as a LAMP Stack. LAMP stands for:</p>
 <ul>
-<li>Linux</li>
-<li>Apache</li>
-<li>MySQL</li>
-<li>PHP</li>
+<li>Linux Operating System</li>
+<li>Apache Version 2.0</li>
+<li>MySQL Version 5.7.20</li>
+<li>PHP Version 7.1.3</li>
 </ul>
-<p>In order to install Kora, the minimum version of <strong>MySQL needed is 5.7.20</strong> and the minimum version of <strong>PHP is 7.1.3</strong>. Oftentimes, the server environment will rely on minor variations of these. For instance, the HTTPD (or Hypertext Transfer Protocol Daemon) version of Apache is often used.</p>
-<p>Use whichever installer is available for your Linux-based environment to install — or confirm installation of — these basic applicaitons. Common installers are <code>apt</code> (Advanced Package Tool) and <code>yum</code> (Yellowdog Updater, Modifier).</p>
+<p>Oftentimes, the server environment will rely on minor variations of these. For instance, the httpd (or Hypertext Transfer Protocol Daemon) version of Apache 2 is often used.</p>
+<p>Use whichever installer is available for your Linux-based environment to install — or confirm installation of — the most recent versions of these basic applications in your Linux server environment. Common installers are <code>apt</code> (Advanced Package Tool) and <code>yum</code> (Yellowdog Updater, Modifier).</p>
 <h2 id="php-packages">PHP Packages</h2>
 <p>After confirming the environment is a LAMP Stack with the appropriate version levels for MySQL and PHP, it will be important to install several additional PHP packages. These are:</p>
 <table style="width:100%;text-align:center">
@@ -257,15 +261,66 @@
     </tr>
 </table>
 
-<p><span style="clear:both"></span></p>
+<p><span></span></p>
 <p>Install the versions of these packages that correspond to the version of PHP you have installed as a part of your LAMP Stack.</p>
+<h2 id="enabling-mod_rewrite">Enabling <em>mod_rewrite</em></h2>
+<p>Kora uses an Apache module called <code>mod_rewrite</code> to manage internet browser navigation within a Kora installation, via the ".htaccess" file inside the "public" directory. Different servers handle enabling and disabling <code>mod_rewrite</code> in different ways, so it will be important for you to find out how this is managed with your specific circumstance and then confirm that <code>mod_rewrite</code> is enabled for the domain where Kora is accessed.</p>
+<p>This sometimes requires finding the ".conf" file for your version of Apache, which contains the overarching permissions for, among many modules, <code>mod_rewrite</code>. Determining where this ".conf" file is saved is sometimes possible by temporarily creating a webpage on your domain that provides a full readout of your PHP configuration.</p>
+<ol>
+<li>
+<p>Create a file named "server-readout.php" in the root directory for your domain; this is often named "html", "public", or "www". Further, it is often also the inner-most of these directories; this means, if the directory "www" exists, but inside this is a subdirectory named "html", the root directory is most likely "html".</p>
+<p>Inside the created file, put the single line:</p>
+<pre><code>&lt;?php phpinfo(); ?&gt;
+</code></pre>
+<p>To do this via an SSH Terminal connection instead, navigate to the domain root (again, often named "html", or "public", or "www") and then use the following command to create this file with the same contents:</p>
+<pre><code>echo "&lt;?php phpinfo(); ?&gt;" &gt; server-readout.php
+</code></pre>
+</li>
+<li>
+<p>Once created, you can navigate to this file in your brower: http(s)://your.domain.name/server-readout.php.</p>
+<p>This page has a ton of sensitive information, so you should not leave it up for long. It has a banner similar to this at the top:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/system_requirements_1_annotated.png" title="PHP Info page banner"></p>
+<p>Scrolling down to the section called "apache2handler" or similar, you will find the apache root directory — which will contain the relevant ".conf" file — as well as confirmation that <code>mod_rewrite</code> is loaded generally as a module, as noted in this screenshot:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/system_requirements_2_annotated.png" title="PHP Info page banner"></p>
+</li>
+<li>
+<p>If the <code>mod_rewrite</code> module is not loaded, use the version of apache your environment is running to search for case specific instructions on how to load it. For instance, for an environment using a generic version of apache, you might run the following commands one at a time:</p>
+<pre><code>sudo a2enmod rewrite
+</code></pre>
+<p><span></span></p>
+<pre><code>sudo service apache2 restart
+</code></pre>
+<p>Each of these commands uses <code>sudo</code>, which tells the linux system to run the command as a super user (it's an acronym for "super user do"). It is necessary to also restart apache, in order for the change to take effect.</p>
+</li>
+<li>
+<p>To ensure your ".conf" file is properly configured to allow <code>mod_rewrite</code> to function properly in ".htaccess" files, you will next need to navigate to the aforementioned apache root directory. Inside you will find a directory, likely named either "httpd" or "apache"; inside of <em>this</em> directory will be the relevant ".conf" file. In the case of an environment using "httpd", this file will be named "httpd.conf".</p>
+</li>
+<li>
+<p>Edit this file. If using SSH or Terminal, open the file for editing by using the <code>nano</code> text editor that comes built in:</p>
+<pre><code>sudo nano httpd.conf
+</code></pre>
+<p>and scroll through, looking for a section that looks something similar to:</p>
+<p><code>&lt;Directory "/var/www/html"&gt;
+    AllowOverride None
+    # Allow open access:
+    Require all granted
+&lt;/Directory&gt;</code></p>
+<p>In this case, the root directory fo this domain is inside "html", which is inside "www", which is itself inside "var", so in this example the relevant code in the .conf file is for <code>/var/www/html</code>. In other cases the relevant code will correspond to some other directory. In this example, note how <code>AllowOverride</code> is set to <code>None</code>; to allow <code>mod_rewrite</code> to work properly, change <code>AllowOverride None</code> to <code>AllowOverride All</code>.</p>
+</li>
+<li>
+<p>Save this change; if using SSH or Terminal, do this by exiting with the key combination "ctrl + x", and then hitting "y" to agree to saving the file. It will ask for the file name to be saved, but default to the file's current name, which is what you'll want. Hit "enter" to save and exit nano.</p>
+</li>
+</ol>
+<h2 id="using-mod_rewrite-in-kora">Using <em>mod_rewrite</em> in Kora</h2>
+<p>If intending for Kora to be accessed at any</p>
+<p>Once you have confirmed that <code>mod_rewrite</code> is loaded and enabled</p>
 <h2 id="https-and-ssl-certificate">HTTPS and SSL certificate</h2>
 <p>Kora requires the HTTPS protocol to be enabled for the domain in which it is accessible, which requires an SSL certificate. For some server environments, the included interface — such as cPanel — will have a section for managing the process of enabling HTTPS and acquiring/associating an SSL certificate as a part of that process. Sometimes — such as with MSU's Domains of One's Own accounts and their corresponding cPanel — the SSL certificate and its renewal are handled behind-the-scenes, so to speak, and the certificate is aquired/associated when the HTTPS protocol option is enabled.</p>
 <p>In other instances, it will be necessary to apply for an SSL certificate. This can be done in a number of ways, but the one most commonly used as a cost-free method is through a server application called <a href="https://certbot.eff.org/about">Certbot</a>, which manages the application, acquisition, and association of an SSL certificate from a free certificate supplier called <a href="https://letsencrypt.org/about/">Let's Encrypt</a>. Certbot is a great option for those who need to go this route because it can also be configured to handle automatic certification renewals, since SSL certificates expire. One possible way to install certbot into your server environment is from Certbot directly, and then to provide "Execute" permissions.</p>
-<pre><code>    wget https://dl.eff.org/certbot-auto
+<pre><code>wget https://dl.eff.org/certbot-auto
 </code></pre>
-<p><span style="clear:both"></span></p>
-<pre><code>    chmod a+x certbot-auto
+<p><span></span></p>
+<pre><code>chmod a+x certbot-auto
 </code></pre>
 <p>The specifics of using certbot will depend upon your domain, email address, etc. so it wouldn't be possible to provide a guide here. Certbot provides some more-granular instructions for use on <a href="https://certbot.eff.org/instructions">their "Instructions" page</a>, which should be enough to get the SSL certificate needed.</p>
 <h2 id="kora-email">Kora Email</h2>
