@@ -1,3 +1,7 @@
+---
+title: System Requirements
+---
+
 # System Requirements
 
 Kora requires a server environment deployed with what is often referred to as a LAMP Stack. LAMP stands for:
