@@ -15,10 +15,10 @@ theme:
 nav:
     - 'Home': 'index.md'
     - 'Getting Started':
-        - 'System Requirements': 'getting-started/system_requirements.md'
-        - "Installing Kora on Domain of One's Own & Reclaim Hosting": 'getting-started/installing_kora_domains.md'
         - 'Understanding Core Concepts': 'getting-started/core-concepts.md'
         - 'Understanding Kora User Types and Permissions': 'getting-started/understanding_kora_user_types_and_permissions.md'
+        - 'System Requirements': 'getting-started/system_requirements.md'
+        - "Installing Kora on Domain of One's Own & Reclaim Hosting": 'getting-started/installing_kora_domains.md'
         # - 'Searching and Browsing in Kora': 'getting-started/searching_and_browsing.md'
         - 'Working with the Dashboard': 'getting-started/working_with_the_dashboard.md'
     - 'Projects':
