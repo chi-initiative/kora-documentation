@@ -1,7 +1,7 @@
 
 # Working with the Dashboard
 
-Your dashboard provides an at-a-glance view of your projects, forms, records and other types of kora data. This is accomplished by giving you the ability to create blocks that provide shortcut to the desired part of your Kora installation. You can use the dashboard to quickly navigate to parts of Kora that are most relevant to you  
+Once Kora has been installed and properly configured, your dashboard provides an at-a-glance view of your projects, forms, records and other types of kora data. This is accomplished by giving you the ability to create blocks that provide shortcut to the desired part of your Kora installation. You can use the dashboard to quickly navigate to parts of Kora that are most relevant to you  
 
 ## Enable/Disable Dashboard
 You are able to enable or disable your dashboard from your [user preferences](../user-accounts/edit_user_preferences.md). Follow these steps to enable/disable your dashboard:
