@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Navigating to a Form - Kora User Documentation</title>
+  <title>Advanced Configuration of Kora - Kora User Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -19,8 +19,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Navigating to a Form";
-    var mkdocs_page_input_path = "forms/navigating_to_a_form.md";
+    var mkdocs_page_name = "Advanced Configuration of Kora";
+    var mkdocs_page_input_path = "getting-started/advanced_configuration.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -55,18 +55,24 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Getting Started</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../getting-started/core-concepts/">Understanding Core Concepts</a>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../core-concepts/">Understanding Core Concepts</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../getting-started/understanding_kora_user_types_and_permissions/">Understanding Kora User Types and Permissions</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../understanding_kora_user_types_and_permissions/">Understanding Kora User Types and Permissions</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../getting-started/system_requirements/">System Requirements</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../system_requirements/">System Requirements</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installing_kora_domains/">Installing Kora on Domain of One's Own & Reclaim Hosting</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../installing_kora_domains/">Installing Kora on Domain of One's Own & Reclaim Hosting</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../getting-started/advanced_configuration/">Advanced Configuration of Kora</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Advanced Configuration of Kora</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#using-mod_rewrite-in-kora">Using mod_rewrite in Kora</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#increasing-memory-usage-and-file-size-limits">Increasing Memory Usage and File Size Limits</a>
+    </li>
+    </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../getting-started/working_with_the_dashboard/">Working with the Dashboard</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../working_with_the_dashboard/">Working with the Dashboard</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Projects</span></p>
@@ -93,42 +99,34 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Forms</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../creating_a_form/">Creating a Form</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/creating_a_form/">Creating a Form</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../understanding_field_types/">Understanding Field Types</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/understanding_field_types/">Understanding Field Types</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../batch_assigning_field_values/">Batch Assigning Field Values</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/batch_assigning_field_values/">Batch Assigning Field Values</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../adding_users_to_forms/">Adding Users to a Form</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/adding_users_to_forms/">Adding Users to a Form</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../additional_form_administrators/">Adding Additional Form Administrators</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/additional_form_administrators/">Adding Additional Form Administrators</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../creating_a_multipage_form/">Creating a Multipage Form</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/creating_a_multipage_form/">Creating a Multipage Form</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../creating_fields/">Creating Fields</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/creating_fields/">Creating Fields</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../editing_a_form/">Editing a Form</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/editing_a_form/">Editing a Form</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../editing_fields/">Editing Fields</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/editing_fields/">Editing Fields</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../exporting_a_form/">Exporting a Form</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/exporting_a_form/">Exporting a Form</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Navigating to a Form</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#navigating-to-a-form-from-your-dashboard">Navigating to a Form from Your Dashboard</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#navigating-to-a-form-from-your-projects-list">Navigating to a Form from Your Projects List</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#navigating-to-a-form-using-the-search-function">Navigating to a Form using the Search Function</a>
-    </li>
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/navigating_to_a_form/">Navigating to a Form</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../importing_a_form/">Importing a Form</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/importing_a_form/">Importing a Form</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../field_value_presets/">Using Field Value Presets</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/field_value_presets/">Using Field Value Presets</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../searching_for_a_form/">Searching for a Form</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../forms/searching_for_a_form/">Searching for a Form</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Records</span></p>
@@ -199,14 +197,14 @@
     
       
         
-          <li>Forms &raquo;</li>
+          <li>Getting Started &raquo;</li>
         
       
     
-    <li>Navigating to a Form</li>
+    <li>Advanced Configuration of Kora</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/chi-initiative/kora-documentation/edit/master/docs/forms/navigating_to_a_form.md"
+        <a href="https://github.com/chi-initiative/kora-documentation/edit/master/docs/getting-started/advanced_configuration.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -217,43 +215,69 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="navigating-to-a-form">Navigating to a Form</h1>
-<p>You may need to navigate to a form to begin creating a record, to edit a form, or to add users to a form, among others. There are several ways to do this. </p>
-<h2 id="navigating-to-a-form-from-your-dashboard">Navigating to a Form from Your Dashboard</h2>
+                <h1 id="advanced-configuration-of-kora">Advanced Configuration of Kora</h1>
+<p>This document explains advanced features of Kora, which may only be needed in certain circumstances.</p>
+<h2 id="using-mod_rewrite-in-kora">Using <em>mod_rewrite</em> in Kora</h2>
+<p>If your installation will exist at a URL with a subdirectory, it is important to adjust the ".htaccess" file inside of "public" to reflect this. <strong>Note</strong>: This is <em>only</em> applicable to a Kora installation accessible by subdirectory and <em>not</em> for one existing at a domain-level or subdomain-level URL. For an explanation of these circumstances, please see the <a href="../installing_kora_domains/#create-kora-installation-urls">"Create Kora Installation URLs" part of the Reclaim/DoOO Installation guide</a>.</p>
 <ol>
 <li>
-<p>From your dashboard, choose the project that houses the form you are navigating to. Click on the name of that project. <p align="center"> <img src="../forms-img/navigating_to_a_form_1_annotated.png" width="100%" style="align:center" title="Step 1"> </p></p>
+<p>If you have not yet done so, confirm that <code>mod_rewrite</code>. See "<a href="../system_requirements/#enabling-mod_rewrite">Enabling <em>mod_rewrite</em></a>" section of the "System Requirements" documentation.</p>
 </li>
 <li>
-<p>Within your project, scroll through the list of the forms until you find the one you would like to select. You can either click on the name of the form, or click <strong>Go to Form</strong>. Both of these options will bring you to that form. <p align="center"> <img src="../forms-img/navigating_to_a_form_2_annotated.png" width="100%" style="align:center" title="Step 2"> </p></p>
+<p>Edit the ".htaccess" file inside the "public" directory.</p>
+<ul>
+<li>
+<p>If using a cPanel interface, follow the instructions for editing files in "<a href="../installing_kora_domains/#upload-and-prepare-kora-application-files-via-cpanel-file-manager">Upload and Prepare Kora Application Files via cPanel File Manager</a>," a section in the Installation guide.</p>
+</li>
+<li>
+<p>If using SSH or Terminal, navigate to "kora/public" and use <code>sudo nano</code>, this time to edit ".htaccess". An explanation for using <code>nano</code> with super user privileges is also contained in the "<a href="../system_requirements/#enabling-mod_rewrite">Enabling <em>mod_rewrite</em></a>" section of the "System Requirements" documentation.</p>
+</li>
+</ul>
+<p><span></span></p>
+<p>The file's code will begin with:</p>
+<pre><code>&lt;IfModule mod_rewrite.c&gt;
+    &lt;IfModule mod_negotiation.c&gt;
+        Options -MultiViews -Indexes
+    &lt;/IfModule&gt;
+
+    RewriteEngine On
+    #RewriteBase #add base url ex: www.website.com[/this part is your base url, the url subdirectory where you want your installation to be accessible from]
+    #RewriteBase /your_base_url
+</code></pre>
+</li>
+<li>
+<p>Remove the <code>#</code> from the final line above and provide the subdirectory part of your URL for accessing your installation. For instance, if you installed Kora and created a symbolic link to a directory within your root called "kora", the last few lines might look like:</p>
+<pre><code>RewriteEngine On
+#RewriteBase #add base url ex: www.website.com[/this part is your base url, the url subdirectory where you want your installation to be accessible from]
+RewriteBase /kora
+</code></pre>
+</li>
+<li>
+<p>Be sure to save your changes when exiting.</p>
 </li>
 </ol>
-<h2 id="navigating-to-a-form-from-your-projects-list">Navigating to a Form from Your Projects List</h2>
+<h2 id="increasing-memory-usage-and-file-size-limits">Increasing Memory Usage and File Size Limits</h2>
+<p>A Kora installation relies on default values for memory and storage usage by PHP. However, these will be set too low to handle Kora installations where large files will be uploaded to the installation, such as high-resolution images, image-dense pdfs, or 3D objects with detailed surface texture files. To deal with this, the ".htaccess" file saved in the "public" directory contains a list of PHP attributes and associated increased values. In that file, they appear like this:</p>
+<pre><code>#Recommended but only use these if your system allows overwrites
+#php_value upload_max_filesize 4998M
+#php_value post_max_size 4999M
+#php_value memory_limit 5000M
+#php_value max_execution_time 3000
+#php_value max_input_time 3000
+</code></pre>
+<p>If your server environment allows overwrites via the .htaccess file, simply edit this file and remove the <code>#</code> before each attribute to enable the overwrite. For editing instructions, see links to multiple explanations in the section above, "<a href="#using-mod_rewrite-in-kora">Using <em>mod_rewrite</em> in Kora</a>".</p>
+<p>In some cases however, such as in Domain of One's Own or other <a href="https://reclaimhosting.com">Reclaim Hosting</a>-provided environments, these values cannot overwritten via this method. Instead, these values may be managed by the provided server graphical interface; in the case of Reclaim Hosting, this is the cPanel. In this example, these values are managed by a cPanel application called "MultiPHP INI Editor."</p>
 <ol>
 <li>
-<p>From your projects list, scroll and find the project that houses the form you are navigating to. Click on the name of that project. <p align="center"> <img src="../forms-img/navigating_to_a_form_3_annotated.png" width="100%" style="align:center" title="Step 1"> </p></p>
+<p>To adjust these values, begin by clicking on this application.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/advanced_configuration_1_annotated.png" title="MultiPHP INI Editor"></p>
 </li>
 <li>
-<p>Within your project, scroll through the list of the forms until you find the one you would like to select. You can either click on the name of the form, or click <strong>Go to Form</strong>. Both of these options will bring you to that form. <p align="center"> <img src="../forms-img/navigating_to_a_form_2_annotated.png" width="100%" style="align:center" title="Step 2"> </p></p>
-</li>
-</ol>
-<h2 id="navigating-to-a-form-using-the-search-function">Navigating to a Form using the Search Function</h2>
-<p>When you are logged into Kora, you have the ability to search for any form by name using the search bar function. </p>
-<ol>
-<li>
-<p>Click the magnifying glass or search icon in the top right corner of your screen. This will make a grey search box appear below the blue menu. <p align="center"> <img src="../forms-img/navigating_to_a_form_4_annotated.png" width="100%" style="align:center" title="Step 1"> </p></p>
+<p>Select the domain or subdomain where your installation is.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/advanced_configuration_2_annotated.png" title="Select relevant domain or subdomain from the dropdown"></p>
 </li>
 <li>
-<p>Type your form name into the search box. If the form you would like to navigate to appears in a list below the search box, click the form name. If it does not appear, press enter on your keyboard. <p align="center"> <img src="../forms-img/navigating_to_a_form_5_annotated.png" width="100%" style="align:center" title="Step 2"> </p></p>
-</li>
-<li>
-<p>This will bring you to the <strong>Search Kora</strong> page. Here you can adjust the keyword(s) entered and gives you the ability to select specific project(s) to filter the search results (if needed). <p align="center"> <img src="../forms-img/navigating_to_a_form_6_annotated.png" width="100%" style="align:center" title="Step 3"> </p></p>
-</li>
-<li>
-<p>Results of your search will be listed below the blue <strong>Search</strong> button. It will list results of your search by presence as a <em>Record</em>, <em>Form</em>, <em>Field</em>, and <em>Project</em>. Click on the <strong>Forms</strong> option to show the list of forms that match your search criteria. <p align="center"> <img src="../forms-img/navigating_to_a_form_7_annotated.png" width="100%" style="align:center" title="Step 4"> </p></p>
-</li>
-<li>
-<p>Choose the form that you would like to navigate to by clicking on the form name. <p align="center"> <img src="../forms-img/navigating_to_a_form_8_annotated.png" width="100%" style="align:center" title="Step 5"> </p></p>
+<p>All of the overwritable PHP attributes for the selected domain or subdomain will appear; find each of those listed in the code block above and adjust their values as necessary. Be sure to save the new settings.</p>
 </li>
 </ol>
               
@@ -263,10 +287,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../importing_a_form/" class="btn btn-neutral float-right" title="Importing a Form">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../working_with_the_dashboard/" class="btn btn-neutral float-right" title="Working with the Dashboard">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../exporting_a_form/" class="btn btn-neutral" title="Exporting a Form"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../installing_kora_domains/" class="btn btn-neutral" title="Installing Kora on Domain of One's Own & Reclaim Hosting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -294,10 +318,10 @@
           <a href="https://github.com/chi-initiative/kora-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../exporting_a_form/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../installing_kora_domains/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../importing_a_form/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../working_with_the_dashboard/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

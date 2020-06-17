@@ -66,15 +66,15 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#enabling-mod_rewrite">Enabling mod_rewrite</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#using-mod_rewrite-in-kora">Using mod_rewrite in Kora</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#https-and-ssl-certificate">HTTPS and SSL certificate</a>
+    <li class="toctree-l2"><a class="reference internal" href="#https-and-ssl-certificate">HTTPS and SSL Certificate</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#kora-email">Kora Email</a>
     </li>
     </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../installing_kora_domains/">Installing Kora on Domain of One's Own & Reclaim Hosting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../advanced_configuration/">Advanced Configuration of Kora</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../working_with_the_dashboard/">Working with the Dashboard</a>
                     </li>
@@ -298,22 +298,35 @@
 <pre><code>sudo nano httpd.conf
 </code></pre>
 <p>and scroll through, looking for a section that looks something similar to:</p>
-<p><code>&lt;Directory "/var/www/html"&gt;
+<pre><code>&lt;Directory "/var/www/html"&gt;
     AllowOverride None
     # Allow open access:
     Require all granted
-&lt;/Directory&gt;</code></p>
-<p>In this case, the root directory fo this domain is inside "html", which is inside "www", which is itself inside "var", so in this example the relevant code in the .conf file is for <code>/var/www/html</code>. In other cases the relevant code will correspond to some other directory. In this example, note how <code>AllowOverride</code> is set to <code>None</code>; to allow <code>mod_rewrite</code> to work properly, change <code>AllowOverride None</code> to <code>AllowOverride All</code>.</p>
+&lt;/Directory&gt;
+</code></pre>
+<p>In this case, the root directory fo this domain is inside "html", which is inside "www", which is itself inside "var", so in this example the relevant code in the .conf file is for <code>/var/www/html</code>. In other cases the relevant code will correspond to some other directory. In this example, note how <code>AllowOverride</code> is set to <code>None</code>; to allow <code>mod_rewrite</code> to work properly, change <code>AllowOverride None</code> to <code>AllowOverride All</code>:</p>
+<pre><code>&lt;Directory "/var/www/html"&gt;
+    AllowOverride All
+    # Allow open access:
+    Require all granted
+&lt;/Directory&gt;
+</code></pre>
 </li>
 <li>
 <p>Save this change; if using SSH or Terminal, do this by exiting with the key combination "ctrl + x", and then hitting "y" to agree to saving the file. It will ask for the file name to be saved, but default to the file's current name, which is what you'll want. Hit "enter" to save and exit nano.</p>
 </li>
+<li>
+<p>After adjusting this file, restart your apache. Once again, if yours is the generic version, use:</p>
+<pre><code>sudo service apache2 restart
+</code></pre>
+</li>
 </ol>
-<h2 id="using-mod_rewrite-in-kora">Using <em>mod_rewrite</em> in Kora</h2>
-<p>If intending for Kora to be accessed at any</p>
-<p>Once you have confirmed that <code>mod_rewrite</code> is loaded and enabled</p>
-<h2 id="https-and-ssl-certificate">HTTPS and SSL certificate</h2>
-<p>Kora requires the HTTPS protocol to be enabled for the domain in which it is accessible, which requires an SSL certificate. For some server environments, the included interface — such as cPanel — will have a section for managing the process of enabling HTTPS and acquiring/associating an SSL certificate as a part of that process. Sometimes — such as with MSU's Domains of One's Own accounts and their corresponding cPanel — the SSL certificate and its renewal are handled behind-the-scenes, so to speak, and the certificate is aquired/associated when the HTTPS protocol option is enabled.</p>
+<p>Once finished, <code>mod_overwrite</code> will be enabled for your root directory.</p>
+<p><strong>Important: Remember to delete the .php page you created, containing your server information.</strong> This can be done via SSH or Terminal, when located in its directory, with the command:</p>
+<pre><code>rm [filename]
+</code></pre>
+<h2 id="https-and-ssl-certificate">HTTPS and SSL Certificate</h2>
+<p>Kora requires the HTTPS protocol to be enabled for the domain in which it is accessible, which requires an SSL certificate. For some server environments, the included interface — such as cPanel — will have a section for managing the process of enabling HTTPS and acquiring/associating an SSL certificate as a part of that process. Sometimes — such as with MSU's Domains of One's Own accounts and their corresponding cPanel — the SSL certificate and its renewal are handled behind-the-scenes, so to speak, and the certificate is acquired/associated when the HTTPS protocol option is enabled.</p>
 <p>In other instances, it will be necessary to apply for an SSL certificate. This can be done in a number of ways, but the one most commonly used as a cost-free method is through a server application called <a href="https://certbot.eff.org/about">Certbot</a>, which manages the application, acquisition, and association of an SSL certificate from a free certificate supplier called <a href="https://letsencrypt.org/about/">Let's Encrypt</a>. Certbot is a great option for those who need to go this route because it can also be configured to handle automatic certification renewals, since SSL certificates expire. One possible way to install certbot into your server environment is from Certbot directly, and then to provide "Execute" permissions.</p>
 <pre><code>wget https://dl.eff.org/certbot-auto
 </code></pre>
