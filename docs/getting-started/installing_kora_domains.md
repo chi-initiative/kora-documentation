@@ -288,6 +288,8 @@ Find the directions for each below.
 
 3. To confirm that the symbolic link process worked, you may go back into File Manager and navigate into your publicly-accessible directory, which you were to take note of in Step 2 of "[Upload and Prepare Kora Application Files via cPanel File Manager](#upload-and-prepare-kora-application-files-via-cpanel-file-manager)." There, you should find the directory "kora" with the black chain-link icon over the folder icon.
 
+4. After completing this step, you will need to additionally configure Kora to enable functionality for a module called `mod_rewrite`. This is explained in the "[Using *mod_rewrite* in Kora](../advanced_configuration/#using-mod_rewrite-in-kora)" section of the "Advanced Configuration" documentation.
+
 ### Subdomain URLs
 
 If going this route for your URL, you can now close Terminal and return to cPanel Main.

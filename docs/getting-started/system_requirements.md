@@ -93,48 +93,36 @@ This sometimes requires finding the ".conf" file for your version of Apache, whi
 
     and scroll through, looking for a section that looks something similar to:
 
-    ```
-    <Directory "/var/www/html">
-        AllowOverride None
-        # Allow open access:
-        Require all granted
-    </Directory>
-    ```
+        <Directory "/var/www/html">
+            AllowOverride None
+            # Allow open access:
+            Require all granted
+        </Directory>
 
-    In this case, the root directory fo this domain is inside "html", which is inside "www", which is itself inside "var", so in this example the relevant code in the .conf file is for `/var/www/html`. In other cases the relevant code will correspond to some other directory. In this example, note how `AllowOverride` is set to `None`; to allow `mod_rewrite` to work properly, change `AllowOverride None` to `AllowOverride All`.
+    In this case, the root directory fo this domain is inside "html", which is inside "www", which is itself inside "var", so in this example the relevant code in the .conf file is for `/var/www/html`. In other cases the relevant code will correspond to some other directory. In this example, note how `AllowOverride` is set to `None`; to allow `mod_rewrite` to work properly, change `AllowOverride None` to `AllowOverride All`:
+
+        <Directory "/var/www/html">
+            AllowOverride All
+            # Allow open access:
+            Require all granted
+        </Directory>
+
 
 6. Save this change; if using SSH or Terminal, do this by exiting with the key combination "ctrl + x", and then hitting "y" to agree to saving the file. It will ask for the file name to be saved, but default to the file's current name, which is what you'll want. Hit "enter" to save and exit nano.
 
+7. After adjusting this file, restart your apache. Once again, if yours is the generic version, use:
 
+        sudo service apache2 restart
 
+Once finished, `mod_overwrite` will be enabled for your root directory.
 
+**Important: Remember to delete the .php page you created, containing your server information.** This can be done via SSH or Terminal, when located in its directory, with the command:
 
+    rm [filename]
 
+## HTTPS and SSL Certificate
 
-
-
-## Using *mod_rewrite* in Kora
-
-If intending for Kora to be accessed at any
-
-
-Once you have confirmed that `mod_rewrite` is loaded and enabled
-
-
-
-
-
-
-
-
-
-
-
-
-
-## HTTPS and SSL certificate
-
-Kora requires the HTTPS protocol to be enabled for the domain in which it is accessible, which requires an SSL certificate. For some server environments, the included interface — such as cPanel — will have a section for managing the process of enabling HTTPS and acquiring/associating an SSL certificate as a part of that process. Sometimes — such as with MSU's Domains of One's Own accounts and their corresponding cPanel — the SSL certificate and its renewal are handled behind-the-scenes, so to speak, and the certificate is aquired/associated when the HTTPS protocol option is enabled.
+Kora requires the HTTPS protocol to be enabled for the domain in which it is accessible, which requires an SSL certificate. For some server environments, the included interface — such as cPanel — will have a section for managing the process of enabling HTTPS and acquiring/associating an SSL certificate as a part of that process. Sometimes — such as with MSU's Domains of One's Own accounts and their corresponding cPanel — the SSL certificate and its renewal are handled behind-the-scenes, so to speak, and the certificate is acquired/associated when the HTTPS protocol option is enabled.
 
 In other instances, it will be necessary to apply for an SSL certificate. This can be done in a number of ways, but the one most commonly used as a cost-free method is through a server application called [Certbot](https://certbot.eff.org/about), which manages the application, acquisition, and association of an SSL certificate from a free certificate supplier called [Let's Encrypt](https://letsencrypt.org/about/). Certbot is a great option for those who need to go this route because it can also be configured to handle automatic certification renewals, since SSL certificates expire. One possible way to install certbot into your server environment is from Certbot directly, and then to provide "Execute" permissions.
 
