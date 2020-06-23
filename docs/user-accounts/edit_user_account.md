@@ -63,3 +63,11 @@ To change the language used on Kora, click the white bar below the **Language** 
 You can update your kora user password under the **Update Password** sub-heading. You must first enter your new password in the white box under **Enter New Password** section. Then confirm your new password by typing the new password again in the white box under **Confirm New Password**.
 
 <img style="display:block;margin:auto;max-width:100%" src="../user-accounts-img/edit_user_account_11_annotated.png" width="100%" title="Update your Password">
+
+## Link Gitlab Account
+
+When Gitlab integration is enabled, users who did not create their account through the Gitlab option may still link their Gitlab and Kora accounts. To do so, simply click the "Add Gitlab Account" button under "Assign OAuth Account."
+
+<img style="display:block;margin:auto;max-width:100%" src="../user-accounts-img/edit_user_account_12_annotated.png" width="100%" title="Add Gitlab Account">
+
+This will redirect to the Gitlab login screen. Log into that Gitlab instance with your personal account and click "Authorize" to complete the process. Once linked, you will be able to log into your Kora account through the Gitlab option.

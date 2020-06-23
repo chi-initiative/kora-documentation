@@ -133,6 +133,10 @@ In other instances, it will be necessary to apply for an SSL certificate. This c
 
 The specifics of using certbot will depend upon your domain, email address, etc. so it wouldn't be possible to provide a guide here. Certbot provides some more-granular instructions for use on [their "Instructions" page](https://certbot.eff.org/instructions), which should be enough to get the SSL certificate needed.
 
+## Google reCAPTCHA
+
+Kora requires integration with Google's reCAPTCHA verification service. Instructions for how to implement this can be found in the [Reclaim Hosting/Domain of One's Own installation guide](../installing_kora_domains/#configure-recaptcha).
+
 ## Kora Email
 
 Kora requires a Simple Mail transfer Protocol (SMTP) email server for sending emails related to new user sign-ups, invitations, or lost passwords. In some cases, the email server will be handled by some part of the included interface — including in many cPanel-based interfaces — but in others the email server may be managed via the SSH connection to the environment. When configuring Kora's email settings, it is possible to use an SMTP server on another domain, by providing the appropriate domain name for the server for "Mail Host," appropriate user email address from that server for "Mail User," and the email address's password in "Mail Password." Please see Step 5 of "[Set Up Server Email and Link It to Kora](../installing_kora_domains/#set-up-server-email-and-link-it-to-kora)." Additionally, if the "Mail User" and "Mail From Address" do not match, the recipient's mail client is more likely to flag the generated email as spam.
