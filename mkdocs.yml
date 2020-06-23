@@ -16,7 +16,7 @@ nav:
     - 'Home': 'index.md'
     - 'About this Documentation': 'about.md'
     - 'Getting Started':
-        - 'Understanding Core Concepts': 'getting-started/core-concepts.md'
+        - 'Understanding Core Concepts': 'getting-started/core_concepts.md'
         - 'Understanding Kora User Types and Permissions': 'getting-started/understanding_kora_user_types_and_permissions.md'
         - 'System Requirements': 'getting-started/system_requirements.md'
         - "Installing Kora on Domain of One's Own & Reclaim Hosting": 'getting-started/installing_kora_domains.md'
@@ -68,7 +68,7 @@ nav:
         - 'Resetting your Kora Password': 'user-accounts/resetting_your_password.md'
         - 'Signing up for a User Account': 'user-accounts/signing_up_for_a_user_account.md'
     - 'Managing a Kora Installation':
-        - 'Updating a Kora 3 Installation': 'management/update-kora.md'
+        - 'Updating a Kora 3 Installation': 'management/update_kora.md'
         - 'Managing API Tokens': 'management/managing_api_tokens.md'
         - 'Editing Your Kora Installation Configuration': 'management/editing_your_kora_installation_configuration.md'
 
