@@ -52,7 +52,7 @@ Install the versions of these packages that correspond to the version of PHP you
 
 ## Enabling *mod_rewrite*
 
-Kora uses an Apache module called `mod_rewrite` to manage internet browser navigation within a Kora installation, via the ".htaccess" file inside the "public" directory. Different servers handle enabling and disabling `mod_rewrite` in different ways, so it will be important for you to find out how this is managed with your specific circumstance and then confirm that `mod_rewrite` is enabled for the domain where Kora is accessed.
+Kora is designed to have only its "public" folder accessible online. To accomplish this, it uses an Apache module called `mod_rewrite` to manage internet browser navigation within the installation, via the ".htaccess" file inside the "public" directory. Different servers handle enabling and disabling `mod_rewrite` in different ways, so it will be important for you to find out how this is managed with your specific circumstance and then confirm that `mod_rewrite` is enabled for the domain where Kora is accessed.
 
 This sometimes requires finding the ".conf" file for your version of Apache, which contains the overarching permissions for, among many modules, `mod_rewrite`. Determining where this ".conf" file is saved is sometimes possible by temporarily creating a webpage on your domain that provides a full readout of your PHP configuration.
 
