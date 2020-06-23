@@ -72,6 +72,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#https-and-ssl-certificate">HTTPS and SSL Certificate</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#google-recaptcha">Google reCAPTCHA</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#kora-email">Kora Email</a>
     </li>
     </ul>
@@ -338,6 +340,8 @@
 <pre><code>chmod a+x certbot-auto
 </code></pre>
 <p>The specifics of using certbot will depend upon your domain, email address, etc. so it wouldn't be possible to provide a guide here. Certbot provides some more-granular instructions for use on <a href="https://certbot.eff.org/instructions">their "Instructions" page</a>, which should be enough to get the SSL certificate needed.</p>
+<h2 id="google-recaptcha">Google reCAPTCHA</h2>
+<p>Kora requires integration with Google's reCAPTCHA verification service. Instructions for how to implement this can be found in the <a href="../installing_kora_domains/#configure-recaptcha">Reclaim Hosting/Domain of One's Own installation guide</a>.</p>
 <h2 id="kora-email">Kora Email</h2>
 <p>Kora requires a Simple Mail transfer Protocol (SMTP) email server for sending emails related to new user sign-ups, invitations, or lost passwords. In some cases, the email server will be handled by some part of the included interface — including in many cPanel-based interfaces — but in others the email server may be managed via the SSH connection to the environment. When configuring Kora's email settings, it is possible to use an SMTP server on another domain, by providing the appropriate domain name for the server for "Mail Host," appropriate user email address from that server for "Mail User," and the email address's password in "Mail Password." Please see Step 5 of "<a href="../installing_kora_domains/#set-up-server-email-and-link-it-to-kora">Set Up Server Email and Link It to Kora</a>." Additionally, if the "Mail User" and "Mail From Address" do not match, the recipient's mail client is more likely to flag the generated email as spam.</p>
 <p>In the case of MSU's Domains of one's Own, emails have been entirely disabled to comply with a univeristy-wide policy. If you are unable to set up an SMTP server to use with your Kora installation — such as on another, privately-managed domain — you will need to manage user creation and password resets manually. To do this, please consult the guide for <a href="../../user-accounts/managing_users_in_a_kora_installation/#manual-user-confirmationsactivations-and-password-resets">manually managing Kora user accounts</a>.</p>
