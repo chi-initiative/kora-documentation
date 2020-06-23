@@ -14,6 +14,7 @@ theme:
 
 nav:
     - 'Home': 'index.md'
+    - 'About this Documentation': 'about.md'
     - 'Getting Started':
         - 'Understanding Core Concepts': 'getting-started/core-concepts.md'
         - 'Understanding Kora User Types and Permissions': 'getting-started/understanding_kora_user_types_and_permissions.md'
