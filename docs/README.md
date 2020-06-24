@@ -12,7 +12,7 @@ Additions and significant changes should be created in a branch and submitted as
 - Break longer tasks up into short paragraphs or lists.
 - Use illustrative images when needed, especially to indicate which button or link users should engage with.
 
-### Formatting
+## Formatting
 **Section headings** should start with H2 (`##`) and go down to H4. Create sections where it is logical in the documentation structure; they will appear in the left navigation of the documentation (see "[Installing Kora on Domain of One's Own and Reclaim Hosting](https://chi-initiative.github.io/getting-started/installing_kora_domains/) for an example of extensive section use)
 
 **Links** should be composed as relative to the current file.
