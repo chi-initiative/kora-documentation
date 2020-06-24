@@ -60,7 +60,7 @@
                 </ul>
                 <p class="caption"><span class="caption-text">Getting Started</span></p>
                 <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../core-concepts/">Understanding Core Concepts</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../core_concepts/">Understanding Core Concepts</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../understanding_kora_user_types_and_permissions/">Understanding Kora User Types and Permissions</a>
                     </li>
@@ -100,7 +100,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#test-file-permissions">Test File Permissions</a>
+    <li class="toctree-l2"><a class="reference internal" href="#testing-the-installation">Testing the Installation</a>
     </li>
     </ul>
                     </li>
@@ -203,7 +203,7 @@
                 </ul>
                 <p class="caption"><span class="caption-text">Managing a Kora Installation</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../management/update-kora/">Updating a Kora 3 Installation</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../management/update_kora/">Updating a Kora 3 Installation</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../../management/managing_api_tokens/">Managing API Tokens</a>
                     </li>
@@ -277,7 +277,11 @@
 <li>
 <p>The Password Generator modal will open and generate a random string of characters (blocked out in the image below).</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_6_annotated.png" title="Database User Password Generator"></p>
-<p><strong>IMPORTANT</strong>: Copy this password to somewhere for safe-keeping. You will need it later for configuration of your Kora installation.</p>
+<p><br></p>
+<div class="admonition tip">
+<p class="admonition-title">IMPORTANT</p>
+<p>Copy this password to somewhere for safe-keeping. You will need it later for configuration of your Kora installation.</p>
+</div>
 <p>After copying this password to somewhere, click "Use Password."</p>
 </li>
 <li>
@@ -391,10 +395,17 @@ DB_PASSWORD={saved database user password}
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_29_annotated.png" title="First Set of Terminal Commands"></p>
 <p>After running, if it is successful, the window will look like this, with the successful installation message (in green):</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_30_annotated.png" title="Successful Installation Message"></p>
-<p><em><strong>NOTE</strong>: If the installation fails and provides a message that says (in part) "Failed to connect to database! Check your database credentials or review the logs for more error information," this may be due to some common problems and there are a few things to check before trying to run the installation command again. First, return to the MySQL section of cPanel to confirm you have written down the full database name and username correctly. Second, re-open the .env file where you earlier put that database information, to double-check that these names are correct. If they are, there may be an issue with the generated password for your MySQL user. You can go generate a new password, save it again, and enter it into the .env file, before once again trying to run the installation command. If the installation again fails, the issue may be something else. You can check for any similar issues and potential solutions in <a href="https://github.com/matrix-msu/kora/issues">Kora's GitHub Issues</a>, or open your own Issue with a detailed description of the problem.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the installation fails and provides a message that says (in part) "Failed to connect to database! Check your database credentials or review the logs for more error information," this may be due to some common problems and there are a few things to check before trying to run the installation command again. First, return to the MySQL section of cPanel to confirm you have written down the full database name and username correctly. Second, re-open the .env file where you earlier put that database information, to double-check that these names are correct. If they are, there may be an issue with the generated password for your MySQL user. You can go generate a new password, save it again, and enter it into the .env file, before once again trying to run the installation command. If the installation again fails, the issue may be something else. You can check for any similar issues and potential solutions in <a href="https://github.com/matrix-msu/kora/issues">Kora's GitHub Issues</a>, or open your own Issue with a detailed description of the problem.</p>
+</div>
 </li>
 <li>
-<p><strong>INCREDIBLY IMPORTANT</strong>: You <em>must</em> copy the last line generated here in the successful installation message (outlined above), which has your password for the generated username of "admin". To copy things in cPanel's Terminal, first use your mouse to select the line, then right-click and select "Copy." Paste this somewhere safe, where you will not lose it! <strong><em>It cannot be stressed enough how important this step is, because losing this password means losing access to your installation.</em></strong></p>
+<p><strong>INCREDIBLY IMPORTANT</strong>: You <em>must</em> copy the last line generated here in the successful installation message (outlined above), which has your password for the generated username of "admin". To copy things in cPanel's Terminal, first use your mouse to select the line, then right-click and select "Copy." Paste this somewhere safe, where you will not lose it!</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It cannot be stressed enough how important this step is, because losing this password means losing access to your installation and will require a full reinstallation.</p>
+</div>
 </li>
 <li>
 <p>Notice that, in the successful installation message, you are directed to "give READ access to the web user," as well as "WRITE access" for specific directories, to ensure that Kora continues functioning properly after users start contributing. What these directions require could be different for different Domain of One's Own environments, because different system administrators may have set up the default permissions for the environment differently. For now, to ensure that things are set up for the most likely scenario for most Domain of One's Own or Reclaim Hosting environments, you will be setting file permissions for the entire "kora" directory and its contents.</p>
@@ -426,8 +437,9 @@ DB_PASSWORD={saved database user password}
 </ol>
 <h2 id="set-write-and-execute-permissions-on-certain-directories-if-needed-via-cpanel-terminal">Set "Write" and "Execute" Permissions On Certain Directories if Needed via cPanel Terminal</h2>
 <p>As stated in the previous section, the previous commands will have been enough for some users to complete the required permissions setup for their installation. However for others, it will be necessary to specifically change the permissions on the three directory trees noted in the successful installation message.</p>
-<p>If you are unsure of whether or not your file permissions need to be additionally configured, you can quickly test this by completing the rest of the Kora setup process, then creating a record in your Kora installation that has a file attached to it and uploading that file. If the file upload process works, then your current installation does not need any further permissions adjustments. If it does not work, you will need to re-enter cPanel and re-enter Terminal, which should default to the correct location (the root directory) for this section's instructions.</p>
-<p>You will need to wait until your Kora installation is completed and properly configured before you can conduct this test, so its instructions are provided in more detail below, in the section "<a href="#test-file-permissions">Test File Permissions</a>."</p>
+<p>If you are unsure of whether or not your file permissions are properly configured, you can quickly test this by completing the rest of the Kora setup process, then creating a record in your Kora installation that has a file attached to it and uploading that file. If the file upload process works, then your current installation does not need any further permissions adjustments. If it does not work, you will need to re-enter cPanel and re-enter Terminal, which should default to the correct location (the root directory) for this section's instructions.</p>
+<p>You will need to wait until your Kora installation is completed and properly configured before you can conduct this test, so its instructions are provided in the final section of this page, "<a href="#testing-the-installation">Testing the Installation</a>."</p>
+<p>To set the "Write" and "Execute" permissions for the relevant directories:</p>
 <ol>
 <li>
 <p>Begin by ensuring your current Terminal location is the root directory, represented by a "~" in the Terminal prompt to the left of the cursor. If your prompt does not have a "~" — it may instead still display "kora" — change your location upward to relocate to the root. As before, use <code>cd</code>, but this time use <code>..</code>, which just means 'move up one directory':</p>
@@ -459,8 +471,11 @@ DB_PASSWORD={saved database user password}
 <p>To set up a subdirectory URL for your Kora installation, you will just have to do a couple more things in Terminal. First you will change your location to be inside of the directory that your main URL is accessible from: in this example case in MSU's Domain of One's Own environment, this is a directory called <code>public_html</code>. But another common name for it is <code>www</code>. Use the following, with whatever name pertains to your version:</p>
 <pre><code>cd public_html
 </code></pre>
-<p>Note: if you receive an error that "public_html" does not exist, more than likely this is because you skipped over a few previous steps that did not pertain to you and so you are currently still inside of the "kora" directory. If this is the case, use <code>cd ..</code> to move upward, and then again try <code>cd public_html</code>.</p>
-<p>(There is no screenshot for this specifically, but you will know you have successfully changed your directory to <code>public_html</code> — or the one relevant to your case — when you see it to the left of the dollar sign character, inside the brackets.)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you receive an error that "public_html" does not exist, more than likely this is because you skipped over a few previous steps that did not pertain to you and so you are currently still inside of the "kora" directory. If this is the case, use <code>cd ..</code> to move upward, and then again try <code>cd public_html</code>.</p>
+</div>
+<p>(There is no screenshot for this specifically, but you will know you have successfully changed your directory to <code>public_html</code> — or the one relevant to your case — when you see it written to the left of the dollar sign character, inside the brackets.)</p>
 </li>
 <li>
 <p>Setting up the subdirectory for your URL requires using the command <code>ln</code> with the <code>-s</code> flag. <code>ln</code> stands for "link" and the <code>-s</code> flag tells the system that the link being created is "symbolic". The next part of the command is the location of the Kora installation public directory, relative to your current location. And then the final part is the location of the desired subdirectory that will appear at the end of your site's URL. So in the case of a <code>public_html</code> example, the public directory of the installation files is located one directory up, and then inside of <code>kora</code>. So the command is:</p>
@@ -474,7 +489,7 @@ DB_PASSWORD={saved database user password}
 <p>To confirm that the symbolic link process worked, you may go back into File Manager and navigate into your publicly-accessible directory, which you were to take note of in Step 2 of "<a href="#upload-and-prepare-kora-application-files-via-cpanel-file-manager">Upload and Prepare Kora Application Files via cPanel File Manager</a>." There, you should find the directory "kora" with the black chain-link icon over the folder icon.</p>
 </li>
 <li>
-<p>After completing this step, you will need to additionally configure Kora to enable functionality for a module called <code>mod_rewrite</code>. This is explained in the "<a href="../advanced_configuration/#using-mod_rewrite-in-kora">Using <em>mod_rewrite</em> in Kora</a>" section of the "Advanced Configuration" documentation.</p>
+<p>After completing this step, you will need to additionally configure Kora to enable functionality for a module called <code>mod_rewrite</code>. This is explained in the "<a href="../advanced_configuration/#using-mod_rewrite-in-kora">Using <em>mod_rewrite</em> in Kora</a>" section of the "Advanced Configuration of Kora" page.</p>
 </li>
 </ol>
 <h3 id="subdomain-urls">Subdomain URLs</h3>
@@ -523,7 +538,10 @@ DB_PASSWORD={saved database user password}
 </li>
 </ol>
 <h3 id="configure-recaptcha">Configure reCAPTCHA</h3>
-<p><em>NOTE</em>: Because this subsection regards setting up an external service, there are no screenshots provided.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because this subsection regards setting up an external service, there are no screenshots provided.</p>
+</div>
 <p><strong>Kora currently uses reCAPTCHA v2 Checkbox</strong></p>
 <ol>
 <li>
@@ -556,7 +574,11 @@ DB_PASSWORD={saved database user password}
 <li>
 <p>In the "Create an Email Account" box, look at the options available in the "Domain" dropdown menu. This will be the portion of the email address <em>after</em> the @ symbol. If using a subdomain URL, you can specify this subdomain here, otherwise your option will be limited to your main URL. After choosing the domain, enter a "Username", such as "admin" if you use the subdomain option, or "kora" if you use the main URL option. Finally, click on Generate in the "Password" section to receive a randomly generated password (as you did when setting up your MySQL database).</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_45_annotated.png" title="Add Information for Setting Up New Email Account"></p>
-<p><strong>IMPORTANT</strong>: Just as before, ensure you copy this password and save it someplace safe, because it will be needed for email configuration in Kora.</p>
+<p><br></p>
+<div class="admonition tip">
+<p class="admonition-title">IMPORTANT</p>
+<p>Just as before, ensure you copy this password and save it someplace safe, because it will be needed for email configuration in Kora.</p>
+</div>
 </li>
 <li>
 <p>The remaining settings should be set according to your preferences. I will not outline how to link this email account to a mail client because the option to generate an email with just such a guide is provided by cPanel. Once everything is set as you like, click "Create", which, as long as you leave the "Stay on this page..." option unchecked, will create the address and redirect you back to the list of email addresses.</p>
@@ -573,7 +595,10 @@ DB_PASSWORD={saved database user password}
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_48_annotated.png" title="Add Email Information to Kora Configuration"></p>
 </li>
 </ol>
-<p><strong>NOTE</strong>: If your server email is disabled by account administrators — as is the case for MSU Domain of One's Own accounts — and you cannot get another server email to successfully work with Kora, it is still possible to do anything that may appear to require the email server working, such as confirming new users, inviting users, or setting passwords. Find instructions for these tasks in the guide for <a href="../../user-accounts/managing_users_in_a_kora_installation/#manual-user-confirmationsactivations-and-password-resets">managing Kora user accounts</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your server email is disabled by account administrators — as is the case for MSU Domain of One's Own accounts — and you cannot get another server email to successfully work with Kora, it is still possible to do anything that may appear to require the email server working, such as confirming new users, inviting users, or setting passwords. Find instructions for these tasks in the guide for <a href="../../user-accounts/managing_users_in_a_kora_installation/#manual-user-confirmationsactivations-and-password-resets">managing Kora user accounts</a>.</p>
+</div>
 <h3 id="admin-user-profile-settings">Admin User Profile Settings</h3>
 <p>The final portion of configuration is for the admin account's profile settings. This section is specific to what is a part of the initial configuration for Kora, but this documentation website also has a more complete <a href="../../user-accounts/edit_user_preferences/">guide for user profile settings</a>.</p>
 <ol>
@@ -590,8 +615,7 @@ DB_PASSWORD={saved database user password}
 <p>Once all these have been set, click "Update Profile" to complete your setup.</p>
 </li>
 </ol>
-<h2 id="test-file-permissions">Test File Permissions</h2>
-<p>As noted above in the section above outlining how to set the "Write" and "Execute" permissions for the specified directories, in some cases Kora will not work with the defaulted permissions generated during installation.</p>
+<h2 id="testing-the-installation">Testing the Installation</h2>
 <p>To check whether or not your installation works properly:</p>
 <ol>
 <li>

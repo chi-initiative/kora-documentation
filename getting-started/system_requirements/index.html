@@ -60,7 +60,7 @@
                 </ul>
                 <p class="caption"><span class="caption-text">Getting Started</span></p>
                 <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../core-concepts/">Understanding Core Concepts</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../core_concepts/">Understanding Core Concepts</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../understanding_kora_user_types_and_permissions/">Understanding Kora User Types and Permissions</a>
                     </li>
@@ -179,7 +179,7 @@
                 </ul>
                 <p class="caption"><span class="caption-text">Managing a Kora Installation</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../management/update-kora/">Updating a Kora 3 Installation</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../management/update_kora/">Updating a Kora 3 Installation</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../../management/managing_api_tokens/">Managing API Tokens</a>
                     </li>
@@ -268,7 +268,7 @@
 <p><span></span></p>
 <p>Install the versions of these packages that correspond to the version of PHP you have installed as a part of your LAMP Stack.</p>
 <h2 id="enabling-mod_rewrite">Enabling <em>mod_rewrite</em></h2>
-<p>Kora uses an Apache module called <code>mod_rewrite</code> to manage internet browser navigation within a Kora installation, via the ".htaccess" file inside the "public" directory. Different servers handle enabling and disabling <code>mod_rewrite</code> in different ways, so it will be important for you to find out how this is managed with your specific circumstance and then confirm that <code>mod_rewrite</code> is enabled for the domain where Kora is accessed.</p>
+<p>Kora is designed to have only its "public" folder accessible online. To accomplish this, it uses an Apache module called <code>mod_rewrite</code> to manage internet browser navigation within the installation, via the ".htaccess" file inside the "public" directory. Different servers handle enabling and disabling <code>mod_rewrite</code> in different ways, so it will be important for you to find out how this is managed with your specific circumstance and then confirm that <code>mod_rewrite</code> is enabled for the domain where Kora is accessed.</p>
 <p>This sometimes requires finding the ".conf" file for your version of Apache, which contains the overarching permissions for, among many modules, <code>mod_rewrite</code>. Determining where this ".conf" file is saved is sometimes possible by temporarily creating a webpage on your domain that provides a full readout of your PHP configuration.</p>
 <ol>
 <li>
