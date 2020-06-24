@@ -8,7 +8,7 @@ This documentation, which covers the current version of Kora (v3), was developed
 
 * [Zachary Francis-Hapner](http://anthropology.msu.edu/author/franc230/), PhD student, MSU Department of Anthropology
 * [Brian Samuel Geyer](http://anthropology.msu.edu/author/geyerbri/), PhD Candidate, MSU Department of Anthropology
-* [Autumn Painter](http://anthropology.msu.edu/author/beyeraut/), Phd Candidate, MSU Department of Anthropology
+* [Autumn Painter](http://anthropology.msu.edu/author/beyeraut/), PhD Candidate, MSU Department of Anthropology
 
 Additional writing and editing by:
 
