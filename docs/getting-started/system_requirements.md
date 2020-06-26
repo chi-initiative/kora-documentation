@@ -4,16 +4,18 @@ title: System Requirements
 
 # System Requirements
 
-Kora requires a server environment deployed with what is often referred to as a LAMP Stack. LAMP stands for:
+Kora requires a server environment with at least 1 GB of storage and 1 GB of RAM, deployed with what is referred to as a LAMP Stack. LAMP stands for:
 
 * Linux Operating System
-* Apache Version 2.0
-* MySQL Version 5.7.20
-* PHP Version 7.1.3
+* Apache (Version 2.0)
+* MySQL (Version 5.7.20)
+* PHP (Version 7.1.3)
+
+These versions are Kora's minimum version requirements.
 
 Oftentimes, the server environment will rely on minor variations of these. For instance, the httpd (or Hypertext Transfer Protocol Daemon) version of Apache 2 is often used.
 
-Use whichever installer is available for your Linux-based environment to install — or confirm installation of — the most recent versions of these basic applications in your Linux server environment. Common installers are `apt` (Advanced Package Tool) and `yum` (Yellowdog Updater, Modifier).
+Use whichever installer is available for your Linux-based environment to install — or confirm installation of — the most recent versions of these basic applications in your Linux server environment. Common installers include `apt` (Advanced Package Tool) and `yum` (Yellowdog Updater, Modifier).
 
 ## PHP Packages
 
@@ -118,7 +120,7 @@ Once finished, `mod_overwrite` will be enabled for your root directory.
 
 **Important: Remember to delete the .php page you created, containing your server information.** This can be done via SSH or Terminal, when located in its directory, with the command:
 
-    rm [filename]
+    rm server-readout.php
 
 ## HTTPS and SSL Certificate
 
