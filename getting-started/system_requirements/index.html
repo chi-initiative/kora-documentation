@@ -226,15 +226,16 @@
             <div class="section">
               
                 <h1 id="system-requirements">System Requirements</h1>
-<p>Kora requires a server environment deployed with what is often referred to as a LAMP Stack. LAMP stands for:</p>
+<p>Kora requires a server environment with at least 1 GB of storage and 1 GB of RAM, deployed with what is referred to as a LAMP Stack. LAMP stands for:</p>
 <ul>
 <li>Linux Operating System</li>
-<li>Apache Version 2.0</li>
-<li>MySQL Version 5.7.20</li>
-<li>PHP Version 7.1.3</li>
+<li>Apache (Version 2.0)</li>
+<li>MySQL (Version 5.7.20)</li>
+<li>PHP (Version 7.1.3)</li>
 </ul>
+<p>These versions are Kora's minimum version requirements.</p>
 <p>Oftentimes, the server environment will rely on minor variations of these. For instance, the httpd (or Hypertext Transfer Protocol Daemon) version of Apache 2 is often used.</p>
-<p>Use whichever installer is available for your Linux-based environment to install — or confirm installation of — the most recent versions of these basic applications in your Linux server environment. Common installers are <code>apt</code> (Advanced Package Tool) and <code>yum</code> (Yellowdog Updater, Modifier).</p>
+<p>Use whichever installer is available for your Linux-based environment to install — or confirm installation of — the most recent versions of these basic applications in your Linux server environment. Common installers include <code>apt</code> (Advanced Package Tool) and <code>yum</code> (Yellowdog Updater, Modifier).</p>
 <h2 id="php-packages">PHP Packages</h2>
 <p>After confirming the environment is a LAMP Stack with the appropriate version levels for MySQL and PHP, it will be important to install several additional PHP packages. These are:</p>
 <table style="width:100%;text-align:center">
@@ -329,7 +330,7 @@
 </ol>
 <p>Once finished, <code>mod_overwrite</code> will be enabled for your root directory.</p>
 <p><strong>Important: Remember to delete the .php page you created, containing your server information.</strong> This can be done via SSH or Terminal, when located in its directory, with the command:</p>
-<pre><code>rm [filename]
+<pre><code>rm server-readout.php
 </code></pre>
 <h2 id="https-and-ssl-certificate">HTTPS and SSL Certificate</h2>
 <p>Kora requires the HTTPS protocol to be enabled for the domain in which it is accessible, which requires an SSL certificate. For some server environments, the included interface — such as cPanel — will have a section for managing the process of enabling HTTPS and acquiring/associating an SSL certificate as a part of that process. Sometimes — such as with MSU's Domains of One's Own accounts and their corresponding cPanel — the SSL certificate and its renewal are handled behind-the-scenes, so to speak, and the certificate is acquired/associated when the HTTPS protocol option is enabled.</p>
