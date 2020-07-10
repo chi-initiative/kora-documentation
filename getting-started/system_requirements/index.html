@@ -231,7 +231,7 @@
 <li>Linux Operating System</li>
 <li>Apache (Version 2.0)</li>
 <li>MySQL (Version 5.7.20)</li>
-<li>PHP (Version 7.1.3)</li>
+<li>PHP (Version 7.1.3 to 7.2.31)</li>
 </ul>
 <p>These versions are Kora's minimum version requirements.</p>
 <p>Oftentimes, the server environment will rely on minor variations of these. For instance, the httpd (or Hypertext Transfer Protocol Daemon) version of Apache 2 is often used.</p>
@@ -268,6 +268,7 @@
 
 <p><span></span></p>
 <p>Install the versions of these packages that correspond to the version of PHP you have installed as a part of your LAMP Stack.</p>
+<p>If other issues arise, it may be that some other PHP modules not included in the core PHP installation or packages listed above are also required. Kora is build on the Laravel PHP Framework, so it is possible one of <a href="https://laravel.com/docs/7.x#server-requirements">its required PHP modules</a> is missing from your server environment and so the culprit.</p>
 <h2 id="enabling-mod_rewrite">Enabling <em>mod_rewrite</em></h2>
 <p>Kora is designed to have only its "public" folder accessible online. To accomplish this, it uses an Apache module called <code>mod_rewrite</code> to manage internet browser navigation within the installation, via the ".htaccess" file inside the "public" directory. Different servers handle enabling and disabling <code>mod_rewrite</code> in different ways, so it will be important for you to find out how this is managed with your specific circumstance and then confirm that <code>mod_rewrite</code> is enabled for the domain where Kora is accessed.</p>
 <p>This sometimes requires finding the ".conf" file for your version of Apache, which contains the overarching permissions for, among many modules, <code>mod_rewrite</code>. Determining where this ".conf" file is saved is sometimes possible by temporarily creating a webpage on your domain that provides a full readout of your PHP configuration.</p>
