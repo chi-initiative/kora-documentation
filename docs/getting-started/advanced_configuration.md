@@ -64,47 +64,15 @@ In some cases however, such as in Domain of One's Own or other [Reclaim Hosting]
 
 3. All of the overwritable PHP attributes for the selected domain or subdomain will appear; find each of those listed in the code block above and adjust their values as necessary. Be sure to save the new settings.
 
-## Gitlab Integration
+## GitLab Integration
 
-Kora includes the option to allow users to sign up and log in using Gitlab's authentication system, via their OAuth API. This can be implemented with any type of Gitlab account or installation – including a gitlab.com free account, a Gitlab Community Edition (CE) instance personally hosted, a Gitlab Enterprise Edition (EE) instance managed through gitlab.com, etc. – and will allow any user who has a legitimate account for that gitlab location (whether privately hosted or through gitlab.com) to authenticate their Kora account.
+Kora includes the option to allow users to sign up and log in using GitLab's authentication system, via their OAuth API. This can be implemented with any type of GitLab account or installation – including a gitlab.com free account, a GitLab Community Edition (CE) instance personally hosted, a GitLab Enterprise Edition (EE) instance managed through gitlab.com, etc. – and will allow any user who has a legitimate account for that GitLab location (whether privately hosted or through gitlab.com) to authenticate their Kora account.
 
-### Individual Gitlab User Integration
+### Individual GitLab User Integration
 
-This option will be tied to one specific user's Gitlab account.
+This option will be tied to one specific user's GitLab account.
 
-1. Begin by navigating to the Gitlab instance you wish to use for this process and log in, then go to the account's settings page.
-
-2. In the left-hand sidebar, click on "Applications". This will default to showing the options for "Add new application"
-
-3. Fill in the required information for adding a new application. The name will be whatever identifying name you wish to give this newly-created link; it is recommended you reference this Kora installation's URL for specificity, but any name you choose will work.
-
-4. In the "Redirect URI" text box, use the following example to put in the URI for your specific Kora instance. In this example URI, the Kora instance's URL is at https://example.org/kora/, so this creates the URI of:
-
-        https://example.org/kora/login/gitlab/callback
-
-    Notice that what has been added to the URL is "/login/gitlab/callback" in order to create the URI.
-
-5. Leave the box for the setting "Confidential" checked; this is the default setting.
-
-6.  Check the box for the "read_user" scope and then click "Save application" after the list of scopes.
-
-7. You will be redirected to the page with your "Application ID" and "Secret." You will be copying each of these into your Kora Configuration File page of your installation.
-
-8. When viewing your installation's Kora Configuration File page (accessible via the right sidebar, under the "Management" section), type in the gitlab instance's website into the "Gitlab Client" box.
-
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/advanced_configuration_3_annotated.png" title="Gitlab Integration Settings">
-
-    For instance, for a free account on gitlab.com, leave the default "https://gitlab.com" text.
-
-9. " Copy the Gitlab "Application ID" from Step 7 above into the Kora Configuration Page box for "Gitlab Client ID"; copy "Secret" to "Gitlab Client Secret."
-
-10. Click "Update Configuration File" to save these settings.
-
-### Gitlab Instance Admin Integration
-
-Gitlab integration may also be achieved at the Admin level in any Gitlab instance with these settings available, such as a personally-hosted instance. This has the benefit of being manageable by any user with administrator privileges for the Gitlab instance.
-
-1. Begin by navigating to the Gitlab instance you wish to use for this process and log in, then go to the "Admin Area."
+1. Begin by navigating to the GitLab instance you wish to use for this process and log in, then go to the account's settings page.
 
 2. In the left-hand sidebar, click on "Applications". This will default to showing the options for "Add new application"
 
@@ -122,10 +90,55 @@ Gitlab integration may also be achieved at the Admin level in any Gitlab instanc
 
 7. You will be redirected to the page with your "Application ID" and "Secret." You will be copying each of these into your Kora Configuration File page of your installation.
 
-8. When viewing your installation's Kora Configuration File page (accessible via the right sidebar, under the "Management" section), type in the gitlab instance's website into the "Gitlab Client" box. For instance, for a personally hosted Gitlab instance at another subdomain alongside your Kora instance, it could be "https://gitlab.example.org."
+8. When viewing your installation's Kora Configuration File page (accessible via the right sidebar, under the "Management" section), type in the GitLab instance's website into the "GitLab Client" box.
 
-    (For an image of this box and those for the next step, please see Step 8 in the section above, "[Individual Gitlab User Integration](#individual-gitlab-user-integration)")
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/advanced_configuration_3_annotated.png" title="GitLab Integration Settings">
 
-9. " Copy the Gitlab "Application ID" from Step 7 into the Kora Configuration Page box for "Gitlab Client ID"; copy "Secret" to "Gitlab Client Secret."
+    For instance, for a free account on gitlab.com, use "https://gitlab.com"
+
+9. Copy the GitLab "Application ID" from Step 7 above into the Kora Configuration Page box for "GitLab Client ID"; copy "Secret" to "GitLab Client Secret."
 
 10. Click "Update Configuration File" to save these settings.
+
+!!! warning
+    The GitLab text boxes cannot contain any spaces in between characters (spaces at the beginning or end will be automatically removed); otherwise your Kora installation will 'break.'' To fix this, you will need to manually edit the .env file in Kora's main directory, to change the offending text to something without spaces in the middle. Doing so will restore your installation to working order.
+
+### GitLab Instance Admin Integration
+
+GitLab integration may also be achieved at the Admin level in any GitLab instance with these settings available, such as a personally-hosted instance. This has the benefit of being manageable by any user with administrator privileges for the GitLab instance.
+
+1. Begin by navigating to the GitLab instance you wish to use for this process and log in, then go to the "Admin Area."
+
+2. In the left-hand sidebar, click on "Applications". This will default to showing the options for "Add new application"
+
+3. Fill in the required information for adding a new application. The name will be whatever identifying name you wish to give this newly-created link; it is recommended you reference this Kora installation's URL for specificity, but any name you choose will work.
+
+4. In the "Redirect URI" text box, use the following example to put in the URI for your specific Kora instance. In this example URI, the Kora instance's URL is at https://example.org/kora/, so this creates the URI of:
+
+        https://example.org/kora/login/gitlab/callback
+
+    Notice that what has been added to the URL is "/login/gitlab/callback" in order to create the URI.
+
+5. Leave the box for the setting "Confidential" checked; this is the default setting.
+
+6.  Check the box for the "read_user" scope and then click "Save application" after the list of scopes.
+
+7. You will be redirected to the page with your "Application ID" and "Secret." You will be copying each of these into your Kora Configuration File page of your installation.
+
+8. When viewing your installation's Kora Configuration File page (accessible via the right sidebar, under the "Management" section), type in the GitLab instance's website into the "GitLab Client" box. For instance, for a personally hosted GitLab instance at another subdomain alongside your Kora instance, it could be "https://gitlab.example.org."
+
+    (For an image of this box and those for the next step, please see Step 8 in the section above, "[Individual GitLab User Integration](#individual-gitlab-user-integration)")
+
+9. " Copy the GitLab "Application ID" from Step 7 into the Kora Configuration Page box for "GitLab Client ID"; copy "Secret" to "GitLab Client Secret."
+
+10. Click "Update Configuration File" to save these settings.
+
+!!! warning
+    The GitLab text boxes cannot contain any spaces in between characters (spaces at the beginning or end will be automatically removed); otherwise your Kora installation will 'break.'' To fix this, you will need to manually edit the .env file in Kora's main directory, to change the offending text to something without spaces in the middle. Doing so will restore your installation to working order.
+
+### Removing GitLab Integration
+
+To remove GitLab integration, simply replace the URL in the "GitLab Client" box with a single word or random character string (without spaces). This will remove the "Login with GitLab" button on the login page. If you wish to also remove the ID and Secret, you can also replace these with a single word or random character string (again, without spaces).
+
+!!! warning
+    The GitLab text boxes cannot contain any spaces in between characters (spaces at the beginning or end will be automatically removed); otherwise your Kora installation will 'break.'' To fix this, you will need to manually edit the .env file in Kora's main directory, to change the offending text to something without spaces in the middle. Doing so will restore your installation to working order.
