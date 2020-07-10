@@ -9,7 +9,7 @@ Kora requires a server environment with at least 1 GB of storage and 1 GB of RAM
 * Linux Operating System
 * Apache (Version 2.0)
 * MySQL (Version 5.7.20)
-* PHP (Version 7.1.3)
+* PHP (Version 7.1.3 to 7.2.31)
 
 These versions are Kora's minimum version requirements.
 
@@ -51,6 +51,8 @@ After confirming the environment is a LAMP Stack with the appropriate version le
 <span></span>
 
 Install the versions of these packages that correspond to the version of PHP you have installed as a part of your LAMP Stack.
+
+If other issues arise, it may be that some other PHP modules not included in the core PHP installation or packages listed above are also required. Kora is build on the Laravel PHP Framework, so it is possible one of [its required PHP modules](https://laravel.com/docs/7.x#server-requirements) is missing from your server environment and so the culprit.
 
 ## Enabling *mod_rewrite*
 
