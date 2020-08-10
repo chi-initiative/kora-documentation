@@ -20,6 +20,7 @@ nav:
         - 'Understanding Kora User Types and Permissions': 'getting-started/understanding_kora_user_types_and_permissions.md'
         - 'System Requirements': 'getting-started/system_requirements.md'
         - "Installing Kora on Domain of One's Own & Reclaim Hosting": 'getting-started/installing_kora_domains.md'
+        - "Installing Kora on Reclaim Cloud": 'getting-started/cloud_install.md'
         - 'Advanced Configuration of Kora': 'getting-started/advanced_configuration.md'
         # - 'Searching and Browsing in Kora': 'getting-started/searching_and_browsing.md'
         - 'Working with the Dashboard': 'getting-started/working_with_the_dashboard.md'

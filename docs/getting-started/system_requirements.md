@@ -9,7 +9,7 @@ Kora requires a server environment with at least 1 GB of storage and 1 GB of RAM
 * Linux Operating System
 * Apache (Version 2.0)
 * MySQL (Version 5.7.20)
-* PHP (Version 7.1.3 to 7.2.31)
+* PHP (Version 7.1.3 to 7.2.32)
 
 These versions are Kora's minimum version requirements.
 

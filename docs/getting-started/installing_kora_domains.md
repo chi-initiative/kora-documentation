@@ -14,7 +14,7 @@ Finally, make sure to visit the [Kora GitHub repo releases](https://github.com/m
 
 Begin all of this by logging into your account to reach your cPanel. Most cPanels look something like this:
 
- <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_1_annotated.png" title="cPanel Main View">
+<img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_1_annotated.png" title="cPanel Main View">
 
 ## Set up MySQL Database
 
