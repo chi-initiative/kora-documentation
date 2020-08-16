@@ -328,7 +328,7 @@ Once you have implemented one of the two methods above, your Kora installation i
 
 Once completed, return to cPanel Main.
 
-## Further Configure Kora Once installed
+## Further Configure Kora Once Installed
 
 In a new tab, navigate to your Kora application's URL. If everything has been done correctly, you should land on the login page for your Kora installation. But keep the cPanel open in another tab because you will need to switch back to it to set up your email at some point.
 
@@ -372,6 +372,10 @@ If you successfully reached the Kora login page, **Congratulations!** Your insta
 4. Finally, click "Submit". Once redirected back to the main page, the lighter-blue bar at the top will display the number of sites registered and have a dropdown list for you to select whichever. Obviously if this is the first time setting one up, you will only have one. Ensure the one you intend to use is selected in the dropdown and then click on the gear icon in the upper right to go to the reCAPTCHA "Settings" page. Click on the "reCAPTCHA keys" dropdown list to display your site and secret keys.
 
 5. Copy the "site key" and paste it into your Kora Configuration File page text box titled "Recaptcha Public Key"; copy the "secret key" and paste it into the text box titled "Recaptcha Private Key". If you want to ensure this information is saved before setting up your email, scroll to the bottom of the page and click "Update Configuration File".
+
+### GitLab Integration
+
+If desired, your Kora installation can use GitLab's authentication system to manage account creation and user login. For more information about this, including integration instruction, please see the section of "Advanced Configuration" called, "[GitLab Integration](../advanced_configuration/#gitlab-integration)."
 
 ### Set Up Server Email and Link It to Kora
 
