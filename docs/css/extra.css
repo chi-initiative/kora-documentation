@@ -63,6 +63,11 @@
 /* sidebar menu top-level */
 .wy-menu-vertical a {
     color: #ffffff;
+    margin: 5px 0px 5px;
+}
+
+.wy-menu-vertical li.current a {
+    margin: 0px;
 }
 
 .wy-nav-side {
