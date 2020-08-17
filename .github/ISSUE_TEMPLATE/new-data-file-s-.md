@@ -3,7 +3,7 @@ name: New Data File(s)
 about: Use this template to suggest any new data files for an already-existing documentation
   page. Only include data files for the same documentation page in the same issue.
 title: Proposed Data File(s)
-labels: new data
+labels: documentation, enhancement, new data
 assignees: ''
 
 ---

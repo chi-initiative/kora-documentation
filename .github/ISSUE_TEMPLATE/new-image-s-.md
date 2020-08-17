@@ -3,7 +3,7 @@ name: New Image(s)
 about: Use this template to suggest any new images for an already-existing documentation
   page. Only include data files for the same documentation page in the same issue.
 title: Proposed Image(s)
-labels: new image
+labels: documentation, enhancement, new image
 assignees: ''
 
 ---
