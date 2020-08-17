@@ -2,7 +2,7 @@
 name: New Documentation Page
 about: Use this template to suggest a new page (or sub-section) of documentation
 title: Proposed Documentation Page
-labels: new page
+labels: documentation, enhancement, new page
 assignees: ''
 
 ---
