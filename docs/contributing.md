@@ -44,7 +44,7 @@ Pull requests will remain
     One acceptable addition to a page that you might find useful would an admonition, also called a call-out, to highlight a key explanation of some concept or idea. These look like this:
 
     !!! note
-        This is an info admonition.
+        This is a note admonition.
 
     !!! tip
         This is a tip admonition.
