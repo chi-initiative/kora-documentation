@@ -2,9 +2,9 @@
 title: How to Contribute to this Guide
 ---
 
-# How to Contribute to this Guide
+# Contribute to this Guide
 
-This guide is designed to allow for input from readers and contributing to it is a fairly straightforward process.
+This documentation website is designed to allow for input from readers and contributing to it is a fairly straightforward process.
 
 GitHub, the website on which this documentation is built, is built using Git, a version control system that tracks file changes over time and allows multiple users to make alterations to files and present them to the owners of those files for review and acceptance or rejection. In the case of this guide, any suggested alterations will be sent to the Kora Documentation team for consideration prior to being officially added to this documentation website.
 
