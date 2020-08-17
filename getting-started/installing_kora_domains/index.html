@@ -58,6 +58,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="../../about/">About this Documentation</a>
                     </li>
                 </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../contributing/">Contribute to this Documenation</a>
+                    </li>
+                </ul>
                 <p class="caption"><span class="caption-text">Getting Started</span></p>
                 <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../core_concepts/">Understanding Core Concepts</a>
@@ -90,9 +94,11 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#further-configure-kora-once-installed">Further Configure Kora Once installed</a>
+    <li class="toctree-l2"><a class="reference internal" href="#further-configure-kora-once-installed">Further Configure Kora Once Installed</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#configure-recaptcha">Configure reCAPTCHA</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gitlab-integration">GitLab Integration</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#set-up-server-email-and-link-it-to-kora">Set Up Server Email and Link It to Kora</a>
     </li>
@@ -520,7 +526,7 @@ DB_PASSWORD={saved database user password}
 </li>
 </ol>
 <p>Once completed, return to cPanel Main.</p>
-<h2 id="further-configure-kora-once-installed">Further Configure Kora Once installed</h2>
+<h2 id="further-configure-kora-once-installed">Further Configure Kora Once Installed</h2>
 <p>In a new tab, navigate to your Kora application's URL. If everything has been done correctly, you should land on the login page for your Kora installation. But keep the cPanel open in another tab because you will need to switch back to it to set up your email at some point.</p>
 <p>If you successfully reached the Kora login page, <strong>Congratulations!</strong> Your install is at least partially working!</p>
 <ol>
@@ -563,6 +569,8 @@ DB_PASSWORD={saved database user password}
 <p>Copy the "site key" and paste it into your Kora Configuration File page text box titled "Recaptcha Public Key"; copy the "secret key" and paste it into the text box titled "Recaptcha Private Key". If you want to ensure this information is saved before setting up your email, scroll to the bottom of the page and click "Update Configuration File".</p>
 </li>
 </ol>
+<h3 id="gitlab-integration">GitLab Integration</h3>
+<p>If desired, your Kora installation can use GitLab's authentication system to manage account creation and user login. For more information about this, including integration instruction, please see the section of "Advanced Configuration" called, "<a href="../advanced_configuration/#gitlab-integration">GitLab Integration</a>."</p>
 <h3 id="set-up-server-email-and-link-it-to-kora">Set Up Server Email and Link It to Kora</h3>
 <p>To set up mail for your Kora install, this guide will explain how to use the email client available through cPanel for your Domain of One's Own account. It is possible to set this up with other email clients, however this basic option is easiest for keeping the installation and email all under the one environment.</p>
 <ol>

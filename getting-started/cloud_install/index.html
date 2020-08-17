@@ -58,6 +58,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="../../about/">About this Documentation</a>
                     </li>
                 </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../contributing/">Contribute to this Documenation</a>
+                    </li>
+                </ul>
                 <p class="caption"><span class="caption-text">Getting Started</span></p>
                 <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../core_concepts/">Understanding Core Concepts</a>
@@ -76,7 +80,31 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#configure-php-modules">Configure PHP Modules</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#import-and-install-kora">Import and Install Kora</a>
+    <li class="toctree-l2"><a class="reference internal" href="#import-and-install-kora-with-site-url-considerations">Import and Install Kora, with Site URL Considerations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#installation-via-zipped-file-as-a-url-subdirectory">Installation via Zipped File as a URL Subdirectory</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installation-via-github-repository-and-clouds-development-manager">Installation via GitHub Repository and Cloud's Development Manager</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#confirm-kora-installation">Confirm Kora Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#further-configure-kora-once-installed">Further Configure Kora Once Installed</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#configure-recaptcha">Configure reCAPTCHA</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gitlab-integration">GitLab Integration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configure-kora-email">Configure Kora Email</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#admin-user-profile-settings">Admin User Profile Settings</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#testing-the-installation">Testing the Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alter-cloud-environment-after-creation">Alter Cloud Environment After creation</a>
     </li>
     </ul>
                     </li>
@@ -230,11 +258,13 @@
 <h2 id="set-up-scalable-cloud-environment">Set up Scalable Cloud Environment</h2>
 <ol>
 <li>
-<p>After creating an account, begin from your Dashboard. Select "Create New Environment" in the middle, or "NEW ENVIRONMENT" in the top-left:</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_0_annotated.png" title=""></p>
+<p>After creating an account, begin from your Dashboard. Select "Create New Environment" in the middle:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_0.1_annotated.png" title=""></p>
+<p>Or "NEW ENVIRONMENT" in the top-left:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_0.2_annotated.png" title=""></p>
 </li>
 <li>
-<p>In the module that appears, Select PHP Tab. It will look like this:</p>
+<p>In the modal that appears, Select PHP Tab. It will look like this:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_1_annotated.png" title=""></p>
 </li>
 <li>
@@ -259,7 +289,7 @@
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_6_annotated.png" title=""></p>
 </li>
 <li>
-<p>Feel free to review all these settings again, but you can always adjust these later if needed (see XXX below). When ready, click "Create" in lower-right to initialize the environment.</p>
+<p>Feel free to review all these settings again, but you can always adjust these later if needed (see the section, "<a href="#alter-cloud-environment-after-creation">Alter Cloud Environment After Creation</a>" below). When ready, click "Create" in lower-right to initialize the environment.</p>
 </li>
 </ol>
 <h2 id="set-up-mysql-database">Set up MySQL Database</h2>
@@ -337,9 +367,8 @@ imagick.progress_monitor = 0 ; Used to enable the image progress monitor
 <pre><code>[mail]
 ;SMTP = {mail host}
 ;port = {port-number}
-
-The first two lines of this module defines the server location and the port. The full code of this section is not reproduced here and portions have been changed, for security purposes. Remove the `;` from the beginning of each of these two lines, and write down the specified value for `SMTP =`. This will be used when setting up the email function in Kora.
 </code></pre>
+<p>The first two lines of this module defines the server location and the port. The full code of this section is not reproduced here and portions have been changed, for security purposes. Remove the <code>;</code> from the beginning of each of these two lines, and write down the specified value for <code>SMTP =</code>. This will be used when setting up the email function in Kora.</p>
 </li>
 <li>
 <p>Once you have enabled all the modules and the mail configurations, Click "Save" at the top of this panel area.</p>
@@ -354,13 +383,16 @@ The first two lines of this module defines the server location and the port. The
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_19_annotated.png" title=""></p>
 <p>New tab will open with a page displaying information generated by the function <code>phpinfo()</code>. The top of it will look like this:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_20_annotated.png" title=""></p>
-<p>You can use this page to confirm that all ten of these modules have been loaded; those that are loaded have their own section headings. If any are not loaded, return to the php.ini file to confirm you properly deleted the semi-colon from the <code>extension=...</code> line that corresponds to the module in question.</p>
+<p>You can use this page to confirm that all eleven of these modules have been loaded; those that are loaded have their own section headings. If any are not loaded, return to the php.ini file to confirm you properly deleted the semi-colon from the <code>extension=...</code> line that corresponds to the module in question.</p>
 </li>
 <li>
 <p>When finished, close this browser tab.</p>
 </li>
 </ol>
-<h2 id="import-and-install-kora">Import and Install Kora</h2>
+<h2 id="import-and-install-kora-with-site-url-considerations">Import and Install Kora, with Site URL Considerations</h2>
+<p>There are two paths for importing Kora into your Reclaim Cloud environment. There are also two basic forms your Kora website's URL can take. To demonstrate both options for both of these, this section is split into two subsections, to highlight the two different versions of each. If you wish to "mix-and-match" these processes, this should be a  fairly straightforward adjustment to make.</p>
+<h3 id="installation-via-zipped-file-as-a-url-subdirectory">Installation via Zipped File as a URL Subdirectory</h3>
+<p>When creating your new Kora website, you have two basic options for how your URL will be configured. This first option is for instances where your installation will be accessible at, as an example, <strong>https://example.org/subdirectory</strong>. The subdirectory in this example URL is appropriately named "subdirectory."</p>
 <ol>
 <li>
 <p>Back at the dashboard, hover on "Application Servers" and click on icon for "Web SSH"</p>
@@ -374,15 +406,16 @@ The first two lines of this module defines the server location and the port. The
 <p>Use the following command to navigate to the directory just above your environment's Document Root (contents of Document Root is what's visible via your environment's URL)</p>
 <pre><code>cd /var/www/webroot
 </code></pre>
-<p>Your terminal will look like this:</p>
+<p>You can either type this code in, or copy it and then paste it into the terminal using a keyboard shortcut. Your terminal will look like this:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_1_annotated.png" title=""></p>
 </li>
 <li>
-<p>Open a new browser tab and navigate to https://github.com/matrix-msu/kora/releases. Click the dropdown menu for "Assets" of most recent release. Right-click on the "Source Code (zip)" file link and copy this file's URL.</p>
+<p>Open a new browser tab and navigate to <a href="https://github.com/matrix-msu/kora/releases">https://github.com/matrix-msu/kora/releases</a>. Click the dropdown menu for "Assets" of most recent release. Right-click on the "Source Code (zip)" file link and copy this file's URL.</p>
 </li>
 <li>
-<p>Return to the Reclaim Cloud environment tab. Type <code>wget</code> then a space, then paste the file URL you just copied using a keyboard shortcut; on Windows the shortcut combination to paste is ctrl + v. This is an example of what your command will look like after pasting:</p>
-<p>wget https://github.com/matrix-msu/kora/archive/3.0.0.zip</p>
+<p>Return to the Reclaim Cloud environment tab. Type <code>wget</code> then a space, then paste the file URL you just copied. This is an example of what your command will look like after pasting:</p>
+<pre><code>wget https://github.com/matrix-msu/kora/archive/3.0.0.zip
+</code></pre>
 </li>
 <li>
 <p>Hit "Enter" and let the command run. During the file transfer process, your terminal will look similar to this:</p>
@@ -437,7 +470,7 @@ DB_PREFIX=kora_
 <p>On the <code>DB_PASSWORD=</code> line, change "kora" to the password you saved from the process of creating the user in phpMyAdmin. Again, use the nano-specific keyboard shortcut for pasting, if copied from elsewhere.</p>
 </li>
 <li>
-<p>Leave the rest of this file alone. Use the proper keyboard shortcut for exiting nano on your computer; for a Windows machine, this is crtl + x. The system will ask you if you wish to save your changes; hit <code>y</code> for yes. Then hit "enter" to confirm that the file name is ".env"</p>
+<p>Leave the rest of this file alone. Use the proper keyboard shortcut for exiting nano on your computer; for a Windows machine, this is crtl + x. The system will ask you if you wish to save your changes; hit "y" for yes. Then hit "enter" to confirm that the file name is ".env"</p>
 </li>
 <li>
 <p>Now, change your directory to public:</p>
@@ -445,40 +478,376 @@ DB_PREFIX=kora_
 </code></pre>
 </li>
 <li>
-<p>Copy the ".htaccess.example" file in this directory, as ".htaccess"
-    cp .htaccess.example .htaccess
-This guide explains setting up kora such that it is accessible at {reclaim-cloud-url}/kora/. For other configurations, change accordingly.
-Edit this .htaccess file with nano:
-    nano .htaccess
-Find section of this file:
-    RewriteEngine On
-    #RewriteBase #add base url ex: www.website.com[/this part is your base url for this file up to "public"]
-    #RewriteBase /your_base_url
-From this final line, remove <code>#</code> and then change "/your_base_url" to "/kora". This tells the system that your Kora install's url will be example.org/kora
-Save this file using the same process as explained in the case of editing ".env" Leave the file name as .htaccess
-Navigate upward to the main kora directory:
-    cd ..
-Run the following command to install Kora
-    php artisan kora:install
-Copy the last line of the successful installation message, which has your default admin password for your kora installation.
-Reclaim Cloud has default permissions levels that will automatically meet the READ and WRITE permissions requirements for the specified folders in the successful installation message.
-Navigate to your Root Directory; in this case, use the following two commands:
-    cd ..
-    cd ROOT
-Create a symbolic link in this directory that corresponds to the path you wrote in the .htaccess file before. For example, if you changed "/your_base_url" to "/kora", use this command for your symbolic link creation:
-    ln -s ../kora/public kora
-After finishing this, hover on "Application Servers" and select "Open in Browser". In the new tab, the phpinfo() page will again open. Add "/kora" to the URL and load this page, which should be the Kora login screen.
-Log in using "admin" as the username and the password from the installation success message, which you previously saved.
-Further configure via the "Kora Configuration File" page, accessible in the right navbar menu, under "Management"
-Set up reCAPTCHA
-Set up GitLab if desired
-For Mail, provide the value from the "SMTP = " line saved from the config file before for the "Mail Host" text box. More than likely, the value saved from before will match the default value in Kora
-Next, type in an address that you would like the email to appear from. This can technically be anything you wish, but it is good practice for the portion after the @ symbol to match your Kora installation's main url. For example, if your installation is accessible at the url https:\/\/env-0000000.us.reclaim.cloud/kora, you could set this email address to "kora-admin@env-0000000.us.reclaim.cloud".
-Set the "Mail From Name" to whatever you prefer, such as your own name, some name that references your specific version of Kora, or even a generic "Kora Administrator".
-Leave "Mail User" and "Mail Password" with their default settings in Kora.
-Click "Update Configuration File" at the bottom of the page.</p>
+<p>Copy the ".htaccess.example" file in this directory using the <code>cp</code> command, as ".htaccess"</p>
+<pre><code>cp .htaccess.example .htaccess
+</code></pre>
+<p>After you have done this, your terminal will look similar to this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_36_annotated.png" title=""></p>
+</li>
+<li>
+<p>Next, edit this file, again using <code>nano</code></p>
+<pre><code>nano .htaccess
+</code></pre>
+<p>Find the following section of code in this file:</p>
+<pre><code>RewriteEngine On
+#RewriteBase #add base url ex: www.website.com[/this part is your base url, the url subdirectory where you want your installation to be accessible from]
+#RewriteBase /your_base_url
+</code></pre>
+<p>It is also highlighted in this image:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_37_annotated.png" title=""></p>
+<p>From the final line of this section of code, remove <code>#</code> and then change "/your_base_url" to "/kora". This tells the system that your Kora install's url will be <strong>https://example.org/kora</strong> (if your subdirectory is something different, change this line accordingly)</p>
+</li>
+<li>
+<p>Save this file using the same process as explained in the case of editing ".env" above. Leave the file name as ".htaccess".</p>
+</li>
+<li>
+<p>Navigate upward to the main kora directory:</p>
+<pre><code>cd ..
+</code></pre>
+<p>Run the following command to install Kora</p>
+<pre><code>php artisan kora:install
+</code></pre>
+<p>This will install Kora into your environment by completing a number of tasks, such as linking the mySQL database you created to these application files.</p>
+</li>
+<li>
+<p>Once this finishes, your terminal will look similar to this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_38_annotated.png" title=""></p>
+<p><strong>INCREDIBLY IMPORTANT</strong>: You <em>must</em> copy the last line generated here in the successful installation message (outlined above), which has your password for the generated username of "admin". Paste this somewhere safe, where you will not lose it!</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It cannot be stressed enough how important this step is, because losing this password means losing access to your installation and will require a full reinstallation.</p>
+</div>
+</li>
+<li>
+<p>Reclaim Cloud has default permissions levels that will automatically meet the READ and WRITE permissions requirements for the specified folders in the successful installation message, so for this installation you will not need to change any permission levels. You may skip this step and proceed to #21.</p>
+<p>If using this guide to install into any other environments, you may need to change permission levels. You can use the following commands to do so:</p>
+<pre><code>chmod -R 755 .
+</code></pre>
+<p><span></span></p>
+<pre><code>chmod -R 775 bootstrap/cache/
+</code></pre>
+<p><span></span></p>
+<pre><code>chmod -R 775 storage/
+</code></pre>
+<p><span></span></p>
+<pre><code>chmod -R 775 public/assets/javascripts/production/
+</code></pre>
+</li>
+<li>
+<p>Navigate to your RootDirectory, which is the directory that your server points your URL at; in this case, use the following two commands:</p>
+<pre><code>cd ..
+</code></pre>
+<p><span></span></p>
+<pre><code>cd ROOT
+</code></pre>
+</li>
+<li>
+<p>Create a symbolic link in this directory, that corresponds to the path you wrote in the .htaccess file before. For example, if you changed "/your_base_url" to "/kora", use this command for your symbolic link creation:</p>
+<pre><code>ln -s ../kora/public kora
+</code></pre>
+<p>Once you have run this command, your terminal will look like this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_39_annotated.png" title=""></p>
 </li>
 </ol>
+<p>At this point you may skip the next sub-section and proceed to the next section, "<a href="#further-configure-kora-once-installed">Further Configure Kora Once Installed</a>."</p>
+<h3 id="installation-via-github-repository-and-clouds-development-manager">Installation via GitHub Repository and Cloud's Development Manager</h3>
+<p>The second option for configuring your webpage's URL is to have it accessible at a main-level domain (or, technically in the case of the Reclaim Cloud-provided URLS, subdomain). Auto-generated Reclaim Cloud URLs are usually in the form of <strong>https://[environment-name].us.reclaim.cloud</strong>. In this example, your Kora installation would be accessible at this URL, without an additional subdirectory on the end. (For an explanation of the subdirectory URL case, please see the previous sub-section, "<a href="#installation-via-zipped-file-as-a-url-subdirectory">Installation via Zipped File as a URL Subdirectory</a>.")</p>
+<ol>
+<li>
+<p>In the dashboard, hover on the line "Deployments" for your environment, and click on "Deploy from Git / SVN."</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_27_annotated.png" title=""></p>
+</li>
+<li>
+<p>This will open a new modal, for configuring a repository from which to pull files.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_28_annotated.png" title=""></p>
+<p>Click on the dropdown menu for "Repository" and choose "Add New Repository."</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_29_annotated.png" title=""></p>
+</li>
+<li>
+<p>Another new modal will open, for adding a new repository. In this modal, give this configuration a name; for instance "Kora," since this will be pointed at the official Kora repository managed by Matrix at MSU. Point it at this repository by pasting in the following address into the "URL" text box:</p>
+<pre><code>https://github.com/matrix-msu/kora
+</code></pre>
+<p>Leave the "Branch" text box with its default "master" text. The modal should look similar to this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_30_annotated.png" title=""></p>
+</li>
+<li>
+<p>Click "Add" on this modal, which will return you to the previous modal with "Kora" selected for the "Repository." Again leave "Branch" text as defaulted to "master"; additionally, also leave the "Path" text box with its "ROOT" default.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_42_annotated.png" title=""></p>
+<p>Then click "Deploy" to have the Development Manager transfer all of the files from the kora repository on GitHub into your environment's ROOT folder.</p>
+</li>
+<li>
+<p>Currently, your ROOT folder is set as your URL's DocumentRoot, but this would be quite insecure for your Kora application, so this must be changed. To do so, once again hover over "Application Servers" and again click on wrench icon for "Config."</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_14_annotated.png" title=""></p>
+<p>This will again bring up the "Application Servers : Configs" tab in the bottom panel.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_15_annotated.png" title=""></p>
+</li>
+<li>
+<p>In the left-hand pane of this panel, click on the "conf" folder.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_15.1_annotated.png" title=""></p>
+<p>This will show its contents in the right-hand pane. Double-click on the file, "httpd.conf"</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_43_annotated.png" title=""></p>
+</li>
+<li>
+<p>Search this file for "DocumentRoot," which should find four matches. The first two, shown in the image below, are in a section where DocumentRoot is defined as a directory tree leading to "ROOT"</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_44_annotated.png" title=""></p>
+<p>Change this line by adding "/public", to read as follows:</p>
+<pre><code>DocumentRoot "/var/www/webroot/ROOT/public"
+</code></pre>
+</li>
+<li>
+<p>The next match when searching for DocumentRoot will be the comment above a line of code that reads,</p>
+<pre><code>&lt;Directory "/var/www/webroot/ROOT"&gt;
+</code></pre>
+<p>Add "/public" to this line as well, so that it reads,</p>
+<pre><code>&lt;Directory "/var/www/webroot/ROOT/public"&gt;
+</code></pre>
+</li>
+<li>
+<p>The final match for "DocumentRoot" in this file will be in the middle of a code block that reads,</p>
+<pre><code>    ServerAdmin webmaster@domain.com
+    DocumentRoot /var/www/webroot/ROOT
+    ServerName website.jelastic.com
+    ServerAlias *
+    ErrorLog logs/dummy-host.jelastic.com-error_log
+    CustomLog logs/dummy-host.jelastic.com-access_log common
+&lt;/VirtualHost&gt;
+</code></pre>
+<p>It is the second line here, beginning with "DocumentRoot," that will need to be altered. As you may have guessed, you will add "/public" to this line as well. It will read,</p>
+<pre><code>DocumentRoot /var/www/webroot/ROOT/public
+</code></pre>
+</li>
+<li>
+<p>Once these changes have been made, click on "Save," and then hover on "Application Servers" and click on the icon for "Restart Nodes."</p>
+</li>
+<li>
+<p>After your nodes restart, hover on "Application Servers" again and click on icon for "Web SSH"</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_25_annotated.png" title=""></p>
+</li>
+<li>
+<p>Display will open with an SSH terminal</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_26_annotated.png" title=""></p>
+</li>
+<li>
+<p>Use the following command to navigate to the directory where the Development Manager has transferred all the kora repository files to:</p>
+<pre><code>cd /var/www/webroot/ROOT
+</code></pre>
+<p>Your terminal will look like this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_33_annotated.png" title=""></p>
+</li>
+<li>
+<p>Use the copy command <code>cp</code> to make a new copy of the ".env.example" file, but with the name ".env" This command looks like:</p>
+<pre><code>cp .env.example .env
+</code></pre>
+<p>When <code>cp</code> is successful, there won't be a message; the terminal will simply create a new line with the command prompt. So your terminal will look like this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_34_annotated.png" title=""></p>
+</li>
+<li>
+<p>Use the <code>nano</code> file editing program built into this version of Linux to make changes to the .env file. The command is:</p>
+<pre><code>nano .env
+</code></pre>
+<p>This file will look similar to this when displayed by <code>nano</code>:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_35_annotated.png" title=""></p>
+<p>You can navigate around this file by using the directional arrows on your keyboard. Locate the block of lines that say:</p>
+<pre><code>DB_HOST=localhost
+DB_DATABASE=kora
+DB_USERNAME=kora
+DB_PASSWORD=kora
+DB_DEFAULT=mysql
+DB_PREFIX=kora_
+</code></pre>
+</li>
+<li>
+<p>For the <code>DB_HOST=</code> line, change "localhost" to the "host" you saved from the MySQL email. Pasting the host requires a nano-specific keyboard shortcut; for Windows machines this is ctrl + shift + v</p>
+<p>If you used "kora" for the user you set up in phpMyAdmin, and you checked the "Create database with same name and grant all privileges" box when creating it, leave the <code>DB_DATABASE=</code> and <code>DB_USERNAME=</code> lines alone; otherwise, change them to match the username and database names you created in phpMyAdmin.</p>
+<p>On the <code>DB_PASSWORD=</code> line, change "kora" to the password you saved from the process of creating the user in phpMyAdmin. Again, use the nano-specific keyboard shortcut for pasting, if copied from elsewhere.</p>
+</li>
+<li>
+<p>Leave the rest of this file alone. Use the proper keyboard shortcut for exiting nano on your computer; for a Windows machine, this is crtl + x. The system will ask you if you wish to save your changes; hit "y" for yes. Then hit "enter" to confirm that the file name is ".env"</p>
+</li>
+<li>
+<p>Now, change your directory to public:</p>
+<pre><code>cd public
+</code></pre>
+</li>
+<li>
+<p>Copy the ".htaccess.example" file in this directory using the <code>cp</code> command, as ".htaccess"</p>
+<pre><code>cp .htaccess.example .htaccess
+</code></pre>
+<p>After you have done this, your terminal will look similar to this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_36_annotated.png" title=""></p>
+</li>
+<li>
+<p>Next, edit this file, again using <code>nano</code></p>
+<pre><code>nano .htaccess
+</code></pre>
+<p>Find the following section of code in this file:</p>
+<pre><code>RewriteEngine On
+#RewriteBase #add base url ex: www.website.com[/this part is your base url, the url subdirectory where you want your installation to be accessible from]
+#RewriteBase /your_base_url
+</code></pre>
+<p>It is also highlighted in this image:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_37_annotated.png" title=""></p>
+<p>From the final line of this section of code, remove <code>#</code> and then change "/your_base_url" to "/kora". This tells the system that your Kora install's url will be <strong>https://example.org/kora</strong> (if your subdirectory is something different, change this line accordingly)</p>
+</li>
+<li>
+<p>Save this file using the same process as explained in the case of editing ".env" above. Leave the file name as "".htaccess".</p>
+</li>
+<li>
+<p>Navigate upward to the main kora directory:</p>
+<pre><code>cd ..
+</code></pre>
+<p>Run the following command to install Kora</p>
+<pre><code>php artisan kora:install
+</code></pre>
+<p>This will install Kora into your environment by completing a number of tasks, such as linking the mySQL database you created to these application files.</p>
+</li>
+<li>
+<p>Once this finishes, your terminal will look similar to this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_38_annotated.png" title=""></p>
+<p><strong>INCREDIBLY IMPORTANT</strong>: You <em>must</em> copy the last line generated here in the successful installation message (outlined above), which has your password for the generated username of "admin". Paste this somewhere safe, where you will not lose it!</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It cannot be stressed enough how important this step is, because losing this password means losing access to your installation and will require a full reinstallation.</p>
+</div>
+</li>
+<li>
+<p>Reclaim Cloud has default permissions levels that will automatically meet the READ and WRITE permissions requirements for the specified folders in the successful installation message, so for this installation you will not need to change any permission levels. You may skip this step and proceed to the next section.</p>
+<p>If using this guide to install into any other environments, you may need to change permission levels. You can use the following commands to do so:</p>
+<pre><code>chmod -R 755 .
+</code></pre>
+<p><span></span></p>
+<pre><code>chmod -R 775 bootstrap/cache/
+</code></pre>
+<p><span></span></p>
+<pre><code>chmod -R 775 storage/
+</code></pre>
+<p><span></span></p>
+<pre><code>chmod -R 775 public/assets/javascripts/production/
+</code></pre>
+</li>
+</ol>
+<h2 id="confirm-kora-installation">Confirm Kora Installation</h2>
+<p>Once finished with either of the subsections in the previous section of this guide, your Kora installation should be properly configured and now accessible via your browser. Hover on "Application Servers" as you have done previously and select "Open in Browser".</p>
+<ul>
+<li>If you set up Kora with a subdirectory URL, the phpinfo() page you previously visited in Step 7 of the section, "<a href="#set-up-mysql-database">Set up MySQL Database</a>" will again open. Add "/kora" to the URL and load this page, which should be the Kora login screen.</li>
+</ul>
+<p>If you successfully reached the Kora login page, <strong>Congratulations!</strong> Your install is at least partially working!</p>
+<ol>
+<li>
+<p>The last required step to complete the work done via terminal is to delete the "index.php" file saved in your website's ROOT folder. This file should be deleted because it contains quite a bit of sensitive information, which would make your Kora website vulnerable.</p>
+<p>There is an easy command to reset your terminal prompt location back to where it begins, to the location it is whenever you open up terminal:</p>
+<pre><code>cd ~
+</code></pre>
+<p>Once reset to the starting location, use this command to again reach the "ROOT" folder:</p>
+<pre><code>cd /var/www/webroot/ROOT
+</code></pre>
+</li>
+<li>
+<p>Once in "ROOT", use the remove command <code>rm</code> to delete the file:</p>
+<pre><code>rm index.php
+</code></pre>
+</li>
+</ol>
+<h2 id="further-configure-kora-once-installed">Further Configure Kora Once Installed</h2>
+<ol>
+<li>
+<p>Back in the browser tab where the Kora login page loaded, log in using "admin" as the username and the password from the installation success message, which you previously saved. You will land on a page that looks like this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_39_annotated.png" title="Successful Login to Kora"></p>
+</li>
+<li>
+<p>It is highly recommended that you at some point click through the introduction to get a quick tutorial on the basics of using Kora. Once done, click on the menu icon in the top-right to bring out the side-bar menu.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_40.1_annotated.png" title="Open Kora Menu"></p>
+<p>Then click on "Management" at the bottom and select "Kora Configuration File" from the options that appear.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_41_annotated.png" title="Kora Configuration File Menu Item"></p>
+<p>The page that loads will look similar to this:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_42_annotated.png" title="Configuration File Page"></p>
+</li>
+</ol>
+<h3 id="configure-recaptcha">Configure reCAPTCHA</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because this subsection regards setting up an external service, there are no screenshots provided.</p>
+</div>
+<p><strong>Kora currently uses reCAPTCHA v2 Checkbox</strong></p>
+<ol>
+<li>
+<p>Kora uses Google's reCAPTCHA service for anti-robot protections. As you can see on the screenshot above, the configuration file is asking for a "Recaptcha Private Key" and "Recaptcha Public Key", which you will get from that service. The reCAPTCHA documentation can be found at <a href="https://developers.google.com/recaptcha">https://developers.google.com/recaptcha</a>, but to create the keys needed for your site, you will go to <a href="https://www.google.com/u/0/recaptcha/admin/">https://www.google.com/u/0/recaptcha/admin/</a>. Google will ask you to log in with a Gmail account. Many academic institutions have contracts with Google for using their tools via an educational arrangement; in the case of MSU, it is possible to give Google's login page an MSU email address, which then redirects to an MSU-related login page. Successfully logging in redirects back to reCAPTCHA under the MSU account. If this option is not available to you, unfortunately you will need a Gmail account to gain access to reCAPTCHA, which is required for completing Kora's installation setup.</p>
+</li>
+<li>
+<p>Once logged in, if this is your first time using reCAPTCHA, it will automatically go to the registration page. However, if you have used reCAPTCHA before, it will take you to a page displaying the information for the first reCAPTCHA key set you created. To create a new set of keys, click on the plus icon in the upper-right to register a new site.</p>
+<p>Give your new set any label you prefer (a suggestion would be to use your Kora installation URL). As noted above, Kora currently uses reCAPTCHA v2 "I'm not a robot" Checkbox version, so pick those options. Under "Domains", write your main domain (do not include "http://", "https://", or the subdirectory) and either hit Enter or click the plus sign to add it to the list of approved domains for the set of keys that are about to be generated. As an aside: this functionality means you could conceivably have multiple Kora installations, or even multiple sites that use reCAPTCHA v2 Checkbox, all using the same keys.</p>
+</li>
+<li>
+<p>The "Owners" section should auto-add your account email, but you can add another if you wish. Be sure to (review and) accept the Terms of Service. The final option is the checkbox for "Send alerts to owners", which you may wish to leave enabled so that you receive emailed updates when security issues with your site arise.</p>
+</li>
+<li>
+<p>Finally, click "Submit". Once redirected back to the main page, the lighter-blue bar at the top will display the number of sites registered and have a dropdown list for you to select whichever. Obviously if this is the first time setting one up, you will only have one. Ensure the one you intend to use is selected in the dropdown and then click on the gear icon in the upper right to go to the reCAPTCHA "Settings" page. Click on the "reCAPTCHA keys" dropdown list to display your site and secret keys.</p>
+</li>
+<li>
+<p>Copy the "site key" and paste it into your Kora Configuration File page text box titled "Recaptcha Public Key"; copy the "secret key" and paste it into the text box titled "Recaptcha Private Key". If you want to ensure this information is saved before setting up your email, scroll to the bottom of the page and click "Update Configuration File".</p>
+</li>
+</ol>
+<h3 id="gitlab-integration">GitLab Integration</h3>
+<p>If desired, your Kora installation can use GitLab's authentication system to manage account creation and user login. For more information about this, including integration instruction, please see the section of "Advanced Configuration" called, "<a href="../advanced_configuration/#gitlab-integration">GitLab Integration</a>."</p>
+<h3 id="configure-kora-email">Configure Kora Email</h3>
+<ol>
+<li>
+<p>For the Mail configuration settings on the "Kora Configuration File" page, provide the value from the "SMTP = " in the "Mail Host" text box. You should have saved this information back in Step 4 of "<a href="#configure-php-modules">Configure PHP Modules</a>." More than likely though, the value saved will match the default value already on this page.</p>
+</li>
+<li>
+<p>Next, type in an address that you would like the email to appear from in the "Mail From Address" text box. This can technically be anything you wish, but it is good practice for the portion after the @ symbol to match your Kora installation's main url. For example, if your installation is accessible at the url <strong>https://env-0000000.us.reclaim.cloud/kora</strong>, you could set this email address to "kora-admin@env-0000000.us.reclaim.cloud".</p>
+</li>
+<li>
+<p>Set the "Mail From Name" to whatever you prefer, such as your own name, some name that references your specific version of Kora, or even a generic "Kora Administrator".</p>
+</li>
+<li>
+<p>Leave "Mail User" and "Mail Password" with their default settings in Kora.</p>
+</li>
+<li>
+<p>Click "Update Configuration File" at the bottom of the page.</p>
+</li>
+</ol>
+<h3 id="admin-user-profile-settings">Admin User Profile Settings</h3>
+<p>The final portion of configuration is for the admin account's profile settings. This section is specific to what is a part of the initial configuration for Kora, but this documentation website also has a more complete <a href="../../user-accounts/edit_user_preferences/">guide for user profile settings</a>.</p>
+<ol>
+<li>
+<p>To get there to the profile settings page, select the user icon in the upper-right.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_40.2_annotated.png" title="Open User Menu"></p>
+<p>Then choose "Edit My Profile."</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/installing_kora_domains_49_annotated.png" title="User Profile Settings Menu Item"></p>
+</li>
+<li>
+<p>On this page, you can change the username and password that were auto-generated when installing Kora, however it is probably best to leave these alone. However, it <em>is</em> important to change the default admin email here because it is shown to users at various locations throughout Kora. It should be changed to an address which is often checked; unless you will be doing more with the SMTP server you have set up as a part of this guide, this means it <em>should not</em> be set to the "Mail From Address" used on the "Kora Configuration File" page.</p>
+<p>You can also change the displayed admin name, if you wish, as it is also displayed to users in various locations. Finally, should you wish to change the admin account password from what was auto-generated to one you prefer, you can do that here.</p>
+</li>
+<li>
+<p>Once all these have been set, click "Update Profile" to complete your setup.</p>
+</li>
+</ol>
+<h2 id="testing-the-installation">Testing the Installation</h2>
+<p>To check whether or not your installation works properly:</p>
+<ol>
+<li>
+<p><a href="../../projects/creating_a_project/">Create a Project</a>.</p>
+</li>
+<li>
+<p><a href="../../forms/creating_a_form/">Create a Form</a> in that project.</p>
+</li>
+<li>
+<p><a href="../../forms/creating_fields/">Create a Field</a> in that project <em>with the field type set to one of the File types</em> (setting it to "Documents" will give the greatest flexibility for uploading any file to test).</p>
+</li>
+<li>
+<p>And finally, <a href="../../records/creating_a_record/">create a Record</a> where you upload an example file.</p>
+</li>
+</ol>
+<p>If the creation of that Record with an uploaded file succeeds, such that the uploaded file is viewable or downloadable when clicked upon, everything should be configured properly. If this fails, please check that you have properly enabled all the PHP modules noted in Step 3 of "<a href="#configure-php-modules">Configure PHP Modules</a>," and properly set the permission levels described in either Step 20 of "<a href="#installation-via-zipped-file-as-a-url-subdirectory">Installation via Zipped File as a URL Subdirectory</a>," or Step 24 of "<a href="#installation-via-github-repository-and-clouds-development-manager">Installation via GitHub Repository and Cloud's Development Manager</a>."</p>
+<h2 id="alter-cloud-environment-after-creation">Alter Cloud Environment After creation</h2>
+<p>In some cases, it may be necessary for you to adjust the environment into which you've installed Kora. For instance, if you find your Kora website is quite popular and needs more RAM, CPU, or Storage than you original configured, you can alter the environment.</p>
+<p>Hover on the environment and click on the icon for "Change Environment Topology":</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_45_annotated.png" title=""></p>
+<p>The environment configuration modal will open, where you can make the necessary adjustments. For instance, you can increase the Scaling Limits for either your Apache/PHP layer or MySQL layer. You can also increase the disk limit of either. The disk limit setting is highlighted in this screenshot:</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_5.1_annotated.png" title=""></p>
+<p>If increasing disk size, be sure to adjust the size on the Apache/PHP layer, as this is the one that corresponds to your Kora installation files; the disk limit on your MySQL layer corresponds to the database itself and is unlikely to need an adjustment upward from its default.</p>
               
             </div>
           </div>
