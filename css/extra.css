@@ -56,13 +56,18 @@
 }
 
 /* spacing at end of sidebar */
-.wy-menu-vertical ul:last-of-type {
+.wy-menu-vertical ul {
     margin-bottom: 5px;
 }
 
 /* sidebar menu top-level */
 .wy-menu-vertical a {
     color: #ffffff;
+    margin: 5px 0px 5px;
+}
+
+.wy-menu-vertical li.current a {
+    margin: 0px;
 }
 
 .wy-nav-side {
@@ -128,6 +133,7 @@
 /* third-level (first sub-page level) */
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.loctree-l2.current a, .wy-menu-vertical li.loctree-l2.current span.toctree-expand {
     padding: 0.4045em 4.045em !important;
+    text-transform: none !important;
     font-size: 90%;
 }
 
