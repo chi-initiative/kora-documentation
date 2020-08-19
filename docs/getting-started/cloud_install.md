@@ -24,19 +24,23 @@ This guide is for installing Kora in a [Reclaim Cloud](https://reclaim.cloud/) e
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_2_annotated.png" title="">
 
-4. Leave Apache layer, which is the blue block with a red feather, as-is; Click on "SQL" layer under it to add MySQL Layer. Use the dropdown on this block to change from MariaDB to MySQL SE 8.0.20.
+4. Return to the Apache Layer view by clicking on it, which is the blue block with a red feather in the middle.
+
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_46_annotated.png" title="">
+
+    Leave Apache layer as-is; Click on "SQL" layer under it to add MySQL Layer. Use the dropdown on this block to change from MariaDB to MySQL SE 8.0.20.
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_3_annotated.png" title="">
 
-5. While viewing the settings for the Apache layer, in middle panel area, use the PHP dropdown menu to change to version 7.2.32.
+5. While still viewing the settings for the Apache layer, in middle panel area, use the PHP dropdown menu to change to version 7.2.32.
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_4_annotated.png" title="">
 
     In the same area area, use slider for "Application Servers" to set Scaling Limit to at least 8 cloudlets, which will set the max reserve to at least Kora's minimum RAM requirement of 1 GB. The reserve can be set higher than this, if desired; doing so will allow your environment to use more CPU and/or RAM if your installation requires it at some future time. You will only be charged for higher processing power if your Kora website has enough people using it simultaneously to require the extra resources.
 
-    Leave the reserved level on 1 cloudlet
+    Leave the reserved level on 1 cloudlet.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_5_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_5.1_annotated.png" title="">
 
 6. Click on "SQL" block to adjust the MySQL Layer settings. In middle panel area, use slider for "Application Servers" to set Scaling Limit to at least 8 cloudlets, which will set the max reserve to at least Kora's minimum RAM requirement of 1 GB. Either leave the reserved level at its default of 3 cloudlets, or drop it to 1 cloudlet.
 
@@ -71,11 +75,11 @@ This guide is for installing Kora in a [Reclaim Cloud](https://reclaim.cloud/) e
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_10_annotated.png" title="">
 
-    Click button for "User Accounts" in top menu, highlighted in the screenshot above. This will bring up the list of existing users.
+    Click the tab for "User Accounts" in the top menu, highlighted in the screenshot above. This will bring up the list of existing users.
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_11_annotated.png" title="">
 
-5. Click on "Add user account" (highlighte in the previous screenshot) to reach the page for adding new database users.
+5. Click on "Add user account" (highlighted in the previous screenshot) to reach the page for adding new database users.
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_12_annotated.png" title="">
 
@@ -89,7 +93,7 @@ This guide is for installing Kora in a [Reclaim Cloud](https://reclaim.cloud/) e
 
 ## Configure PHP Modules
 
-1. In the dashboard, hover over "Application Servers" and click on wrench icon for "Config."
+1. In the dashboard, hover over "Application Servers" and click on the wrench icon, for "Config."
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_14_annotated.png" title="">
 
@@ -101,7 +105,7 @@ This guide is for installing Kora in a [Reclaim Cloud](https://reclaim.cloud/) e
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_16_annotated.png" title="">
 
-3. Use Search function to locate each of these modules:
+3. Use the built-in "Search" function to locate each of these modules:
 
     `gd`, `imagick`, `imap`, `intl`, `ldap`, `pgsql` (NOT "pdo_pgsql"), `snmp`, `soap`, `wddx`, `xmlrpc`, `xsl`
 
@@ -141,9 +145,9 @@ This guide is for installing Kora in a [Reclaim Cloud](https://reclaim.cloud/) e
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_18_annotated.png" title="">
 
-    Click "Yes" for the warning for "Restart Apache nodes?"
+    Click "Yes" for the warning for "Restart Apache nodes?" Wait for the notification indicating that the nodes have been successfully restarted.
 
-7. Hover on "Application Servers" and click on the icon for "Open in Browser"
+7. Next, hover on "Application Servers" and click on the icon for "Open in Browser"
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_19_annotated.png" title="">
 
@@ -165,11 +169,11 @@ When creating your new Kora website, you have two basic options for how your URL
 
 1. Back at the dashboard, hover on "Application Servers" and click on icon for "Web SSH"
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_25_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_21_annotated.png" title="">
 
 2. Display will open with an SSH terminal
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_26_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_22_annotated.png" title="">
 
 3. Use the following command to navigate to the directory just above your environment's Document Root (contents of Document Root is what's visible via your environment's URL)
 
@@ -177,7 +181,7 @@ When creating your new Kora website, you have two basic options for how your URL
 
     You can either type this code in, or copy it and then paste it into the terminal using a keyboard shortcut. Your terminal will look like this:
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_1_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_23_annotated.png" title="">
 
 
 4. Open a new browser tab and navigate to [https://github.com/matrix-msu/kora/releases](https://github.com/matrix-msu/kora/releases). Click the dropdown menu for "Assets" of most recent release. Right-click on the "Source Code (zip)" file link and copy this file's URL.
@@ -188,7 +192,7 @@ When creating your new Kora website, you have two basic options for how your URL
 
 6. Hit "Enter" and let the command run. During the file transfer process, your terminal will look similar to this:
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_2_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_24_annotated.png" title="">
 
     The file will be named the last part of the URL where you fetched it from. In this example, the name is `3.0.0.zip`. If needed, you can run the command `ls` to view a list of the directory's contents. The newly-added zip file should be listed.
 
@@ -198,7 +202,7 @@ When creating your new Kora website, you have two basic options for how your URL
 
     The system will create a new directory with the contents of this zip in a directory "kora-[zip-file-name]". In this example, the directory is named "kora-3.0.0"; if needed, you can again use `ls` to confirm the directory's name. You can also see the name of the directory at the beginning of each line that displays after running the `unzip` command:
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_3_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_25_annotated.png" title="">
 
 
 8. Use the move command to rename the directory as "kora". Be sure to use the exact directory name that displayed. An example of this command is:
@@ -213,7 +217,7 @@ When creating your new Kora website, you have two basic options for how your URL
 
     After the `mv` and `cd` commands, your terminal will look similar to this:
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_4_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_26_annotated.png" title="">
 
 10. Use the copy command `cp` to make a new copy of the ".env.example" file, but with the name ".env" This command looks like:
 
@@ -221,7 +225,7 @@ When creating your new Kora website, you have two basic options for how your URL
 
     When `cp` is successful, there won't be a message; the terminal will simply create a new line with the command prompt. So your terminal will look like this:
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_5_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_27_annotated.png" title="">
 
 11. Use the `nano` file editing program built into this version of Linux to make changes to the .env file. The command is:
 
@@ -245,6 +249,8 @@ When creating your new Kora website, you have two basic options for how your URL
     If you used "kora" for the user you set up in phpMyAdmin, and you checked the "Create database with same name and grant all privileges" box when creating it, leave the `DB_DATABASE=` and `DB_USERNAME=` lines alone; otherwise, change them to match the username and database names you created in phpMyAdmin.
 
     On the `DB_PASSWORD=` line, change "kora" to the password you saved from the process of creating the user in phpMyAdmin. Again, use the nano-specific keyboard shortcut for pasting, if copied from elsewhere.
+
+    (You can see how this file will appear after editing in the screenshot below, in Step 15.)
 
 13. Leave the rest of this file alone. Use the proper keyboard shortcut for exiting nano on your computer; for a Windows machine, this is crtl + x. The system will ask you if you wish to save your changes; hit "y" for yes. Then hit "enter" to confirm that the file name is ".env"
 
@@ -323,7 +329,7 @@ When creating your new Kora website, you have two basic options for how your URL
 
         ln -s ../kora/public kora
 
-    Once you have run this command, your terminal will look like this:
+    Once you have run this command, your terminal will look similar to this:
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_39_annotated.png" title="">
 
@@ -335,15 +341,15 @@ The second option for configuring your webpage's URL is to have it accessible at
 
 1. In the dashboard, hover on the line "Deployments" for your environment, and click on "Deploy from Git / SVN."
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_27_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_28_annotated.png" title="">
 
 2. This will open a new modal, for configuring a repository from which to pull files.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_28_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_29_annotated.png" title="">
 
     Click on the dropdown menu for "Repository" and choose "Add New Repository."
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_29_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_30_annotated.png" title="">
 
 3. Another new modal will open, for adding a new repository. In this modal, give this configuration a name; for instance "Kora," since this will be pointed at the official Kora repository managed by Matrix at MSU. Point it at this repository by pasting in the following address into the "URL" text box:
 
@@ -351,21 +357,17 @@ The second option for configuring your webpage's URL is to have it accessible at
 
     Leave the "Branch" text box with its default "master" text. The modal should look similar to this:
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_30_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_31_annotated.png" title="">
 
-4. Click "Add" on this modal, which will return you to the previous modal with "Kora" selected for the "Repository." Again leave "Branch" text as defaulted to "master"; additionally, also leave the "Path" text box with its "ROOT" default.
+4. Click "Add" on this modal (highlighted above), which will return you to the previous modal with "Kora" selected for the "Repository." Again leave "Branch" text as defaulted to "master"; additionally, also leave the "Path" text box with its "ROOT" default. Click "Deploy" in the lower-right to have the Development Manager transfer all of the files from the kora repository on GitHub into your environment's ROOT folder.
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_42_annotated.png" title="">
-
-    Then click "Deploy" to have the Development Manager transfer all of the files from the kora repository on GitHub into your environment's ROOT folder.
-
-
 
 5. Currently, your ROOT folder is set as your URL's DocumentRoot, but this would be quite insecure for your Kora application, so this must be changed. To do so, once again hover over "Application Servers" and again click on wrench icon for "Config."
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_14_annotated.png" title="">
 
-    This will again bring up the "Application Servers : Configs" tab in the bottom panel.
+    This will bring up the "Application Servers : Configs" tab in the bottom panel.
 
     <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_15_annotated.png" title="">
 
@@ -411,11 +413,11 @@ The second option for configuring your webpage's URL is to have it accessible at
 
 11. After your nodes restart, hover on "Application Servers" again and click on icon for "Web SSH"
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_25_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_32_annotated.png" title="">
 
-12. Display will open with an SSH terminal
+12. The panel at the bottom will open a new tab with an SSH terminal.
 
-    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_26_annotated.png" title="">
+    <img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_22_annotated.png" title="">
 
 13. Use the following command to navigate to the directory where the Development Manager has transferred all the kora repository files to:
 
@@ -455,6 +457,8 @@ The second option for configuring your webpage's URL is to have it accessible at
     If you used "kora" for the user you set up in phpMyAdmin, and you checked the "Create database with same name and grant all privileges" box when creating it, leave the `DB_DATABASE=` and `DB_USERNAME=` lines alone; otherwise, change them to match the username and database names you created in phpMyAdmin.
 
     On the `DB_PASSWORD=` line, change "kora" to the password you saved from the process of creating the user in phpMyAdmin. Again, use the nano-specific keyboard shortcut for pasting, if copied from elsewhere.
+
+    (You can see how this file will appear after editing in the screenshot below, in Step 19.)
 
 17. Leave the rest of this file alone. Use the proper keyboard shortcut for exiting nano on your computer; for a Windows machine, this is crtl + x. The system will ask you if you wish to save your changes; hit "y" for yes. Then hit "enter" to confirm that the file name is ".env"
 
@@ -639,6 +643,6 @@ Hover on the environment and click on the icon for "Change Environment Topology"
 
 The environment configuration modal will open, where you can make the necessary adjustments. For instance, you can increase the Scaling Limits for either your Apache/PHP layer or MySQL layer. You can also increase the disk limit of either. The disk limit setting is highlighted in this screenshot:
 
-<img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_5.1_annotated.png" title="">
+<img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_5.2_annotated.png" title="">
 
 If increasing disk size, be sure to adjust the size on the Apache/PHP layer, as this is the one that corresponds to your Kora installation files; the disk limit on your MySQL layer corresponds to the database itself and is unlikely to need an adjustment upward from its default.
