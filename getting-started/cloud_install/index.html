@@ -272,15 +272,17 @@
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_2_annotated.png" title=""></p>
 </li>
 <li>
-<p>Leave Apache layer, which is the blue block with a red feather, as-is; Click on "SQL" layer under it to add MySQL Layer. Use the dropdown on this block to change from MariaDB to MySQL SE 8.0.20.</p>
+<p>Return to the Apache Layer view by clicking on it, which is the blue block with a red feather in the middle.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_46_annotated.png" title=""></p>
+<p>Leave Apache layer as-is; Click on "SQL" layer under it to add MySQL Layer. Use the dropdown on this block to change from MariaDB to MySQL SE 8.0.20.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_3_annotated.png" title=""></p>
 </li>
 <li>
-<p>While viewing the settings for the Apache layer, in middle panel area, use the PHP dropdown menu to change to version 7.2.32.</p>
+<p>While still viewing the settings for the Apache layer, in middle panel area, use the PHP dropdown menu to change to version 7.2.32.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_4_annotated.png" title=""></p>
 <p>In the same area area, use slider for "Application Servers" to set Scaling Limit to at least 8 cloudlets, which will set the max reserve to at least Kora's minimum RAM requirement of 1 GB. The reserve can be set higher than this, if desired; doing so will allow your environment to use more CPU and/or RAM if your installation requires it at some future time. You will only be charged for higher processing power if your Kora website has enough people using it simultaneously to require the extra resources.</p>
-<p>Leave the reserved level on 1 cloudlet</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_5_annotated.png" title=""></p>
+<p>Leave the reserved level on 1 cloudlet.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_5.1_annotated.png" title=""></p>
 </li>
 <li>
 <p>Click on "SQL" block to adjust the MySQL Layer settings. In middle panel area, use slider for "Application Servers" to set Scaling Limit to at least 8 cloudlets, which will set the max reserve to at least Kora's minimum RAM requirement of 1 GB. Either leave the reserved level at its default of 3 cloudlets, or drop it to 1 cloudlet.</p>
@@ -311,11 +313,11 @@
 <li>
 <p>Once logged in, the main dashboard will load.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_10_annotated.png" title=""></p>
-<p>Click button for "User Accounts" in top menu, highlighted in the screenshot above. This will bring up the list of existing users.</p>
+<p>Click the tab for "User Accounts" in the top menu, highlighted in the screenshot above. This will bring up the list of existing users.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_11_annotated.png" title=""></p>
 </li>
 <li>
-<p>Click on "Add user account" (highlighte in the previous screenshot) to reach the page for adding new database users.</p>
+<p>Click on "Add user account" (highlighted in the previous screenshot) to reach the page for adding new database users.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_12_annotated.png" title=""></p>
 </li>
 <li>
@@ -332,7 +334,7 @@
 <h2 id="configure-php-modules">Configure PHP Modules</h2>
 <ol>
 <li>
-<p>In the dashboard, hover over "Application Servers" and click on wrench icon for "Config."</p>
+<p>In the dashboard, hover over "Application Servers" and click on the wrench icon, for "Config."</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_14_annotated.png" title=""></p>
 <p>This will bring up a panel at the bottom of the window, with a tab labeled "Application Servers : Configs".</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_15_annotated.png" title=""></p>
@@ -342,7 +344,7 @@
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_16_annotated.png" title=""></p>
 </li>
 <li>
-<p>Use Search function to locate each of these modules:</p>
+<p>Use the built-in "Search" function to locate each of these modules:</p>
 <p><code>gd</code>, <code>imagick</code>, <code>imap</code>, <code>intl</code>, <code>ldap</code>, <code>pgsql</code> (NOT "pdo_pgsql"), <code>snmp</code>, <code>soap</code>, <code>wddx</code>, <code>xmlrpc</code>, <code>xsl</code></p>
 <p>Each of their code blocks will look similar to this one, for <code>gd</code>:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_17_annotated.png" title=""></p>
@@ -376,10 +378,10 @@ imagick.progress_monitor = 0 ; Used to enable the image progress monitor
 <li>
 <p>After saving, hover on "Application Servers" and click on the icon for "Restart Nodes."</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_18_annotated.png" title=""></p>
-<p>Click "Yes" for the warning for "Restart Apache nodes?"</p>
+<p>Click "Yes" for the warning for "Restart Apache nodes?" Wait for the notification indicating that the nodes have been successfully restarted.</p>
 </li>
 <li>
-<p>Hover on "Application Servers" and click on the icon for "Open in Browser"</p>
+<p>Next, hover on "Application Servers" and click on the icon for "Open in Browser"</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_19_annotated.png" title=""></p>
 <p>New tab will open with a page displaying information generated by the function <code>phpinfo()</code>. The top of it will look like this:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_20_annotated.png" title=""></p>
@@ -396,18 +398,18 @@ imagick.progress_monitor = 0 ; Used to enable the image progress monitor
 <ol>
 <li>
 <p>Back at the dashboard, hover on "Application Servers" and click on icon for "Web SSH"</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_25_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_21_annotated.png" title=""></p>
 </li>
 <li>
 <p>Display will open with an SSH terminal</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_26_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_22_annotated.png" title=""></p>
 </li>
 <li>
 <p>Use the following command to navigate to the directory just above your environment's Document Root (contents of Document Root is what's visible via your environment's URL)</p>
 <pre><code>cd /var/www/webroot
 </code></pre>
 <p>You can either type this code in, or copy it and then paste it into the terminal using a keyboard shortcut. Your terminal will look like this:</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_1_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_23_annotated.png" title=""></p>
 </li>
 <li>
 <p>Open a new browser tab and navigate to <a href="https://github.com/matrix-msu/kora/releases">https://github.com/matrix-msu/kora/releases</a>. Click the dropdown menu for "Assets" of most recent release. Right-click on the "Source Code (zip)" file link and copy this file's URL.</p>
@@ -419,7 +421,7 @@ imagick.progress_monitor = 0 ; Used to enable the image progress monitor
 </li>
 <li>
 <p>Hit "Enter" and let the command run. During the file transfer process, your terminal will look similar to this:</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_2_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_24_annotated.png" title=""></p>
 <p>The file will be named the last part of the URL where you fetched it from. In this example, the name is <code>3.0.0.zip</code>. If needed, you can run the command <code>ls</code> to view a list of the directory's contents. The newly-added zip file should be listed.</p>
 </li>
 <li>
@@ -427,7 +429,7 @@ imagick.progress_monitor = 0 ; Used to enable the image progress monitor
 <pre><code>unzip 3.0.0.zip
 </code></pre>
 <p>The system will create a new directory with the contents of this zip in a directory "kora-[zip-file-name]". In this example, the directory is named "kora-3.0.0"; if needed, you can again use <code>ls</code> to confirm the directory's name. You can also see the name of the directory at the beginning of each line that displays after running the <code>unzip</code> command:</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_3_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_25_annotated.png" title=""></p>
 </li>
 <li>
 <p>Use the move command to rename the directory as "kora". Be sure to use the exact directory name that displayed. An example of this command is:</p>
@@ -440,14 +442,14 @@ imagick.progress_monitor = 0 ; Used to enable the image progress monitor
 <pre><code>cd kora
 </code></pre>
 <p>After the <code>mv</code> and <code>cd</code> commands, your terminal will look similar to this:</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_4_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_26_annotated.png" title=""></p>
 </li>
 <li>
 <p>Use the copy command <code>cp</code> to make a new copy of the ".env.example" file, but with the name ".env" This command looks like:</p>
 <pre><code>cp .env.example .env
 </code></pre>
 <p>When <code>cp</code> is successful, there won't be a message; the terminal will simply create a new line with the command prompt. So your terminal will look like this:</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_alt_5_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_27_annotated.png" title=""></p>
 </li>
 <li>
 <p>Use the <code>nano</code> file editing program built into this version of Linux to make changes to the .env file. The command is:</p>
@@ -468,6 +470,7 @@ DB_PREFIX=kora_
 <p>For the <code>DB_HOST=</code> line, change "localhost" to the "host" you saved from the MySQL email. Pasting the host requires a nano-specific keyboard shortcut; for Windows machines this is ctrl + shift + v</p>
 <p>If you used "kora" for the user you set up in phpMyAdmin, and you checked the "Create database with same name and grant all privileges" box when creating it, leave the <code>DB_DATABASE=</code> and <code>DB_USERNAME=</code> lines alone; otherwise, change them to match the username and database names you created in phpMyAdmin.</p>
 <p>On the <code>DB_PASSWORD=</code> line, change "kora" to the password you saved from the process of creating the user in phpMyAdmin. Again, use the nano-specific keyboard shortcut for pasting, if copied from elsewhere.</p>
+<p>(You can see how this file will appear after editing in the screenshot below, in Step 15.)</p>
 </li>
 <li>
 <p>Leave the rest of this file alone. Use the proper keyboard shortcut for exiting nano on your computer; for a Windows machine, this is crtl + x. The system will ask you if you wish to save your changes; hit "y" for yes. Then hit "enter" to confirm that the file name is ".env"</p>
@@ -545,7 +548,7 @@ DB_PREFIX=kora_
 <p>Create a symbolic link in this directory, that corresponds to the path you wrote in the .htaccess file before. For example, if you changed "/your_base_url" to "/kora", use this command for your symbolic link creation:</p>
 <pre><code>ln -s ../kora/public kora
 </code></pre>
-<p>Once you have run this command, your terminal will look like this:</p>
+<p>Once you have run this command, your terminal will look similar to this:</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_39_annotated.png" title=""></p>
 </li>
 </ol>
@@ -555,30 +558,29 @@ DB_PREFIX=kora_
 <ol>
 <li>
 <p>In the dashboard, hover on the line "Deployments" for your environment, and click on "Deploy from Git / SVN."</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_27_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_28_annotated.png" title=""></p>
 </li>
 <li>
 <p>This will open a new modal, for configuring a repository from which to pull files.</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_28_annotated.png" title=""></p>
-<p>Click on the dropdown menu for "Repository" and choose "Add New Repository."</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_29_annotated.png" title=""></p>
+<p>Click on the dropdown menu for "Repository" and choose "Add New Repository."</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_30_annotated.png" title=""></p>
 </li>
 <li>
 <p>Another new modal will open, for adding a new repository. In this modal, give this configuration a name; for instance "Kora," since this will be pointed at the official Kora repository managed by Matrix at MSU. Point it at this repository by pasting in the following address into the "URL" text box:</p>
 <pre><code>https://github.com/matrix-msu/kora
 </code></pre>
 <p>Leave the "Branch" text box with its default "master" text. The modal should look similar to this:</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_30_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_31_annotated.png" title=""></p>
 </li>
 <li>
-<p>Click "Add" on this modal, which will return you to the previous modal with "Kora" selected for the "Repository." Again leave "Branch" text as defaulted to "master"; additionally, also leave the "Path" text box with its "ROOT" default.</p>
+<p>Click "Add" on this modal (highlighted above), which will return you to the previous modal with "Kora" selected for the "Repository." Again leave "Branch" text as defaulted to "master"; additionally, also leave the "Path" text box with its "ROOT" default. Click "Deploy" in the lower-right to have the Development Manager transfer all of the files from the kora repository on GitHub into your environment's ROOT folder.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_42_annotated.png" title=""></p>
-<p>Then click "Deploy" to have the Development Manager transfer all of the files from the kora repository on GitHub into your environment's ROOT folder.</p>
 </li>
 <li>
 <p>Currently, your ROOT folder is set as your URL's DocumentRoot, but this would be quite insecure for your Kora application, so this must be changed. To do so, once again hover over "Application Servers" and again click on wrench icon for "Config."</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_14_annotated.png" title=""></p>
-<p>This will again bring up the "Application Servers : Configs" tab in the bottom panel.</p>
+<p>This will bring up the "Application Servers : Configs" tab in the bottom panel.</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_15_annotated.png" title=""></p>
 </li>
 <li>
@@ -621,11 +623,11 @@ DB_PREFIX=kora_
 </li>
 <li>
 <p>After your nodes restart, hover on "Application Servers" again and click on icon for "Web SSH"</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_25_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_32_annotated.png" title=""></p>
 </li>
 <li>
-<p>Display will open with an SSH terminal</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_26_annotated.png" title=""></p>
+<p>The panel at the bottom will open a new tab with an SSH terminal.</p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_22_annotated.png" title=""></p>
 </li>
 <li>
 <p>Use the following command to navigate to the directory where the Development Manager has transferred all the kora repository files to:</p>
@@ -660,6 +662,7 @@ DB_PREFIX=kora_
 <p>For the <code>DB_HOST=</code> line, change "localhost" to the "host" you saved from the MySQL email. Pasting the host requires a nano-specific keyboard shortcut; for Windows machines this is ctrl + shift + v</p>
 <p>If you used "kora" for the user you set up in phpMyAdmin, and you checked the "Create database with same name and grant all privileges" box when creating it, leave the <code>DB_DATABASE=</code> and <code>DB_USERNAME=</code> lines alone; otherwise, change them to match the username and database names you created in phpMyAdmin.</p>
 <p>On the <code>DB_PASSWORD=</code> line, change "kora" to the password you saved from the process of creating the user in phpMyAdmin. Again, use the nano-specific keyboard shortcut for pasting, if copied from elsewhere.</p>
+<p>(You can see how this file will appear after editing in the screenshot below, in Step 19.)</p>
 </li>
 <li>
 <p>Leave the rest of this file alone. Use the proper keyboard shortcut for exiting nano on your computer; for a Windows machine, this is crtl + x. The system will ask you if you wish to save your changes; hit "y" for yes. Then hit "enter" to confirm that the file name is ".env"</p>
@@ -846,7 +849,7 @@ DB_PREFIX=kora_
 <p>Hover on the environment and click on the icon for "Change Environment Topology":</p>
 <p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_45_annotated.png" title=""></p>
 <p>The environment configuration modal will open, where you can make the necessary adjustments. For instance, you can increase the Scaling Limits for either your Apache/PHP layer or MySQL layer. You can also increase the disk limit of either. The disk limit setting is highlighted in this screenshot:</p>
-<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_5.1_annotated.png" title=""></p>
+<p><img style="display:block;margin:auto;max-width:100%" src="../getting-started-img/cloud_install_5.2_annotated.png" title=""></p>
 <p>If increasing disk size, be sure to adjust the size on the Apache/PHP layer, as this is the one that corresponds to your Kora installation files; the disk limit on your MySQL layer corresponds to the database itself and is unlikely to need an adjustment upward from its default.</p>
               
             </div>
