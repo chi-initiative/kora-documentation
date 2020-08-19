@@ -14,9 +14,10 @@ The kinds of contributions that readers can make fall into two broad categories.
 
 ## Copy-Editing and Other Minor Changes
 
-When making minor changes to pages in this documentation website, please keep the changes for each page within its own pull request. To add additional edits to the same page, when the pull request has already been created, pleas see the sub-section, "[Additional Edits to the Same Page](#additional-edits-to-the-same-page)" below.
+When making minor changes to pages in this documentation website, please keep the changes for each page within its own pull request. To add additional edits to the same page, when the pull request has already been created, pleas see the sub-section, "[Additional Minor Edits to the Same Page](#additional-minor-edits-to-the-same-page)" below.
 
-Pull requests will remain
+Pull requests remain open until a documentation team member is able to review it for inclusion, rejection, or make requests for alterations. Please watch the email address associated with your GitHub account for notifications of messages from the documentation team, which may ask you to adjust your proposed changes before they will be accepted.
+
 ### First-Time Page Edit
 
 1. To make minor changes to any page in this guide, click "Edit on GitHub" in the top-right of the page to be edited. Do this for each separate page to be edited.
@@ -26,7 +27,7 @@ Pull requests will remain
     This will take you to GitHub's website. If not logged in, you will be asked to do so. Once (or if) logged in, you will be directed to a notification that you will need to "fork" the kora-documentation repository before you can make edit suggestions.
 
     !!! note
-        In Git nomenclature, "fork" is both a noun and a verb: a fork is a copy of another account's repository and to that copy is to fork it; you have control over your fork, and the version control system tracks the differences between your repository, the repository from which you forked, and any other forks that are traced back to the original repository. Your fork is identical to the repository from which you forked it only until either you change your fork, or the originating repository is changed by someone.
+        In Git nomenclature, "fork" is both a noun and a verb: a fork is a copy of another account's repository; and to make that copy is to fork it. You have control over your fork. The version control system tracks the differences between your repository, the repository from which you forked, and any other forks that are traced back to the original repository. Your fork is identical to the repository from which you forked it only until either you change your fork, or the originating repository is changed.
 
 2. The page notifying you of the need to fork looks like the screenshot below. Click on "Fork this repository":
 
@@ -95,7 +96,7 @@ Pull requests will remain
 
     <img style="display:block;margin:auto;max-width:100%" src="../contributing-img/contributing_7.1_annotated.png" title="">
 
-### Additional Edits to the Same Page
+### Additional Minor Edits to the Same Page
 
 1. If, after creating a pull request, you decide you wish to make further edits to the *same* page, you will need to find your [pull request in the chi-initiative-owned kora-documentation repository](https://github.com/chi-initiative/kora-documentation/pulls).
 
