@@ -6,9 +6,9 @@ title: How to Contribute to this Guide
 
 This documentation website is designed to allow for input from readers and contributing to it is a fairly straightforward process.
 
-GitHub, the website on which this documentation is built, is built using Git, a version control system that tracks file changes over time and allows multiple users to make alterations to files and present them to the owners of those files for review and acceptance or rejection. In the case of this guide, any suggested alterations will be sent to the Kora Documentation team for consideration prior to being officially added to this documentation website.
+GitHub, the website on which this documentation is built, is built using Git, a version control system that tracks file changes over time and allows multiple users to make alterations to files and present those alterations to the owners for review and acceptance or rejection. In the case of this guide, any suggested alterations will be sent to the Kora documentation team for consideration prior to being officially added to this documentation website.
 
-To contribute, you will need to [sign up for a GitHub account](https://github.com/join). (If using an educational email address, you may also considering [signing up for a GitHub Education account](https://education.github.com/), which will give you access to a number of useful tools.) Once you have completed the process for creating an account – including verifying your email address via the link that will be emailed to you – you will be able to make changes to this documentation and submit it for review.
+To contribute, you will need to [sign up for a GitHub account](https://github.com/join). (If using an educational email address, you may also considering [signing up for a GitHub Education account](https://education.github.com/), which will give you access to a number of useful tools.) Once you have completed the process for creating an account – including verifying your email address via the link that will be emailed to you – you will be able to make changes to this documentation and submit them for review.
 
 The kinds of contributions that readers can make fall into two broad categories. The first would be any changes related to grammar, syntax, very minor page layout changes (such as splitting one paragraph into two), or other small-scale copy-edits. The second would be suggestions to include any new reference images or data files, entirely new guide entries, or significant rewrites of existing guide entries.
 
@@ -24,7 +24,7 @@ Pull requests remain open until a documentation team member is able to review it
 
     <img style="display:block;margin:auto;max-width:100%" src="../contributing-img/contributing_1_annotated.png" title="">
 
-    This will take you to GitHub's website. If not logged in, you will be asked to do so. Once (or if) logged in, you will be directed to a notification that you will need to "fork" the kora-documentation repository before you can make edit suggestions.
+    This will take you to GitHub's website. If not logged in, you will be asked to do so. Once (or if) logged in, you will be directed to a notification informing you that you will need to "fork" the kora-documentation repository before you can make edit suggestions.
 
     !!! note
         In Git nomenclature, "fork" is both a noun and a verb: a fork is a copy of another account's repository; and to make that copy is to fork it. You have control over your fork. The version control system tracks the differences between your repository, the repository from which you forked, and any other forks that are traced back to the original repository. Your fork is identical to the repository from which you forked it only until either you change your fork, or the originating repository is changed.
@@ -38,11 +38,13 @@ Pull requests remain open until a documentation team member is able to review it
     <img style="display:block;margin:auto;max-width:100%" src="../contributing-img/contributing_3_annotated.png" title="">
 
     !!! note
-        Within a repository, there is at least one "branch," or version, of the repository code. Many repositories have multiple branches, which the owners use to keep track of different versions of their projects. In the case of your newly-forked repository, the system will be creating a new branch each time you click on "Edit on GitHub," make some changes, and save those changes in your repository.
+        Within a repository, there is at least one "branch," or version, of the repository code. Many repositories have multiple branches, which the owners use to keep track of different versions of their projects. This term is used for both Git and GitHub.
+
+        In the case of your newly-forked repository, the system will be creating a new branch each time you click on "Edit on GitHub," make some changes, and save those changes in your repository.
 
 4. In the GitHub page that has opened, find the parts of the page you wish to edit and make your changes. The Kora Documentation pages are written in a plain-text syntax system called "Markdown," which is meant for use on the internet. Many find it intuitive to use. To learn how to use Markdown syntax to style your edits appropriately, please consult [this Markdown style guide](https://www.markdownguide.org/basic-syntax/).
 
-    One acceptable addition to a page that you might find useful would an admonition, also called a call-out, to highlight a key explanation of some concept or idea. These look like this:
+    One acceptable addition to a page that you might find useful would be an admonition, also called a call-out, to highlight a key explanation of some concept or idea. These look like this:
 
     !!! note
         This is a note admonition.
@@ -61,7 +63,9 @@ Pull requests remain open until a documentation team member is able to review it
         !!! [admonition type]
             This is the descriptive paragraph for the admonition
 
-    To change the admonition's default title, add the new title in quotations next to the admonition type:
+            This is a second paragraph inside the same admonition
+
+    In this example code, replace the bracketed portion – including the brackets temselves – with one of the four types noted above. To change the admonition's default title, add the new title in quotations next to the admonition type:
 
         !!! [admonition type] "[Example Title]"
             Descriptive paragraph.
@@ -77,7 +81,7 @@ Pull requests remain open until a documentation team member is able to review it
 7. GitHub will then take you to a page to create a "pull request" containing your pages, from the newly-created branch in your forked repository and leading to the main kora-documentation repository.
 
     !!! note
-        In Git (and GitHub) nomenclature, a "pull request" is a request to bring content TO a particular branch FROM another particular branch. As long as the branches are within the same system of connected repositories, then anyone who has one of those repositories can make a pull request for content from one branch to another (even two forked repositories). Though anyone can create the pull request, only the owner of the repository where the content is going TO can accept the request.
+        In GitHub nomenclature, a "pull request" (known as a "request-pull" in Git) is a request to bring content TO a particular branch FROM another particular branch. As long as the branches are within the same system of connected repositories, then anyone who has one of those repositories can make a pull request for content from one branch to another (even two forked repositories). Though anyone can create the pull request, only the owner of the repository where the content is going TO can accept the request.
 
 
     Highlighted below is, from left-to-right, the repository where the changes are going TO (owned by chi-initiative), the branch of that repository it is going TO (master), the arrow indicating the direction of the change, then the repository it is coming FROM (your own repository, or in the case of the example, one owned by the bsgeyer account), and then the branch of the repository it is coming FROM (the newly-created "patch-1" branch).
@@ -86,7 +90,7 @@ Pull requests remain open until a documentation team member is able to review it
 
     <img style="display:block;margin:auto;max-width:100%" src="../contributing-img/contributing_5_annotated.png" title="">
 
-8. Clicking on this button will again change the view on the page, putting the short summary you wrote before into the pull request title box, and the longer description from before into the pull request description. If you wish to change either of these (such as to fix typos, like the ones in the example screenshots presented here), feel free to do so.
+8. Clicking on this button will again change the view on the page, putting the short summary you wrote before into the pull request title box, and the longer description from before into the pull request description. If you wish to change either of these (such as to fix typos, like the one in the example screenshots presented here), feel free to do so.
 
     Click on the new, green "Create pull request" button that appears below these boxes to finalize the pull request.
 
@@ -127,7 +131,7 @@ Doing this will add one's changes to the already-existing pull request for this 
 
 ## Major Edit or New File Proposals
 
-In cases where you would like to suggest new documentation pages, images, or data files, you will need to submit these requests via GitHub's "Issues" feature. To open a new Issue for the kora-documentation, visit the repository's Issue's page](https://github.com/chi-initiative/kora-documentation/issues).
+In cases where you would like to suggest new documentation pages, images, or data files, you will need to submit these requests via GitHub's "Issues" feature; if submitted as a pull request, they will likely be rejected. To open a new Issue for the kora-documentation, visit the repository's Issue's page](https://github.com/chi-initiative/kora-documentation/issues).
 
 On this page, click the green "New issue" button on the right-hand side of the page.
 
@@ -153,3 +157,5 @@ Select the template that corresponds to the changes you would like to suggest by
         ## [Second Page Section Title]
 
         section text
+
+Someone from the Kora documentation team will review your suggestions and take appropriate action, including through comments. Please continue to watch your GitHub-associated email for any such comments.
