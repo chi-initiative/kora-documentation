@@ -58,6 +58,15 @@ Pull requests remain open until a documentation team member is able to review it
     !!! warning
         This is a warning admonition.
 
+    <!--
+    !!! note ""
+        This note admonition has its title and icon suppressed and includes a code box.
+
+            extra_css: [extra.css]
+
+        To suppress only the title, add a space between the two quotations
+    -->
+
     To insert an admonition, follow this code example:
 
         !!! [admonition type]
