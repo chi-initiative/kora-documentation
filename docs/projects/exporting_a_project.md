@@ -18,4 +18,4 @@ To export a project:
 
     <img style="display:block;margin:auto;max-width:80%" src="../projects-img/exporting_a_project_2_annotated.png" title="Select Export Project">
 
-Visit the ""[Importing a Project](../importing_a_project)" guide for step-by-step instruction on how to import your project into Kora.
+Visit the "[Importing a Project](../importing_a_project)" guide for step-by-step instruction on how to import your project into Kora.
