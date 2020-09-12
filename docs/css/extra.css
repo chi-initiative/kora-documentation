@@ -101,9 +101,11 @@
     background: #A8B6BD !important;
 }
 
-/* hide h4s and down in sidebar */
-.wy-menu-vertical li.current .toctree-l4 ~ ul {
-    display: none;
+/* Hide third subsection level subsections and below in sidebar */
+.wy-menu-vertical li.toctree-l3 span.toctree-expand,
+.wy-menu-vertical li.toctree-l4 a,
+.wy-menu-vertical li.toctree-l4.current a {
+    display: none !important;
 }
 
 /* preserving sidebar indent from 1.0.4 in 1.1+ */
@@ -116,7 +118,7 @@
     color: inherit;
 }
 
-/* top-level pages (same level as category names) */
+/* Top-level pages (same level as category names) */
 .wy-menu-vertical li.toctree-l1:only-child a {
     padding: .4045em 1.618em !important;
     font-size: 90%;
@@ -124,24 +126,47 @@
     font-weight: bold;
 }
 
-/* second-level pages, underneath category names */
+/* First subsection level of top-level pages*/
+.wy-menu-vertical li.toctree-l1:only-child li.toctree-l2 a {
+    padding: 0.4045em 3.6em !important;
+    font-weight: normal;
+    font-size: 90%;
+}
+
+/* Second subsection level of top-level pages*/
+.wy-menu-vertical li.toctree-l1:only-child li.toctree-l2 li.toctree-l3 a {
+    padding: 0.4045em 5.6em !important;
+    font-weight: normal;
+}
+
+/* Third subsection level of top-level pages*/
+.wy-menu-vertical li.toctree-l1:only-child li.toctree-l2 li.toctree-l3 li.toctree-l4 a {
+    padding: 0.4045em 7em !important;
+    font-weight: normal;
+}
+
+/* Second-level pages, underneath category names */
 .wy-menu-vertical li.toctree-l1 a, .wy-menu-vertical li.loctree-l1.current span.toctree-expand, .wy-menu-vertical li.loctree-l1.current a {
     padding: 0.4045em 2.427em !important;
     font-size: 90%;
 }
 
-/* third-level (first sub-page level) */
+/* First subsection level of second-level pages */
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.loctree-l2.current a, .wy-menu-vertical li.loctree-l2.current span.toctree-expand {
     padding: 0.4045em 4.045em !important;
     text-transform: none !important;
-    font-size: 90%;
 }
 
-/* fourth-level (second sub-page level) */
+/* Second subsection leve of second-level pages) */
 .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.loctree-l3.current a, .wy-menu-vertical li.loctree-l3.current span.toctree-expand {
     padding: 0.4045em 5.663em !important;
-    font-size: 90%;
 }
+
+/* Third subsection level of second-level pages */
+.wy-menu-vertical li.toctree-l4 a, .wy-menu-vertical li.loctree-l4.current a, .wy-menu-vertical li.loctree-l4.current span.toctree-expand {
+    padding: 0.4045em 7.4em !important;
+}
+
 
 /* admonition styling */
 /* generic */
