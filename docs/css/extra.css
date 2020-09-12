@@ -101,7 +101,7 @@
     background: #A8B6BD !important;
 }
 
-/* Hide third subsection level subsections and below in sidebar *
+/* Hide third subsection level subsections and below in sidebar */
 .wy-menu-vertical li.toctree-l3 span.toctree-expand,
 .wy-menu-vertical li.toctree-l4 a,
 .wy-menu-vertical li.toctree-l4.current a {
