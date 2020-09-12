@@ -1,4 +1,4 @@
-#Adding Users to Projects
+# Adding Users to Projects
 
 Kora Admins and Project Admins can add additional users to a project.
 
@@ -6,7 +6,7 @@ If you are interested in learning how to add users to specific forms within a pr
 
 To add additional users to your project, follow these steps:
 
-1. Navigate to your project's landing page.  Once there, click the project name in the menu bar to open the project dropdown menu.
+1. Navigate to your project's landing page. Once there, click the project name in the menu bar to open the project dropdown menu.
 
     <img style="display:block;margin:auto;max-width:100%" src="../projects-img/adding_users_to_projects_1_annotated.png" width="100%" title="Dropdown Menu">
 
@@ -24,7 +24,7 @@ To add additional users to your project, follow these steps:
 
     <img style="display:block;margin:auto;max-width:100%" src="../projects-img/adding_users_to_projects_4_annotated.png" width="100%" title="Add User(s) to Group">
 
-5. A pop-up window will appear that will allow you to add user(s) to this group. Click on the **Select User(s) to Add to Permissions Group** dropdown menu to view a list of all users in the kora install. Select those users you would like to have access to your project (as many as you want).  Alternatively, you can type a name into the field to find a particular user (this is helpful if your Kora install has a lot of users, and you don't want to scroll through a very long list of names to find the person you want). If the user you want to add doesn't have an existing Kora account, you can enter their email into the **Not Listed Above? Invite Users Via Email** field. Separate multiple emails should be separated by a comma. Enter a personal message (which will be include in the invite email) into the **Include a Personal Message?** field.
+5. A modal will appear that will allow you to add user(s) to this group. Click on the **Select User(s) to Add to Permissions Group** dropdown menu to view a list of all users in the Kora install. Select those users you would like to have access to your project (as many as you want). Alternatively, you can type a name into the field to find a particular user (this is helpful if your Kora install has a lot of users, and you don't want to scroll through a very long list of names to find the person you want). If the user you want to add doesn't have an existing Kora account, you can enter their email into the **Not Listed Above? Invite Users Via Email** field. Separate multiple emails should be separated by a comma. Enter a personal message (which will be included in the invite email) into the **Include a Personal Message?** field.
 
     <img style="display:block;margin:auto;max-width:100%" src="../projects-img/adding_users_to_projects_5_annotated.png" width="100%" title="Add User(s) to Group Pop-up">
 
@@ -35,7 +35,7 @@ To add additional users to your project, follow these steps:
 A pop-up window will appear on the top right of the screen notifying you that your user(s) were successfully added.
 
 
-##Removing User from Project
+## Removing User from Project
 
 To remove users from a project, navigate to the . **Project Permissions** page (as described above).
 
