@@ -16,7 +16,7 @@ To create a project:
 
     <img style="display:block;margin:auto;max-width:100%" src="../projects-img/creating_a_project_3_annotated.png" title="Enter a Description for your Project">
 
-4. From here, you can select additional project administrators.  As the creator of the project, you are automatically added as an admin. Open the **Select Project Admins** dropdown menu to view a list of all users associated with your Kora install.  Select those users you would like to add as project admins (as many as you want).  Alternatively, you can type a name into the field to find a particular user (this is helpful if your Kora install has a lot of users, and you don't want to scroll through a very long list of names to find the person you want). Remember, you can also add users to your project after it has been created. Visit the [Adding Users to Projects](../projects/adding_users_to_projects.md) documentation for more information.
+4. From here, you can select additional project administrators. As the creator of the project, you are automatically added as an admin. Open the **Select Project Admins** dropdown menu to view a list of all users associated with your Kora install. Select those users you would like to add as project admins (as many as you want). Alternatively, you can type a name into the field to find a particular user (this is helpful if your Kora install has a lot of users, and you don't want to scroll through a very long list of names to find the person you want). Remember, you can also add users to your project after it has been created. Visit the [Adding Users to Projects](../projects/adding_users_to_projects.md) documentation for more information.
 
     <img style="display:block;margin:auto;max-width:100%" src="../projects-img/creating_a_project_4_annotated.png" title="Select Project Admins">
 
@@ -26,8 +26,8 @@ To create a project:
 
 You are also able to edit, delete, archive, export, and import projects. Visit the documentation below to learn how to:
 
-- [Edit a Project](../projects/editing_a_project.md)
-- [Archive a Project](../projects/archiving_a_project.md)
-- [Delete a Project](../projects/deleting_a_project.md)
-- [Import a Project](../projects/importing_a_project.md)
-- [Export a Project](../projects/exporting_a_project.md)
+- [Editing a Project](../projects/editing_a_project.md)
+- [Archiving a Project](../projects/archiving_a_project.md)
+- [Deleting a Project](../projects/deleting_a_project.md)
+- [Importing a Project](../projects/importing_a_project.md)
+- [Exporting a Project](../projects/exporting_a_project.md)
