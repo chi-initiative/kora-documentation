@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+{% endblock styles %}
+
+{% block libs %}
+    {{ super() }}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+{% endblock libs %}
+
+{% block scripts %}
+    {{ super() }}
+   <script>
+       // Grab the relevant attributes from each <img>
+		$('img').each(function(i, img) {
+			var href = $(img).attr('src'),
+				title = $(img).attr('title'),
+				css = $(img).attr('style'),
+            	alt = $(alt).attr('alt'),
+            	width = $(width).attr('width'),
+            	height = $(height).attr('height'),
+            	longdesc = $(longdesc).attr('longdesc'),
+                id = $(id).attr('id'),
+                getClass = $(getClass).attr('id');
+
+			// rewrite each <img> with the <a><img></a> formatted as required for lightbox, but exclude other <img>s like the CC license
+			if (css) {
+				$(img).replaceWith(
+                	'<a href="' + href + '" data-lightbox="lightbox" title="' + title + '"> <img style="' + css + '" src="' + href + '" title="' + title + '" alt="' + alt + '" width="' + width + '" height="' + height + '" longdesc="' + longdesc + '" id="' + id + '" class="' + getClass + ' fluid" /></a>'
+                );
+			};
+		});
+    </script>-->
+{% endblock scripts %}
