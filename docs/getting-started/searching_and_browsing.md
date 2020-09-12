@@ -2,4 +2,4 @@
 title: Understanding Core Concepts
 ---
 
-Coming soon.  
+Coming soon.

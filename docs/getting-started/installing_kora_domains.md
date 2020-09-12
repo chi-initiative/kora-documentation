@@ -232,7 +232,7 @@ To return from nearly any part of cPanel to the Main interface (shown in the scr
 
     In the long-form list, Terminal will display two account names: first the username of "Owner," then (the one highlighted in the image above) the username of "Group." In the example here, both are set to the same username, which means the "Owner" permissions level is applied to "Group" as well. In this such case — where the "Owner" and "Group" have the same username — no further permissions changes need to be made to ensure Kora is working properly and you may skip down to "[Create Kora Installation URLs](#create-kora-installation-urls)."  
 
-    However, if these two are different, then you will need to additionally adjust the "Write" permissions for "Group," so please continue to the next section.  
+    However, if these two are different, then you will need to additionally adjust the "Write" permissions for "Group," so please continue to the next section.
 
     If you intend to set the "Write" permissions because you are sure your specific server environment's defaults will prevent Kora from working properly, then you can prepare for the commands in the next section
 

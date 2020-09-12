@@ -86,7 +86,7 @@ This option will be tied to one specific user's GitLab account.
 
 5. Leave the box for the setting "Confidential" checked; this is the default setting.
 
-6.  Check the box for the "read_user" scope and then click "Save application" after the list of scopes.
+6. Check the box for the "read_user" scope and then click "Save application" after the list of scopes.
 
 7. You will be redirected to the page with your "Application ID" and "Secret." You will be copying each of these into your Kora Configuration File page of your installation.
 
@@ -121,7 +121,7 @@ GitLab integration may also be achieved at the Admin level in any GitLab instanc
 
 5. Leave the box for the setting "Confidential" checked; this is the default setting.
 
-6.  Check the box for the "read_user" scope and then click "Save application" after the list of scopes.
+6. Check the box for the "read_user" scope and then click "Save application" after the list of scopes.
 
 7. You will be redirected to the page with your "Application ID" and "Secret." You will be copying each of these into your Kora Configuration File page of your installation.
 
