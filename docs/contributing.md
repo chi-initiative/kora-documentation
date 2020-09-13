@@ -58,14 +58,7 @@ Pull requests remain open until a documentation team member is able to review it
     !!! warning
         This is a warning admonition.
 
-    <!--
-    !!! note ""
-        This note admonition has its title and icon suppressed and includes a code box.
-
-            extra_css: [extra.css]
-
-        To suppress only the title, add a space between the two quotations
-    -->
+    <!-- see bottom of this file for example of admonition with icon/title line suppressed entirely and including a code box -->
 
     To insert an admonition, follow this code example:
 
@@ -168,3 +161,12 @@ Select the template that corresponds to the changes you would like to suggest by
         section text
 
 Someone from the Kora documentation team will review your suggestions and take appropriate action, including through comments. Please continue to watch your GitHub-associated email for any such comments.
+
+<!--
+!!! note ""
+    This note admonition has its title and icon line suppressed and includes a code box.
+
+        extra_css: [extra.css]
+
+    To suppress only the title, add a space between the two quotations
+-->
