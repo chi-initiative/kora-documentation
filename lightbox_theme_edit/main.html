@@ -13,24 +13,63 @@
 {% block scripts %}
     {{ super() }}
    <script>
-       // Grab the relevant attributes from each <img>
+       // Grab the relevant attributes from each <img> and prepare for exclusion if the attribute is empty or absent/undefined
 		$('img').each(function(i, img) {
-			var href = $(img).attr('src'),
-				title = $(img).attr('title'),
-				css = $(img).attr('style'),
-            	alt = $(alt).attr('alt'),
-            	width = $(width).attr('width'),
-            	height = $(height).attr('height'),
-            	longdesc = $(longdesc).attr('longdesc'),
-                id = $(id).attr('id'),
-                getClass = $(getClass).attr('id');
+			var href = $(img).attr('src') + '" ';
+            if ($(img).attr('data-lightbox') != undefined && $(img).attr('data-lightbox') != "" ) {
+                var dataLightbox = 'data-lightbox="' + $(img).attr('data-lightbox') + '" '
+            } else {
+                var dataLightbox = 'data-lightbox="lightbox" '
+            }
+            if ($(img).attr('style') != undefined && $(img).attr('style') != "" ) {
+                var css = 'style="' + $(img).attr('style') + '" '
+            } else {
+                var css = ""
+            }
+            if ($(img).attr('title') != undefined && $(img).attr('title') != "" ) {
+                var title = 'title="' + $(img).attr('title') + '" '
+            } else {
+                var title = ""
+            };
+            if ($(img).attr('alt') !== undefined && $(img).attr('alt') !== "" ) {
+                var alt = 'alt="' + $(img).attr('alt') + '" ',
+                    lightbox = "lightbox"
+            } else {
+                var alt = "",
+                    lightbox = "lightbox"
+            };
+            if ($(img).attr('width') !== undefined && $(img).attr('width') !== "" ) {
+                var width = 'width="' + $(img).attr('width') + '" '
+            } else {
+                var width = ""
+            };
+            if ($(img).attr('height') !== undefined && $(img).attr('height') !== "" ) {
+                var height = 'height="' + $(img).attr('height') + '" '
+            } else {
+                var height = ""
+            };
+            if ($(img).attr('longdesc') !== undefined && $(img).attr('longdesc') !== "" ) {
+                var longdesc = 'longdesc="' + $(img).attr('longdesc') + '" '
+            } else {
+                var longdesc = ""
+            };
+            if ($(img).attr('id') !== undefined && $(img).attr('id') !== "" ) {
+                var id = 'id="' + $(img).attr('id') + '" '
+            } else {
+                var id = ""
+            };
+            if ($(img).attr('class') !== undefined && $(img).attr('class') !== "" ) {
+                var getClass = 'class="' + $(img).attr('class') + ' fluid"'
+            } else {
+                var getClass = '"class="fluid"'
+            };
 
 			// rewrite each <img> with the <a><img></a> formatted as required for lightbox, but exclude other <img>s like the CC license
-			if (css) {
+			if (css || lightbox) {
 				$(img).replaceWith(
-                	'<a href="' + href + '" data-lightbox="lightbox" title="' + title + '"> <img style="' + css + '" src="' + href + '" title="' + title + '" alt="' + alt + '" width="' + width + '" height="' + height + '" longdesc="' + longdesc + '" id="' + id + '" class="' + getClass + ' fluid" /></a>'
+                	'<a href="' + href + dataLightbox + title + '><img ' + css + 'src="' + href + title + alt + width + height + longdesc + id + getClass + ' /></a>'
                 );
 			};
 		});
-    </script>-->
+    </script>
 {% endblock scripts %}
