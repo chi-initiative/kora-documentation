@@ -10,12 +10,16 @@
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>Importing a Form - Kora User Documentation</title>
+    
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   <link href="../../css/extra.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+
+    
   
   <script>
     // Current page data
@@ -29,7 +33,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+ 
   
 </head>
 
@@ -291,6 +297,7 @@
       
     </span>
 </div>
+    
     <script>var base_url = '../..';</script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
@@ -299,6 +306,67 @@
             SphinxRtdTheme.Navigation.enable(false);
         };
     </script>
+   <script>
+       // Grab the relevant attributes from each <img> and prepare for exclusion if the attribute is empty or absent/undefined
+		$('img').each(function(i, img) {
+			var href = $(img).attr('src') + '" ';
+            if ($(img).attr('data-lightbox') != undefined && $(img).attr('data-lightbox') != "" ) {
+                var dataLightbox = 'data-lightbox="' + $(img).attr('data-lightbox') + '" '
+            } else {
+                var dataLightbox = 'data-lightbox="lightbox" '
+            }
+            if ($(img).attr('style') != undefined && $(img).attr('style') != "" ) {
+                var css = 'style="' + $(img).attr('style') + '" '
+            } else {
+                var css = ""
+            }
+            if ($(img).attr('title') != undefined && $(img).attr('title') != "" ) {
+                var title = 'title="' + $(img).attr('title') + '" '
+            } else {
+                var title = ""
+            };
+            if ($(img).attr('alt') !== undefined && $(img).attr('alt') !== "" ) {
+                var alt = 'alt="' + $(img).attr('alt') + '" ',
+                    lightbox = "lightbox"
+            } else {
+                var alt = "",
+                    lightbox = "lightbox"
+            };
+            if ($(img).attr('width') !== undefined && $(img).attr('width') !== "" ) {
+                var width = 'width="' + $(img).attr('width') + '" '
+            } else {
+                var width = ""
+            };
+            if ($(img).attr('height') !== undefined && $(img).attr('height') !== "" ) {
+                var height = 'height="' + $(img).attr('height') + '" '
+            } else {
+                var height = ""
+            };
+            if ($(img).attr('longdesc') !== undefined && $(img).attr('longdesc') !== "" ) {
+                var longdesc = 'longdesc="' + $(img).attr('longdesc') + '" '
+            } else {
+                var longdesc = ""
+            };
+            if ($(img).attr('id') !== undefined && $(img).attr('id') !== "" ) {
+                var id = 'id="' + $(img).attr('id') + '" '
+            } else {
+                var id = ""
+            };
+            if ($(img).attr('class') !== undefined && $(img).attr('class') !== "" ) {
+                var getClass = 'class="' + $(img).attr('class') + ' fluid"'
+            } else {
+                var getClass = '"class="fluid"'
+            };
+
+			// rewrite each <img> with the <a><img></a> formatted as required for lightbox, but exclude other <img>s like the CC license
+			if (css || lightbox) {
+				$(img).replaceWith(
+                	'<a href="' + href + dataLightbox + title + '><img ' + css + 'src="' + href + title + alt + width + height + longdesc + id + getClass + ' /></a>'
+                );
+			};
+		});
+    </script>
+
 
 </body>
 </html>

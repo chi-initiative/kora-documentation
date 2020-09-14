@@ -132,7 +132,7 @@
     font-weight: normal;
 }
 
-.wy-menu-vertical li.toctree-l1:only-child li.toctree-l2.current a {
+.wy-menu-vertical li.toctree-l1:only-child li.toctree-l2 span.toctree-expand::before, .wy-menu-vertical li.toctree-l1:only-child li.toctree-l2.current a {
     font-weight: bold;
 }
 
@@ -143,7 +143,7 @@
     font-size: inherit;
 }
 
-.wy-menu-vertical li.toctree-l1:only-child li.toctree-l2 li.toctree-l3.current a {
+ .wy-menu-vertical li.toctree-l1:only-child li.toctree-l2 li.toctree-l3.current a {
     font-weight: bold;
 }
 
@@ -167,6 +167,10 @@
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.loctree-l2.current a, .wy-menu-vertical li.loctree-l2.current span.toctree-expand {
     padding: 0.4045em 1.618em 0.405em 4.045em !important;
     text-transform: none !important;
+}
+
+.wy-menu-vertical li span.toctree-expand:before {
+    font-weight: bold;
 }
 
 /* Second subsection leve of second-level pages) */
